@@ -1,0 +1,6 @@
+infra/.caddy/
+.caddy/
+caddy_data/
+caddy_config/
+.DS_Store
+*.log

@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  # Serviço que constrói e compila o React
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: eyetec-frontend-prod
+    restart: unless-stopped
+    volumes:
+      - html_data:/var/www/html # Compartilha os arquivos compilados
+
+  # Servidor Web e Proxy que entrega o site para o mundo
+  caddy:
+    image: caddy:2-alpine
+    container_name: eyetec-proxy
+    restart: unless-stopped
+    ports:
+      - "8081:80"   # HTTP padrão
+      - "443:443" # HTTPS padrão (usado na nuvem)
+    volumes:
+      - ./infra/Caddyfile:/etc/caddy/Caddyfile
+      - html_data:/var/www/html # Lê os arquivos compilados do front-end
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - frontend
+
+volumes:
+  html_data:   # Volume compartilhado para os arquivos estáticos do React
+  caddy_data:  # Guarda os certificados SSL que o Caddy gerar na AWS
+  caddy_config:

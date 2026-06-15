@@ -76,7 +76,7 @@ O histórico do Git reflete rigorosamente a evolução cronológica e o raciocí
 
 ## 🛠️ Tecnologias e Ferramentas Propostas
 
-* **Backend:** Node.js, TypeScript, Fastify/Express, Prisma ORM.
+* **Backend:** Java, Spring Boot.
 * **Frontend:** React (Vite), TypeScript, face-api.js, TailwindCSS.
 * **Banco de Dados:** SQLite (Armazenamento baseado em arquivo local).
-* **Infraestrutura:** Docker, Docker Compose.
+* **Infraestrutura:** Docker, Docker Compose, Caddy.

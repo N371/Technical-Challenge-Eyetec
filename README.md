@@ -72,8 +72,6 @@ O histórico do Git reflete rigorosamente a evolução cronológica e o raciocí
 9. `deploy: configure dockerfiles and cross-origin multi-container docker-compose environment`
 10. `docs: review and finalize architecture details and installation steps in README.md`
 
----
-
 
 ## 🛠️ Tecnologias Utilizadas
 

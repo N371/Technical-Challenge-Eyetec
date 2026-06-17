@@ -120,6 +120,14 @@ Assim que o Docker indicar que todos os contêineres foram iniciados com sucesso
 - Opção de deletar.
 
 
+Nota sobre extensibilidade
+
+A tabela users inclui uma coluna face_descriptor (TEXT, aceita NULL)
+e existe um endpoint POST /api/auth/descriptor, preparados para uma
+eventual evolução do projeto rumo a autenticação por reconhecimento facial.
+Não fazem parte do escopo deste desafio e não são usados pelo CRUD — ficam
+disponíveis caso o time queira explorar esse caminho depois, sem precisar
+alterar o que já existe (Open/Closed Principle).
 
 
 

@@ -31,7 +31,7 @@ export function ListagemPage() {
       <header style={{ borderBottom: "1px solid #2a2d3e", padding: "20px 32px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
         <div>
           <h1 style={{ margin: 0, fontSize: 18, fontWeight: 600 }}>Eyetec</h1>
-          <p style={{ margin: 0, fontSize: 12, color: "#6b7280" }}>gestão de usuários</p>
+          <p style={{ margin: 0, fontSize: 12, color: "#6b7280" }}>Gestão de Usuários - Desafio técnico Eyetec</p>
         </div>
         <button onClick={() => navigate("/cadastro")}
           style={{ padding: "8px 20px", borderRadius: 8, border: "none", background: "#3b5bdb", color: "#fff", cursor: "pointer", fontWeight: 600 }}>

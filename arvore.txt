@@ -1,5 +1,71 @@
 .
-├── àrvoreInicial.txt
+├── arvore.txt
+├── backend
+│   ├── HELP.md
+│   ├── mvnw
+│   ├── mvnw.cmd
+│   ├── pom.xml
+│   ├── scripts
+│   │   └── init-db.sql
+│   ├── src
+│   │   └── main
+│   │       ├── java
+│   │       │   └── com
+│   │       │       └── eyetec
+│   │       │           └── usermanager
+│   │       │               ├── config
+│   │       │               │   ├── DatabaseConfig.java
+│   │       │               │   └── WebConfig.java
+│   │       │               ├── {config,model,repository,service,controller}
+│   │       │               ├── controller
+│   │       │               │   ├── AuthController.java
+│   │       │               │   └── UserController.java
+│   │       │               ├── model
+│   │       │               │   └── User.java
+│   │       │               ├── repository
+│   │       │               │   └── UserRepository.java
+│   │       │               ├── service
+│   │       │               │   └── UserService.java
+│   │       │               └── UserManagerApplication.java
+│   │       └── resources
+│   │           ├── application.properties
+│   │           └── schema.sql
+│   ├── target
+│   │   ├── classes
+│   │   │   ├── application.properties
+│   │   │   ├── com
+│   │   │   │   └── eyetec
+│   │   │   │       └── usermanager
+│   │   │   │           ├── config
+│   │   │   │           │   ├── DatabaseConfig.class
+│   │   │   │           │   └── WebConfig.class
+│   │   │   │           ├── controller
+│   │   │   │           │   ├── AuthController.class
+│   │   │   │           │   └── UserController.class
+│   │   │   │           ├── model
+│   │   │   │           │   ├── User$UserBuilder.class
+│   │   │   │           │   └── User.class
+│   │   │   │           ├── repository
+│   │   │   │           │   └── UserRepository.class
+│   │   │   │           ├── service
+│   │   │   │           │   └── UserService.class
+│   │   │   │           └── UserManagerApplication.class
+│   │   │   └── schema.sql
+│   │   ├── generated-sources
+│   │   │   └── annotations
+│   │   ├── maven-archiver
+│   │   │   └── pom.properties
+│   │   ├── maven-status
+│   │   │   └── maven-compiler-plugin
+│   │   │       └── compile
+│   │   │           └── default-compile
+│   │   │               ├── createdFiles.lst
+│   │   │               └── inputFiles.lst
+│   │   ├── usermanager-1.0.0.jar
+│   │   └── usermanager-1.0.0.jar.original
+│   ├── uploads
+│   │   └── 3a22b557-61f5-4927-93c6-f6a74aad5c1a.jpg
+│   └── usermanager.db
 ├── docker-compose.yml
 ├── frontend
 │   ├── Dockerfile
@@ -26,6 +92,20 @@
 │   │   │   ├── package.json
 │   │   │   ├── README.md
 │   │   │   └── xhtml.js
+│   │   ├── agent-base
+│   │   │   ├── dist
+│   │   │   │   └── src
+│   │   │   │       ├── index.d.ts
+│   │   │   │       ├── index.js
+│   │   │   │       ├── index.js.map
+│   │   │   │       ├── promisify.d.ts
+│   │   │   │       ├── promisify.js
+│   │   │   │       └── promisify.js.map
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   └── src
+│   │   │       ├── index.ts
+│   │   │       └── promisify.ts
 │   │   ├── ajv
 │   │   │   ├── dist
 │   │   │   │   ├── ajv.bundle.js
@@ -124,6 +204,220 @@
 │   │   │       ├── prepare-tests
 │   │   │       ├── publish-built-version
 │   │   │       └── travis-gh-pages
+│   │   ├── asynckit
+│   │   │   ├── bench.js
+│   │   │   ├── index.js
+│   │   │   ├── lib
+│   │   │   │   ├── abort.js
+│   │   │   │   ├── async.js
+│   │   │   │   ├── defer.js
+│   │   │   │   ├── iterate.js
+│   │   │   │   ├── readable_asynckit.js
+│   │   │   │   ├── readable_parallel.js
+│   │   │   │   ├── readable_serial.js
+│   │   │   │   ├── readable_serial_ordered.js
+│   │   │   │   ├── state.js
+│   │   │   │   ├── streamify.js
+│   │   │   │   └── terminator.js
+│   │   │   ├── LICENSE
+│   │   │   ├── package.json
+│   │   │   ├── parallel.js
+│   │   │   ├── README.md
+│   │   │   ├── serial.js
+│   │   │   ├── serialOrdered.js
+│   │   │   └── stream.js
+│   │   ├── autoprefixer
+│   │   │   ├── bin
+│   │   │   │   └── autoprefixer
+│   │   │   ├── data
+│   │   │   │   └── prefixes.js
+│   │   │   ├── lib
+│   │   │   │   ├── at-rule.js
+│   │   │   │   ├── autoprefixer.d.ts
+│   │   │   │   ├── autoprefixer.js
+│   │   │   │   ├── brackets.js
+│   │   │   │   ├── browsers.js
+│   │   │   │   ├── declaration.js
+│   │   │   │   ├── hacks
+│   │   │   │   │   ├── align-content.js
+│   │   │   │   │   ├── align-items.js
+│   │   │   │   │   ├── align-self.js
+│   │   │   │   │   ├── animation.js
+│   │   │   │   │   ├── appearance.js
+│   │   │   │   │   ├── autofill.js
+│   │   │   │   │   ├── backdrop-filter.js
+│   │   │   │   │   ├── background-clip.js
+│   │   │   │   │   ├── background-size.js
+│   │   │   │   │   ├── block-logical.js
+│   │   │   │   │   ├── border-image.js
+│   │   │   │   │   ├── border-radius.js
+│   │   │   │   │   ├── break-props.js
+│   │   │   │   │   ├── cross-fade.js
+│   │   │   │   │   ├── display-flex.js
+│   │   │   │   │   ├── display-grid.js
+│   │   │   │   │   ├── file-selector-button.js
+│   │   │   │   │   ├── filter.js
+│   │   │   │   │   ├── filter-value.js
+│   │   │   │   │   ├── flex-basis.js
+│   │   │   │   │   ├── flex-direction.js
+│   │   │   │   │   ├── flex-flow.js
+│   │   │   │   │   ├── flex-grow.js
+│   │   │   │   │   ├── flex.js
+│   │   │   │   │   ├── flex-shrink.js
+│   │   │   │   │   ├── flex-spec.js
+│   │   │   │   │   ├── flex-wrap.js
+│   │   │   │   │   ├── fullscreen.js
+│   │   │   │   │   ├── gradient.js
+│   │   │   │   │   ├── grid-area.js
+│   │   │   │   │   ├── grid-column-align.js
+│   │   │   │   │   ├── grid-end.js
+│   │   │   │   │   ├── grid-row-align.js
+│   │   │   │   │   ├── grid-row-column.js
+│   │   │   │   │   ├── grid-rows-columns.js
+│   │   │   │   │   ├── grid-start.js
+│   │   │   │   │   ├── grid-template-areas.js
+│   │   │   │   │   ├── grid-template.js
+│   │   │   │   │   ├── grid-utils.js
+│   │   │   │   │   ├── image-rendering.js
+│   │   │   │   │   ├── image-set.js
+│   │   │   │   │   ├── inline-logical.js
+│   │   │   │   │   ├── intrinsic.js
+│   │   │   │   │   ├── justify-content.js
+│   │   │   │   │   ├── mask-border.js
+│   │   │   │   │   ├── mask-composite.js
+│   │   │   │   │   ├── order.js
+│   │   │   │   │   ├── overscroll-behavior.js
+│   │   │   │   │   ├── pixelated.js
+│   │   │   │   │   ├── placeholder.js
+│   │   │   │   │   ├── placeholder-shown.js
+│   │   │   │   │   ├── place-self.js
+│   │   │   │   │   ├── print-color-adjust.js
+│   │   │   │   │   ├── text-decoration.js
+│   │   │   │   │   ├── text-decoration-skip-ink.js
+│   │   │   │   │   ├── text-emphasis-position.js
+│   │   │   │   │   ├── transform-decl.js
+│   │   │   │   │   ├── user-select.js
+│   │   │   │   │   └── writing-mode.js
+│   │   │   │   ├── info.js
+│   │   │   │   ├── old-selector.js
+│   │   │   │   ├── old-value.js
+│   │   │   │   ├── prefixer.js
+│   │   │   │   ├── prefixes.js
+│   │   │   │   ├── processor.js
+│   │   │   │   ├── resolution.js
+│   │   │   │   ├── selector.js
+│   │   │   │   ├── supports.js
+│   │   │   │   ├── transition.js
+│   │   │   │   ├── utils.js
+│   │   │   │   ├── value.js
+│   │   │   │   └── vendor.js
+│   │   │   ├── LICENSE
+│   │   │   ├── package.json
+│   │   │   └── README.md
+│   │   ├── axios
+│   │   │   ├── CHANGELOG.md
+│   │   │   ├── dist
+│   │   │   │   ├── axios.js
+│   │   │   │   ├── axios.min.js
+│   │   │   │   ├── axios.min.js.map
+│   │   │   │   ├── browser
+│   │   │   │   │   └── axios.cjs
+│   │   │   │   ├── esm
+│   │   │   │   │   ├── axios.js
+│   │   │   │   │   ├── axios.min.js
+│   │   │   │   │   └── axios.min.js.map
+│   │   │   │   └── node
+│   │   │   │       └── axios.cjs
+│   │   │   ├── index.d.cts
+│   │   │   ├── index.d.ts
+│   │   │   ├── index.js
+│   │   │   ├── lib
+│   │   │   │   ├── adapters
+│   │   │   │   │   ├── adapters.js
+│   │   │   │   │   ├── fetch.js
+│   │   │   │   │   ├── http.js
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── xhr.js
+│   │   │   │   ├── axios.js
+│   │   │   │   ├── cancel
+│   │   │   │   │   ├── CanceledError.js
+│   │   │   │   │   ├── CancelToken.js
+│   │   │   │   │   └── isCancel.js
+│   │   │   │   ├── core
+│   │   │   │   │   ├── AxiosError.js
+│   │   │   │   │   ├── AxiosHeaders.js
+│   │   │   │   │   ├── Axios.js
+│   │   │   │   │   ├── buildFullPath.js
+│   │   │   │   │   ├── dispatchRequest.js
+│   │   │   │   │   ├── InterceptorManager.js
+│   │   │   │   │   ├── mergeConfig.js
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   ├── settle.js
+│   │   │   │   │   └── transformData.js
+│   │   │   │   ├── defaults
+│   │   │   │   │   ├── index.js
+│   │   │   │   │   └── transitional.js
+│   │   │   │   ├── env
+│   │   │   │   │   ├── classes
+│   │   │   │   │   │   └── FormData.js
+│   │   │   │   │   ├── data.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── helpers
+│   │   │   │   │   ├── AxiosTransformStream.js
+│   │   │   │   │   ├── AxiosURLSearchParams.js
+│   │   │   │   │   ├── bind.js
+│   │   │   │   │   ├── buildURL.js
+│   │   │   │   │   ├── callbackify.js
+│   │   │   │   │   ├── combineURLs.js
+│   │   │   │   │   ├── composeSignals.js
+│   │   │   │   │   ├── cookies.js
+│   │   │   │   │   ├── deprecatedMethod.js
+│   │   │   │   │   ├── estimateDataURLDecodedBytes.js
+│   │   │   │   │   ├── formDataToJSON.js
+│   │   │   │   │   ├── formDataToStream.js
+│   │   │   │   │   ├── fromDataURI.js
+│   │   │   │   │   ├── Http2Sessions.js
+│   │   │   │   │   ├── HttpStatusCode.js
+│   │   │   │   │   ├── isAbsoluteURL.js
+│   │   │   │   │   ├── isAxiosError.js
+│   │   │   │   │   ├── isURLSameOrigin.js
+│   │   │   │   │   ├── null.js
+│   │   │   │   │   ├── parseHeaders.js
+│   │   │   │   │   ├── parseProtocol.js
+│   │   │   │   │   ├── progressEventReducer.js
+│   │   │   │   │   ├── readBlob.js
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   ├── resolveConfig.js
+│   │   │   │   │   ├── sanitizeHeaderValue.js
+│   │   │   │   │   ├── shouldBypassProxy.js
+│   │   │   │   │   ├── speedometer.js
+│   │   │   │   │   ├── spread.js
+│   │   │   │   │   ├── throttle.js
+│   │   │   │   │   ├── toFormData.js
+│   │   │   │   │   ├── toURLEncodedForm.js
+│   │   │   │   │   ├── trackStream.js
+│   │   │   │   │   ├── validator.js
+│   │   │   │   │   └── ZlibHeaderTransformStream.js
+│   │   │   │   ├── platform
+│   │   │   │   │   ├── browser
+│   │   │   │   │   │   ├── classes
+│   │   │   │   │   │   │   ├── Blob.js
+│   │   │   │   │   │   │   ├── FormData.js
+│   │   │   │   │   │   │   └── URLSearchParams.js
+│   │   │   │   │   │   └── index.js
+│   │   │   │   │   ├── common
+│   │   │   │   │   │   └── utils.js
+│   │   │   │   │   ├── index.js
+│   │   │   │   │   └── node
+│   │   │   │   │       ├── classes
+│   │   │   │   │       │   ├── FormData.js
+│   │   │   │   │       │   └── URLSearchParams.js
+│   │   │   │   │       └── index.js
+│   │   │   │   └── utils.js
+│   │   │   ├── LICENSE
+│   │   │   ├── MIGRATION_GUIDE.md
+│   │   │   ├── package.json
+│   │   │   └── README.md
 │   │   ├── @babel
 │   │   │   ├── code-frame
 │   │   │   │   ├── lib
@@ -1048,6 +1342,26 @@
 │   │   │   ├── package.json
 │   │   │   ├── parse.js
 │   │   │   └── README.md
+│   │   ├── call-bind-apply-helpers
+│   │   │   ├── actualApply.d.ts
+│   │   │   ├── actualApply.js
+│   │   │   ├── applyBind.d.ts
+│   │   │   ├── applyBind.js
+│   │   │   ├── CHANGELOG.md
+│   │   │   ├── functionApply.d.ts
+│   │   │   ├── functionApply.js
+│   │   │   ├── functionCall.d.ts
+│   │   │   ├── functionCall.js
+│   │   │   ├── index.d.ts
+│   │   │   ├── index.js
+│   │   │   ├── LICENSE
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── reflectApply.d.ts
+│   │   │   ├── reflectApply.js
+│   │   │   ├── test
+│   │   │   │   └── index.js
+│   │   │   └── tsconfig.json
 │   │   ├── caniuse-lite
 │   │   │   ├── data
 │   │   │   │   ├── agents.js
@@ -1894,8 +2208,23 @@
 │   │   │   ├── LICENSE
 │   │   │   ├── package.json
 │   │   │   └── README.md
+│   │   ├── combined-stream
+│   │   │   ├── lib
+│   │   │   │   └── combined_stream.js
+│   │   │   ├── License
+│   │   │   ├── package.json
+│   │   │   ├── Readme.md
+│   │   │   └── yarn.lock
 │   │   ├── convert-source-map
 │   │   │   ├── index.js
+│   │   │   ├── LICENSE
+│   │   │   ├── package.json
+│   │   │   └── README.md
+│   │   ├── cookie
+│   │   │   ├── dist
+│   │   │   │   ├── index.d.ts
+│   │   │   │   ├── index.js
+│   │   │   │   └── index.js.map
 │   │   │   ├── LICENSE
 │   │   │   ├── package.json
 │   │   │   └── README.md
@@ -1937,6 +2266,13 @@
 │   │   │       ├── cmp.js
 │   │   │       ├── NaN.js
 │   │   │       └── neg-vs-pos-0.js
+│   │   ├── delayed-stream
+│   │   │   ├── lib
+│   │   │   │   └── delayed_stream.js
+│   │   │   ├── License
+│   │   │   ├── Makefile
+│   │   │   ├── package.json
+│   │   │   └── Readme.md
 │   │   ├── detect-libc
 │   │   │   ├── index.d.ts
 │   │   │   ├── lib
@@ -1947,6 +2283,20 @@
 │   │   │   ├── LICENSE
 │   │   │   ├── package.json
 │   │   │   └── README.md
+│   │   ├── dunder-proto
+│   │   │   ├── CHANGELOG.md
+│   │   │   ├── get.d.ts
+│   │   │   ├── get.js
+│   │   │   ├── LICENSE
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── set.d.ts
+│   │   │   ├── set.js
+│   │   │   ├── test
+│   │   │   │   ├── get.js
+│   │   │   │   ├── index.js
+│   │   │   │   └── set.js
+│   │   │   └── tsconfig.json
 │   │   ├── electron-to-chromium
 │   │   │   ├── chromium-versions.js
 │   │   │   ├── chromium-versions.json
@@ -1981,6 +2331,38 @@
 │   │   │   ├── license
 │   │   │   ├── package.json
 │   │   │   └── readme.md
+│   │   ├── es-define-property
+│   │   │   ├── CHANGELOG.md
+│   │   │   ├── index.d.ts
+│   │   │   ├── index.js
+│   │   │   ├── LICENSE
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── test
+│   │   │   │   └── index.js
+│   │   │   └── tsconfig.json
+│   │   ├── es-errors
+│   │   │   ├── CHANGELOG.md
+│   │   │   ├── eval.d.ts
+│   │   │   ├── eval.js
+│   │   │   ├── index.d.ts
+│   │   │   ├── index.js
+│   │   │   ├── LICENSE
+│   │   │   ├── package.json
+│   │   │   ├── range.d.ts
+│   │   │   ├── range.js
+│   │   │   ├── README.md
+│   │   │   ├── ref.d.ts
+│   │   │   ├── ref.js
+│   │   │   ├── syntax.d.ts
+│   │   │   ├── syntax.js
+│   │   │   ├── test
+│   │   │   │   └── index.js
+│   │   │   ├── tsconfig.json
+│   │   │   ├── type.d.ts
+│   │   │   ├── type.js
+│   │   │   ├── uri.d.ts
+│   │   │   └── uri.js
 │   │   ├── @eslint
 │   │   │   ├── config-array
 │   │   │   │   ├── dist
@@ -2586,6 +2968,22 @@
 │   │   │   ├── LICENSE
 │   │   │   ├── package.json
 │   │   │   └── README.md
+│   │   ├── es-object-atoms
+│   │   │   ├── CHANGELOG.md
+│   │   │   ├── index.d.ts
+│   │   │   ├── index.js
+│   │   │   ├── isObject.d.ts
+│   │   │   ├── isObject.js
+│   │   │   ├── LICENSE
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── RequireObjectCoercible.d.ts
+│   │   │   ├── RequireObjectCoercible.js
+│   │   │   ├── test
+│   │   │   │   └── index.js
+│   │   │   ├── ToObject.d.ts
+│   │   │   ├── ToObject.js
+│   │   │   └── tsconfig.json
 │   │   ├── espree
 │   │   │   ├── dist
 │   │   │   │   ├── espree.cjs
@@ -2622,6 +3020,16 @@
 │   │   │   ├── gulpfile.babel.js
 │   │   │   ├── package.json
 │   │   │   └── README.md
+│   │   ├── es-set-tostringtag
+│   │   │   ├── CHANGELOG.md
+│   │   │   ├── index.d.ts
+│   │   │   ├── index.js
+│   │   │   ├── LICENSE
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── test
+│   │   │   │   └── index.js
+│   │   │   └── tsconfig.json
 │   │   ├── estraverse
 │   │   │   ├── estraverse.js
 │   │   │   ├── gulpfile.js
@@ -2637,6 +3045,1204 @@
 │   │   │   ├── LICENSE.BSD
 │   │   │   ├── package.json
 │   │   │   └── README.md
+│   │   ├── face-api.js
+│   │   │   ├── build
+│   │   │   │   ├── commonjs
+│   │   │   │   │   ├── ageGenderNet
+│   │   │   │   │   │   ├── AgeGenderNet.d.ts
+│   │   │   │   │   │   ├── AgeGenderNet.js
+│   │   │   │   │   │   ├── AgeGenderNet.js.map
+│   │   │   │   │   │   ├── extractParams.d.ts
+│   │   │   │   │   │   ├── extractParamsFromWeigthMap.d.ts
+│   │   │   │   │   │   ├── extractParamsFromWeigthMap.js
+│   │   │   │   │   │   ├── extractParamsFromWeigthMap.js.map
+│   │   │   │   │   │   ├── extractParams.js
+│   │   │   │   │   │   ├── extractParams.js.map
+│   │   │   │   │   │   ├── index.d.ts
+│   │   │   │   │   │   ├── index.js
+│   │   │   │   │   │   ├── index.js.map
+│   │   │   │   │   │   ├── types.d.ts
+│   │   │   │   │   │   ├── types.js
+│   │   │   │   │   │   └── types.js.map
+│   │   │   │   │   ├── classes
+│   │   │   │   │   │   ├── BoundingBox.d.ts
+│   │   │   │   │   │   ├── BoundingBox.js
+│   │   │   │   │   │   ├── BoundingBox.js.map
+│   │   │   │   │   │   ├── Box.d.ts
+│   │   │   │   │   │   ├── Box.js
+│   │   │   │   │   │   ├── Box.js.map
+│   │   │   │   │   │   ├── Dimensions.d.ts
+│   │   │   │   │   │   ├── Dimensions.js
+│   │   │   │   │   │   ├── Dimensions.js.map
+│   │   │   │   │   │   ├── FaceDetection.d.ts
+│   │   │   │   │   │   ├── FaceDetection.js
+│   │   │   │   │   │   ├── FaceDetection.js.map
+│   │   │   │   │   │   ├── FaceLandmarks5.d.ts
+│   │   │   │   │   │   ├── FaceLandmarks5.js
+│   │   │   │   │   │   ├── FaceLandmarks5.js.map
+│   │   │   │   │   │   ├── FaceLandmarks68.d.ts
+│   │   │   │   │   │   ├── FaceLandmarks68.js
+│   │   │   │   │   │   ├── FaceLandmarks68.js.map
+│   │   │   │   │   │   ├── FaceLandmarks.d.ts
+│   │   │   │   │   │   ├── FaceLandmarks.js
+│   │   │   │   │   │   ├── FaceLandmarks.js.map
+│   │   │   │   │   │   ├── FaceMatch.d.ts
+│   │   │   │   │   │   ├── FaceMatch.js
+│   │   │   │   │   │   ├── FaceMatch.js.map
+│   │   │   │   │   │   ├── index.d.ts
+│   │   │   │   │   │   ├── index.js
+│   │   │   │   │   │   ├── index.js.map
+│   │   │   │   │   │   ├── LabeledBox.d.ts
+│   │   │   │   │   │   ├── LabeledBox.js
+│   │   │   │   │   │   ├── LabeledBox.js.map
+│   │   │   │   │   │   ├── LabeledFaceDescriptors.d.ts
+│   │   │   │   │   │   ├── LabeledFaceDescriptors.js
+│   │   │   │   │   │   ├── LabeledFaceDescriptors.js.map
+│   │   │   │   │   │   ├── ObjectDetection.d.ts
+│   │   │   │   │   │   ├── ObjectDetection.js
+│   │   │   │   │   │   ├── ObjectDetection.js.map
+│   │   │   │   │   │   ├── Point.d.ts
+│   │   │   │   │   │   ├── Point.js
+│   │   │   │   │   │   ├── Point.js.map
+│   │   │   │   │   │   ├── PredictedBox.d.ts
+│   │   │   │   │   │   ├── PredictedBox.js
+│   │   │   │   │   │   ├── PredictedBox.js.map
+│   │   │   │   │   │   ├── Rect.d.ts
+│   │   │   │   │   │   ├── Rect.js
+│   │   │   │   │   │   └── Rect.js.map
+│   │   │   │   │   ├── common
+│   │   │   │   │   │   ├── convLayer.d.ts
+│   │   │   │   │   │   ├── convLayer.js
+│   │   │   │   │   │   ├── convLayer.js.map
+│   │   │   │   │   │   ├── depthwiseSeparableConv.d.ts
+│   │   │   │   │   │   ├── depthwiseSeparableConv.js
+│   │   │   │   │   │   ├── depthwiseSeparableConv.js.map
+│   │   │   │   │   │   ├── disposeUnusedWeightTensors.d.ts
+│   │   │   │   │   │   ├── disposeUnusedWeightTensors.js
+│   │   │   │   │   │   ├── disposeUnusedWeightTensors.js.map
+│   │   │   │   │   │   ├── extractConvParamsFactory.d.ts
+│   │   │   │   │   │   ├── extractConvParamsFactory.js
+│   │   │   │   │   │   ├── extractConvParamsFactory.js.map
+│   │   │   │   │   │   ├── extractFCParamsFactory.d.ts
+│   │   │   │   │   │   ├── extractFCParamsFactory.js
+│   │   │   │   │   │   ├── extractFCParamsFactory.js.map
+│   │   │   │   │   │   ├── extractSeparableConvParamsFactory.d.ts
+│   │   │   │   │   │   ├── extractSeparableConvParamsFactory.js
+│   │   │   │   │   │   ├── extractSeparableConvParamsFactory.js.map
+│   │   │   │   │   │   ├── extractWeightEntryFactory.d.ts
+│   │   │   │   │   │   ├── extractWeightEntryFactory.js
+│   │   │   │   │   │   ├── extractWeightEntryFactory.js.map
+│   │   │   │   │   │   ├── extractWeightsFactory.d.ts
+│   │   │   │   │   │   ├── extractWeightsFactory.js
+│   │   │   │   │   │   ├── extractWeightsFactory.js.map
+│   │   │   │   │   │   ├── fullyConnectedLayer.d.ts
+│   │   │   │   │   │   ├── fullyConnectedLayer.js
+│   │   │   │   │   │   ├── fullyConnectedLayer.js.map
+│   │   │   │   │   │   ├── getModelUris.d.ts
+│   │   │   │   │   │   ├── getModelUris.js
+│   │   │   │   │   │   ├── getModelUris.js.map
+│   │   │   │   │   │   ├── index.d.ts
+│   │   │   │   │   │   ├── index.js
+│   │   │   │   │   │   ├── index.js.map
+│   │   │   │   │   │   ├── loadConvParamsFactory.d.ts
+│   │   │   │   │   │   ├── loadConvParamsFactory.js
+│   │   │   │   │   │   ├── loadConvParamsFactory.js.map
+│   │   │   │   │   │   ├── types.d.ts
+│   │   │   │   │   │   ├── types.js
+│   │   │   │   │   │   └── types.js.map
+│   │   │   │   │   ├── dom
+│   │   │   │   │   │   ├── awaitMediaLoaded.d.ts
+│   │   │   │   │   │   ├── awaitMediaLoaded.js
+│   │   │   │   │   │   ├── awaitMediaLoaded.js.map
+│   │   │   │   │   │   ├── bufferToImage.d.ts
+│   │   │   │   │   │   ├── bufferToImage.js
+│   │   │   │   │   │   ├── bufferToImage.js.map
+│   │   │   │   │   │   ├── createCanvas.d.ts
+│   │   │   │   │   │   ├── createCanvas.js
+│   │   │   │   │   │   ├── createCanvas.js.map
+│   │   │   │   │   │   ├── extractFaces.d.ts
+│   │   │   │   │   │   ├── extractFaces.js
+│   │   │   │   │   │   ├── extractFaces.js.map
+│   │   │   │   │   │   ├── extractFaceTensors.d.ts
+│   │   │   │   │   │   ├── extractFaceTensors.js
+│   │   │   │   │   │   ├── extractFaceTensors.js.map
+│   │   │   │   │   │   ├── fetchImage.d.ts
+│   │   │   │   │   │   ├── fetchImage.js
+│   │   │   │   │   │   ├── fetchImage.js.map
+│   │   │   │   │   │   ├── fetchJson.d.ts
+│   │   │   │   │   │   ├── fetchJson.js
+│   │   │   │   │   │   ├── fetchJson.js.map
+│   │   │   │   │   │   ├── fetchNetWeights.d.ts
+│   │   │   │   │   │   ├── fetchNetWeights.js
+│   │   │   │   │   │   ├── fetchNetWeights.js.map
+│   │   │   │   │   │   ├── fetchOrThrow.d.ts
+│   │   │   │   │   │   ├── fetchOrThrow.js
+│   │   │   │   │   │   ├── fetchOrThrow.js.map
+│   │   │   │   │   │   ├── getContext2dOrThrow.d.ts
+│   │   │   │   │   │   ├── getContext2dOrThrow.js
+│   │   │   │   │   │   ├── getContext2dOrThrow.js.map
+│   │   │   │   │   │   ├── getMediaDimensions.d.ts
+│   │   │   │   │   │   ├── getMediaDimensions.js
+│   │   │   │   │   │   ├── getMediaDimensions.js.map
+│   │   │   │   │   │   ├── imageTensorToCanvas.d.ts
+│   │   │   │   │   │   ├── imageTensorToCanvas.js
+│   │   │   │   │   │   ├── imageTensorToCanvas.js.map
+│   │   │   │   │   │   ├── imageToSquare.d.ts
+│   │   │   │   │   │   ├── imageToSquare.js
+│   │   │   │   │   │   ├── imageToSquare.js.map
+│   │   │   │   │   │   ├── index.d.ts
+│   │   │   │   │   │   ├── index.js
+│   │   │   │   │   │   ├── index.js.map
+│   │   │   │   │   │   ├── isMediaElement.d.ts
+│   │   │   │   │   │   ├── isMediaElement.js
+│   │   │   │   │   │   ├── isMediaElement.js.map
+│   │   │   │   │   │   ├── isMediaLoaded.d.ts
+│   │   │   │   │   │   ├── isMediaLoaded.js
+│   │   │   │   │   │   ├── isMediaLoaded.js.map
+│   │   │   │   │   │   ├── loadWeightMap.d.ts
+│   │   │   │   │   │   ├── loadWeightMap.js
+│   │   │   │   │   │   ├── loadWeightMap.js.map
+│   │   │   │   │   │   ├── matchDimensions.d.ts
+│   │   │   │   │   │   ├── matchDimensions.js
+│   │   │   │   │   │   ├── matchDimensions.js.map
+│   │   │   │   │   │   ├── NetInput.d.ts
+│   │   │   │   │   │   ├── NetInput.js
+│   │   │   │   │   │   ├── NetInput.js.map
+│   │   │   │   │   │   ├── resolveInput.d.ts
+│   │   │   │   │   │   ├── resolveInput.js
+│   │   │   │   │   │   ├── resolveInput.js.map
+│   │   │   │   │   │   ├── toNetInput.d.ts
+│   │   │   │   │   │   ├── toNetInput.js
+│   │   │   │   │   │   ├── toNetInput.js.map
+│   │   │   │   │   │   ├── types.d.ts
+│   │   │   │   │   │   ├── types.js
+│   │   │   │   │   │   └── types.js.map
+│   │   │   │   │   ├── draw
+│   │   │   │   │   │   ├── DrawBox.d.ts
+│   │   │   │   │   │   ├── DrawBox.js
+│   │   │   │   │   │   ├── DrawBox.js.map
+│   │   │   │   │   │   ├── drawContour.d.ts
+│   │   │   │   │   │   ├── drawContour.js
+│   │   │   │   │   │   ├── drawContour.js.map
+│   │   │   │   │   │   ├── drawDetections.d.ts
+│   │   │   │   │   │   ├── drawDetections.js
+│   │   │   │   │   │   ├── drawDetections.js.map
+│   │   │   │   │   │   ├── drawFaceExpressions.d.ts
+│   │   │   │   │   │   ├── drawFaceExpressions.js
+│   │   │   │   │   │   ├── drawFaceExpressions.js.map
+│   │   │   │   │   │   ├── DrawFaceLandmarks.d.ts
+│   │   │   │   │   │   ├── DrawFaceLandmarks.js
+│   │   │   │   │   │   ├── DrawFaceLandmarks.js.map
+│   │   │   │   │   │   ├── DrawTextField.d.ts
+│   │   │   │   │   │   ├── DrawTextField.js
+│   │   │   │   │   │   ├── DrawTextField.js.map
+│   │   │   │   │   │   ├── index.d.ts
+│   │   │   │   │   │   ├── index.js
+│   │   │   │   │   │   └── index.js.map
+│   │   │   │   │   ├── env
+│   │   │   │   │   │   ├── createBrowserEnv.d.ts
+│   │   │   │   │   │   ├── createBrowserEnv.js
+│   │   │   │   │   │   ├── createBrowserEnv.js.map
+│   │   │   │   │   │   ├── createFileSystem.d.ts
+│   │   │   │   │   │   ├── createFileSystem.js
+│   │   │   │   │   │   ├── createFileSystem.js.map
+│   │   │   │   │   │   ├── createNodejsEnv.d.ts
+│   │   │   │   │   │   ├── createNodejsEnv.js
+│   │   │   │   │   │   ├── createNodejsEnv.js.map
+│   │   │   │   │   │   ├── index.d.ts
+│   │   │   │   │   │   ├── index.js
+│   │   │   │   │   │   ├── index.js.map
+│   │   │   │   │   │   ├── isBrowser.d.ts
+│   │   │   │   │   │   ├── isBrowser.js
+│   │   │   │   │   │   ├── isBrowser.js.map
+│   │   │   │   │   │   ├── isNodejs.d.ts
+│   │   │   │   │   │   ├── isNodejs.js
+│   │   │   │   │   │   ├── isNodejs.js.map
+│   │   │   │   │   │   ├── types.d.ts
+│   │   │   │   │   │   ├── types.js
+│   │   │   │   │   │   └── types.js.map
+│   │   │   │   │   ├── euclideanDistance.d.ts
+│   │   │   │   │   ├── euclideanDistance.js
+│   │   │   │   │   ├── euclideanDistance.js.map
+│   │   │   │   │   ├── faceExpressionNet
+│   │   │   │   │   │   ├── FaceExpressionNet.d.ts
+│   │   │   │   │   │   ├── FaceExpressionNet.js
+│   │   │   │   │   │   ├── FaceExpressionNet.js.map
+│   │   │   │   │   │   ├── FaceExpressions.d.ts
+│   │   │   │   │   │   ├── FaceExpressions.js
+│   │   │   │   │   │   ├── FaceExpressions.js.map
+│   │   │   │   │   │   ├── index.d.ts
+│   │   │   │   │   │   ├── index.js
+│   │   │   │   │   │   └── index.js.map
+│   │   │   │   │   ├── faceFeatureExtractor
+│   │   │   │   │   │   ├── denseBlock.d.ts
+│   │   │   │   │   │   ├── denseBlock.js
+│   │   │   │   │   │   ├── denseBlock.js.map
+│   │   │   │   │   │   ├── extractorsFactory.d.ts
+│   │   │   │   │   │   ├── extractorsFactory.js
+│   │   │   │   │   │   ├── extractorsFactory.js.map
+│   │   │   │   │   │   ├── extractParams.d.ts
+│   │   │   │   │   │   ├── extractParamsFromWeigthMap.d.ts
+│   │   │   │   │   │   ├── extractParamsFromWeigthMap.js
+│   │   │   │   │   │   ├── extractParamsFromWeigthMap.js.map
+│   │   │   │   │   │   ├── extractParamsFromWeigthMapTiny.d.ts
+│   │   │   │   │   │   ├── extractParamsFromWeigthMapTiny.js
+│   │   │   │   │   │   ├── extractParamsFromWeigthMapTiny.js.map
+│   │   │   │   │   │   ├── extractParams.js
+│   │   │   │   │   │   ├── extractParams.js.map
+│   │   │   │   │   │   ├── extractParamsTiny.d.ts
+│   │   │   │   │   │   ├── extractParamsTiny.js
+│   │   │   │   │   │   ├── extractParamsTiny.js.map
+│   │   │   │   │   │   ├── FaceFeatureExtractor.d.ts
+│   │   │   │   │   │   ├── FaceFeatureExtractor.js
+│   │   │   │   │   │   ├── FaceFeatureExtractor.js.map
+│   │   │   │   │   │   ├── index.d.ts
+│   │   │   │   │   │   ├── index.js
+│   │   │   │   │   │   ├── index.js.map
+│   │   │   │   │   │   ├── loadParamsFactory.d.ts
+│   │   │   │   │   │   ├── loadParamsFactory.js
+│   │   │   │   │   │   ├── loadParamsFactory.js.map
+│   │   │   │   │   │   ├── TinyFaceFeatureExtractor.d.ts
+│   │   │   │   │   │   ├── TinyFaceFeatureExtractor.js
+│   │   │   │   │   │   ├── TinyFaceFeatureExtractor.js.map
+│   │   │   │   │   │   ├── types.d.ts
+│   │   │   │   │   │   ├── types.js
+│   │   │   │   │   │   └── types.js.map
+│   │   │   │   │   ├── faceLandmarkNet
+│   │   │   │   │   │   ├── FaceLandmark68NetBase.d.ts
+│   │   │   │   │   │   ├── FaceLandmark68NetBase.js
+│   │   │   │   │   │   ├── FaceLandmark68NetBase.js.map
+│   │   │   │   │   │   ├── FaceLandmark68Net.d.ts
+│   │   │   │   │   │   ├── FaceLandmark68Net.js
+│   │   │   │   │   │   ├── FaceLandmark68Net.js.map
+│   │   │   │   │   │   ├── FaceLandmark68TinyNet.d.ts
+│   │   │   │   │   │   ├── FaceLandmark68TinyNet.js
+│   │   │   │   │   │   ├── FaceLandmark68TinyNet.js.map
+│   │   │   │   │   │   ├── index.d.ts
+│   │   │   │   │   │   ├── index.js
+│   │   │   │   │   │   └── index.js.map
+│   │   │   │   │   ├── faceProcessor
+│   │   │   │   │   │   ├── extractParams.d.ts
+│   │   │   │   │   │   ├── extractParamsFromWeigthMap.d.ts
+│   │   │   │   │   │   ├── extractParamsFromWeigthMap.js
+│   │   │   │   │   │   ├── extractParamsFromWeigthMap.js.map
+│   │   │   │   │   │   ├── extractParams.js
+│   │   │   │   │   │   ├── extractParams.js.map
+│   │   │   │   │   │   ├── FaceProcessor.d.ts
+│   │   │   │   │   │   ├── FaceProcessor.js
+│   │   │   │   │   │   ├── FaceProcessor.js.map
+│   │   │   │   │   │   ├── index.d.ts
+│   │   │   │   │   │   ├── index.js
+│   │   │   │   │   │   ├── index.js.map
+│   │   │   │   │   │   ├── types.d.ts
+│   │   │   │   │   │   ├── types.js
+│   │   │   │   │   │   ├── types.js.map
+│   │   │   │   │   │   ├── util.d.ts
+│   │   │   │   │   │   ├── util.js
+│   │   │   │   │   │   └── util.js.map
+│   │   │   │   │   ├── faceRecognitionNet
+│   │   │   │   │   │   ├── convLayer.d.ts
+│   │   │   │   │   │   ├── convLayer.js
+│   │   │   │   │   │   ├── convLayer.js.map
+│   │   │   │   │   │   ├── extractParams.d.ts
+│   │   │   │   │   │   ├── extractParamsFromWeigthMap.d.ts
+│   │   │   │   │   │   ├── extractParamsFromWeigthMap.js
+│   │   │   │   │   │   ├── extractParamsFromWeigthMap.js.map
+│   │   │   │   │   │   ├── extractParams.js
+│   │   │   │   │   │   ├── extractParams.js.map
+│   │   │   │   │   │   ├── FaceRecognitionNet.d.ts
+│   │   │   │   │   │   ├── FaceRecognitionNet.js
+│   │   │   │   │   │   ├── FaceRecognitionNet.js.map
+│   │   │   │   │   │   ├── index.d.ts
+│   │   │   │   │   │   ├── index.js
+│   │   │   │   │   │   ├── index.js.map
+│   │   │   │   │   │   ├── residualLayer.d.ts
+│   │   │   │   │   │   ├── residualLayer.js
+│   │   │   │   │   │   ├── residualLayer.js.map
+│   │   │   │   │   │   ├── scaleLayer.d.ts
+│   │   │   │   │   │   ├── scaleLayer.js
+│   │   │   │   │   │   ├── scaleLayer.js.map
+│   │   │   │   │   │   ├── types.d.ts
+│   │   │   │   │   │   ├── types.js
+│   │   │   │   │   │   └── types.js.map
+│   │   │   │   │   ├── factories
+│   │   │   │   │   │   ├── index.d.ts
+│   │   │   │   │   │   ├── index.js
+│   │   │   │   │   │   ├── index.js.map
+│   │   │   │   │   │   ├── WithAge.d.ts
+│   │   │   │   │   │   ├── WithAge.js
+│   │   │   │   │   │   ├── WithAge.js.map
+│   │   │   │   │   │   ├── WithFaceDescriptor.d.ts
+│   │   │   │   │   │   ├── WithFaceDescriptor.js
+│   │   │   │   │   │   ├── WithFaceDescriptor.js.map
+│   │   │   │   │   │   ├── WithFaceDetection.d.ts
+│   │   │   │   │   │   ├── WithFaceDetection.js
+│   │   │   │   │   │   ├── WithFaceDetection.js.map
+│   │   │   │   │   │   ├── WithFaceExpressions.d.ts
+│   │   │   │   │   │   ├── WithFaceExpressions.js
+│   │   │   │   │   │   ├── WithFaceExpressions.js.map
+│   │   │   │   │   │   ├── WithFaceLandmarks.d.ts
+│   │   │   │   │   │   ├── WithFaceLandmarks.js
+│   │   │   │   │   │   ├── WithFaceLandmarks.js.map
+│   │   │   │   │   │   ├── WithGender.d.ts
+│   │   │   │   │   │   ├── WithGender.js
+│   │   │   │   │   │   └── WithGender.js.map
+│   │   │   │   │   ├── globalApi
+│   │   │   │   │   │   ├── allFaces.d.ts
+│   │   │   │   │   │   ├── allFaces.js
+│   │   │   │   │   │   ├── allFaces.js.map
+│   │   │   │   │   │   ├── ComposableTask.d.ts
+│   │   │   │   │   │   ├── ComposableTask.js
+│   │   │   │   │   │   ├── ComposableTask.js.map
+│   │   │   │   │   │   ├── ComputeFaceDescriptorsTasks.d.ts
+│   │   │   │   │   │   ├── ComputeFaceDescriptorsTasks.js
+│   │   │   │   │   │   ├── ComputeFaceDescriptorsTasks.js.map
+│   │   │   │   │   │   ├── DetectFaceLandmarksTasks.d.ts
+│   │   │   │   │   │   ├── DetectFaceLandmarksTasks.js
+│   │   │   │   │   │   ├── DetectFaceLandmarksTasks.js.map
+│   │   │   │   │   │   ├── detectFaces.d.ts
+│   │   │   │   │   │   ├── detectFaces.js
+│   │   │   │   │   │   ├── detectFaces.js.map
+│   │   │   │   │   │   ├── DetectFacesTasks.d.ts
+│   │   │   │   │   │   ├── DetectFacesTasks.js
+│   │   │   │   │   │   ├── DetectFacesTasks.js.map
+│   │   │   │   │   │   ├── extractFacesAndComputeResults.d.ts
+│   │   │   │   │   │   ├── extractFacesAndComputeResults.js
+│   │   │   │   │   │   ├── extractFacesAndComputeResults.js.map
+│   │   │   │   │   │   ├── FaceMatcher.d.ts
+│   │   │   │   │   │   ├── FaceMatcher.js
+│   │   │   │   │   │   ├── FaceMatcher.js.map
+│   │   │   │   │   │   ├── index.d.ts
+│   │   │   │   │   │   ├── index.js
+│   │   │   │   │   │   ├── index.js.map
+│   │   │   │   │   │   ├── nets.d.ts
+│   │   │   │   │   │   ├── nets.js
+│   │   │   │   │   │   ├── nets.js.map
+│   │   │   │   │   │   ├── PredictAgeAndGenderTask.d.ts
+│   │   │   │   │   │   ├── PredictAgeAndGenderTask.js
+│   │   │   │   │   │   ├── PredictAgeAndGenderTask.js.map
+│   │   │   │   │   │   ├── PredictFaceExpressionsTask.d.ts
+│   │   │   │   │   │   ├── PredictFaceExpressionsTask.js
+│   │   │   │   │   │   ├── PredictFaceExpressionsTask.js.map
+│   │   │   │   │   │   ├── types.d.ts
+│   │   │   │   │   │   ├── types.js
+│   │   │   │   │   │   └── types.js.map
+│   │   │   │   │   ├── index.d.ts
+│   │   │   │   │   ├── index.js
+│   │   │   │   │   ├── index.js.map
+│   │   │   │   │   ├── mtcnn
+│   │   │   │   │   │   ├── bgrToRgbTensor.d.ts
+│   │   │   │   │   │   ├── bgrToRgbTensor.js
+│   │   │   │   │   │   ├── bgrToRgbTensor.js.map
+│   │   │   │   │   │   ├── config.d.ts
+│   │   │   │   │   │   ├── config.js
+│   │   │   │   │   │   ├── config.js.map
+│   │   │   │   │   │   ├── extractImagePatches.d.ts
+│   │   │   │   │   │   ├── extractImagePatches.js
+│   │   │   │   │   │   ├── extractImagePatches.js.map
+│   │   │   │   │   │   ├── extractParams.d.ts
+│   │   │   │   │   │   ├── extractParamsFromWeigthMap.d.ts
+│   │   │   │   │   │   ├── extractParamsFromWeigthMap.js
+│   │   │   │   │   │   ├── extractParamsFromWeigthMap.js.map
+│   │   │   │   │   │   ├── extractParams.js
+│   │   │   │   │   │   ├── extractParams.js.map
+│   │   │   │   │   │   ├── getSizesForScale.d.ts
+│   │   │   │   │   │   ├── getSizesForScale.js
+│   │   │   │   │   │   ├── getSizesForScale.js.map
+│   │   │   │   │   │   ├── index.d.ts
+│   │   │   │   │   │   ├── index.js
+│   │   │   │   │   │   ├── index.js.map
+│   │   │   │   │   │   ├── MtcnnBox.d.ts
+│   │   │   │   │   │   ├── MtcnnBox.js
+│   │   │   │   │   │   ├── MtcnnBox.js.map
+│   │   │   │   │   │   ├── Mtcnn.d.ts
+│   │   │   │   │   │   ├── Mtcnn.js
+│   │   │   │   │   │   ├── Mtcnn.js.map
+│   │   │   │   │   │   ├── MtcnnOptions.d.ts
+│   │   │   │   │   │   ├── MtcnnOptions.js
+│   │   │   │   │   │   ├── MtcnnOptions.js.map
+│   │   │   │   │   │   ├── normalize.d.ts
+│   │   │   │   │   │   ├── normalize.js
+│   │   │   │   │   │   ├── normalize.js.map
+│   │   │   │   │   │   ├── ONet.d.ts
+│   │   │   │   │   │   ├── ONet.js
+│   │   │   │   │   │   ├── ONet.js.map
+│   │   │   │   │   │   ├── PNet.d.ts
+│   │   │   │   │   │   ├── PNet.js
+│   │   │   │   │   │   ├── PNet.js.map
+│   │   │   │   │   │   ├── prelu.d.ts
+│   │   │   │   │   │   ├── prelu.js
+│   │   │   │   │   │   ├── prelu.js.map
+│   │   │   │   │   │   ├── pyramidDown.d.ts
+│   │   │   │   │   │   ├── pyramidDown.js
+│   │   │   │   │   │   ├── pyramidDown.js.map
+│   │   │   │   │   │   ├── RNet.d.ts
+│   │   │   │   │   │   ├── RNet.js
+│   │   │   │   │   │   ├── RNet.js.map
+│   │   │   │   │   │   ├── sharedLayers.d.ts
+│   │   │   │   │   │   ├── sharedLayers.js
+│   │   │   │   │   │   ├── sharedLayers.js.map
+│   │   │   │   │   │   ├── stage1.d.ts
+│   │   │   │   │   │   ├── stage1.js
+│   │   │   │   │   │   ├── stage1.js.map
+│   │   │   │   │   │   ├── stage2.d.ts
+│   │   │   │   │   │   ├── stage2.js
+│   │   │   │   │   │   ├── stage2.js.map
+│   │   │   │   │   │   ├── stage3.d.ts
+│   │   │   │   │   │   ├── stage3.js
+│   │   │   │   │   │   ├── stage3.js.map
+│   │   │   │   │   │   ├── types.d.ts
+│   │   │   │   │   │   ├── types.js
+│   │   │   │   │   │   └── types.js.map
+│   │   │   │   │   ├── NeuralNetwork.d.ts
+│   │   │   │   │   ├── NeuralNetwork.js
+│   │   │   │   │   ├── NeuralNetwork.js.map
+│   │   │   │   │   ├── ops
+│   │   │   │   │   │   ├── index.d.ts
+│   │   │   │   │   │   ├── index.js
+│   │   │   │   │   │   ├── index.js.map
+│   │   │   │   │   │   ├── iou.d.ts
+│   │   │   │   │   │   ├── iou.js
+│   │   │   │   │   │   ├── iou.js.map
+│   │   │   │   │   │   ├── minBbox.d.ts
+│   │   │   │   │   │   ├── minBbox.js
+│   │   │   │   │   │   ├── minBbox.js.map
+│   │   │   │   │   │   ├── nonMaxSuppression.d.ts
+│   │   │   │   │   │   ├── nonMaxSuppression.js
+│   │   │   │   │   │   ├── nonMaxSuppression.js.map
+│   │   │   │   │   │   ├── normalize.d.ts
+│   │   │   │   │   │   ├── normalize.js
+│   │   │   │   │   │   ├── normalize.js.map
+│   │   │   │   │   │   ├── padToSquare.d.ts
+│   │   │   │   │   │   ├── padToSquare.js
+│   │   │   │   │   │   ├── padToSquare.js.map
+│   │   │   │   │   │   ├── shuffleArray.d.ts
+│   │   │   │   │   │   ├── shuffleArray.js
+│   │   │   │   │   │   └── shuffleArray.js.map
+│   │   │   │   │   ├── resizeResults.d.ts
+│   │   │   │   │   ├── resizeResults.js
+│   │   │   │   │   ├── resizeResults.js.map
+│   │   │   │   │   ├── ssdMobilenetv1
+│   │   │   │   │   │   ├── boxPredictionLayer.d.ts
+│   │   │   │   │   │   ├── boxPredictionLayer.js
+│   │   │   │   │   │   ├── boxPredictionLayer.js.map
+│   │   │   │   │   │   ├── extractParams.d.ts
+│   │   │   │   │   │   ├── extractParamsFromWeigthMap.d.ts
+│   │   │   │   │   │   ├── extractParamsFromWeigthMap.js
+│   │   │   │   │   │   ├── extractParamsFromWeigthMap.js.map
+│   │   │   │   │   │   ├── extractParams.js
+│   │   │   │   │   │   ├── extractParams.js.map
+│   │   │   │   │   │   ├── index.d.ts
+│   │   │   │   │   │   ├── index.js
+│   │   │   │   │   │   ├── index.js.map
+│   │   │   │   │   │   ├── mobileNetV1.d.ts
+│   │   │   │   │   │   ├── mobileNetV1.js
+│   │   │   │   │   │   ├── mobileNetV1.js.map
+│   │   │   │   │   │   ├── nonMaxSuppression.d.ts
+│   │   │   │   │   │   ├── nonMaxSuppression.js
+│   │   │   │   │   │   ├── nonMaxSuppression.js.map
+│   │   │   │   │   │   ├── outputLayer.d.ts
+│   │   │   │   │   │   ├── outputLayer.js
+│   │   │   │   │   │   ├── outputLayer.js.map
+│   │   │   │   │   │   ├── pointwiseConvLayer.d.ts
+│   │   │   │   │   │   ├── pointwiseConvLayer.js
+│   │   │   │   │   │   ├── pointwiseConvLayer.js.map
+│   │   │   │   │   │   ├── predictionLayer.d.ts
+│   │   │   │   │   │   ├── predictionLayer.js
+│   │   │   │   │   │   ├── predictionLayer.js.map
+│   │   │   │   │   │   ├── SsdMobilenetv1.d.ts
+│   │   │   │   │   │   ├── SsdMobilenetv1.js
+│   │   │   │   │   │   ├── SsdMobilenetv1.js.map
+│   │   │   │   │   │   ├── SsdMobilenetv1Options.d.ts
+│   │   │   │   │   │   ├── SsdMobilenetv1Options.js
+│   │   │   │   │   │   ├── SsdMobilenetv1Options.js.map
+│   │   │   │   │   │   ├── types.d.ts
+│   │   │   │   │   │   ├── types.js
+│   │   │   │   │   │   └── types.js.map
+│   │   │   │   │   ├── tinyFaceDetector
+│   │   │   │   │   │   ├── const.d.ts
+│   │   │   │   │   │   ├── const.js
+│   │   │   │   │   │   ├── const.js.map
+│   │   │   │   │   │   ├── index.d.ts
+│   │   │   │   │   │   ├── index.js
+│   │   │   │   │   │   ├── index.js.map
+│   │   │   │   │   │   ├── TinyFaceDetector.d.ts
+│   │   │   │   │   │   ├── TinyFaceDetector.js
+│   │   │   │   │   │   ├── TinyFaceDetector.js.map
+│   │   │   │   │   │   ├── TinyFaceDetectorOptions.d.ts
+│   │   │   │   │   │   ├── TinyFaceDetectorOptions.js
+│   │   │   │   │   │   └── TinyFaceDetectorOptions.js.map
+│   │   │   │   │   ├── tinyYolov2
+│   │   │   │   │   │   ├── config.d.ts
+│   │   │   │   │   │   ├── config.js
+│   │   │   │   │   │   ├── config.js.map
+│   │   │   │   │   │   ├── const.d.ts
+│   │   │   │   │   │   ├── const.js
+│   │   │   │   │   │   ├── const.js.map
+│   │   │   │   │   │   ├── convWithBatchNorm.d.ts
+│   │   │   │   │   │   ├── convWithBatchNorm.js
+│   │   │   │   │   │   ├── convWithBatchNorm.js.map
+│   │   │   │   │   │   ├── depthwiseSeparableConv.d.ts
+│   │   │   │   │   │   ├── depthwiseSeparableConv.js
+│   │   │   │   │   │   ├── depthwiseSeparableConv.js.map
+│   │   │   │   │   │   ├── extractParams.d.ts
+│   │   │   │   │   │   ├── extractParamsFromWeigthMap.d.ts
+│   │   │   │   │   │   ├── extractParamsFromWeigthMap.js
+│   │   │   │   │   │   ├── extractParamsFromWeigthMap.js.map
+│   │   │   │   │   │   ├── extractParams.js
+│   │   │   │   │   │   ├── extractParams.js.map
+│   │   │   │   │   │   ├── index.d.ts
+│   │   │   │   │   │   ├── index.js
+│   │   │   │   │   │   ├── index.js.map
+│   │   │   │   │   │   ├── leaky.d.ts
+│   │   │   │   │   │   ├── leaky.js
+│   │   │   │   │   │   ├── leaky.js.map
+│   │   │   │   │   │   ├── TinyYolov2Base.d.ts
+│   │   │   │   │   │   ├── TinyYolov2Base.js
+│   │   │   │   │   │   ├── TinyYolov2Base.js.map
+│   │   │   │   │   │   ├── TinyYolov2.d.ts
+│   │   │   │   │   │   ├── TinyYolov2.js
+│   │   │   │   │   │   ├── TinyYolov2.js.map
+│   │   │   │   │   │   ├── TinyYolov2Options.d.ts
+│   │   │   │   │   │   ├── TinyYolov2Options.js
+│   │   │   │   │   │   ├── TinyYolov2Options.js.map
+│   │   │   │   │   │   ├── types.d.ts
+│   │   │   │   │   │   ├── types.js
+│   │   │   │   │   │   └── types.js.map
+│   │   │   │   │   ├── utils
+│   │   │   │   │   │   ├── index.d.ts
+│   │   │   │   │   │   ├── index.js
+│   │   │   │   │   │   └── index.js.map
+│   │   │   │   │   └── xception
+│   │   │   │   │       ├── extractParams.d.ts
+│   │   │   │   │       ├── extractParamsFromWeigthMap.d.ts
+│   │   │   │   │       ├── extractParamsFromWeigthMap.js
+│   │   │   │   │       ├── extractParamsFromWeigthMap.js.map
+│   │   │   │   │       ├── extractParams.js
+│   │   │   │   │       ├── extractParams.js.map
+│   │   │   │   │       ├── index.d.ts
+│   │   │   │   │       ├── index.js
+│   │   │   │   │       ├── index.js.map
+│   │   │   │   │       ├── TinyXception.d.ts
+│   │   │   │   │       ├── TinyXception.js
+│   │   │   │   │       ├── TinyXception.js.map
+│   │   │   │   │       ├── types.d.ts
+│   │   │   │   │       ├── types.js
+│   │   │   │   │       └── types.js.map
+│   │   │   │   └── es6
+│   │   │   │       ├── ageGenderNet
+│   │   │   │       │   ├── AgeGenderNet.d.ts
+│   │   │   │       │   ├── AgeGenderNet.js
+│   │   │   │       │   ├── AgeGenderNet.js.map
+│   │   │   │       │   ├── extractParams.d.ts
+│   │   │   │       │   ├── extractParamsFromWeigthMap.d.ts
+│   │   │   │       │   ├── extractParamsFromWeigthMap.js
+│   │   │   │       │   ├── extractParamsFromWeigthMap.js.map
+│   │   │   │       │   ├── extractParams.js
+│   │   │   │       │   ├── extractParams.js.map
+│   │   │   │       │   ├── index.d.ts
+│   │   │   │       │   ├── index.js
+│   │   │   │       │   ├── index.js.map
+│   │   │   │       │   ├── types.d.ts
+│   │   │   │       │   ├── types.js
+│   │   │   │       │   └── types.js.map
+│   │   │   │       ├── classes
+│   │   │   │       │   ├── BoundingBox.d.ts
+│   │   │   │       │   ├── BoundingBox.js
+│   │   │   │       │   ├── BoundingBox.js.map
+│   │   │   │       │   ├── Box.d.ts
+│   │   │   │       │   ├── Box.js
+│   │   │   │       │   ├── Box.js.map
+│   │   │   │       │   ├── Dimensions.d.ts
+│   │   │   │       │   ├── Dimensions.js
+│   │   │   │       │   ├── Dimensions.js.map
+│   │   │   │       │   ├── FaceDetection.d.ts
+│   │   │   │       │   ├── FaceDetection.js
+│   │   │   │       │   ├── FaceDetection.js.map
+│   │   │   │       │   ├── FaceLandmarks5.d.ts
+│   │   │   │       │   ├── FaceLandmarks5.js
+│   │   │   │       │   ├── FaceLandmarks5.js.map
+│   │   │   │       │   ├── FaceLandmarks68.d.ts
+│   │   │   │       │   ├── FaceLandmarks68.js
+│   │   │   │       │   ├── FaceLandmarks68.js.map
+│   │   │   │       │   ├── FaceLandmarks.d.ts
+│   │   │   │       │   ├── FaceLandmarks.js
+│   │   │   │       │   ├── FaceLandmarks.js.map
+│   │   │   │       │   ├── FaceMatch.d.ts
+│   │   │   │       │   ├── FaceMatch.js
+│   │   │   │       │   ├── FaceMatch.js.map
+│   │   │   │       │   ├── index.d.ts
+│   │   │   │       │   ├── index.js
+│   │   │   │       │   ├── index.js.map
+│   │   │   │       │   ├── LabeledBox.d.ts
+│   │   │   │       │   ├── LabeledBox.js
+│   │   │   │       │   ├── LabeledBox.js.map
+│   │   │   │       │   ├── LabeledFaceDescriptors.d.ts
+│   │   │   │       │   ├── LabeledFaceDescriptors.js
+│   │   │   │       │   ├── LabeledFaceDescriptors.js.map
+│   │   │   │       │   ├── ObjectDetection.d.ts
+│   │   │   │       │   ├── ObjectDetection.js
+│   │   │   │       │   ├── ObjectDetection.js.map
+│   │   │   │       │   ├── Point.d.ts
+│   │   │   │       │   ├── Point.js
+│   │   │   │       │   ├── Point.js.map
+│   │   │   │       │   ├── PredictedBox.d.ts
+│   │   │   │       │   ├── PredictedBox.js
+│   │   │   │       │   ├── PredictedBox.js.map
+│   │   │   │       │   ├── Rect.d.ts
+│   │   │   │       │   ├── Rect.js
+│   │   │   │       │   └── Rect.js.map
+│   │   │   │       ├── common
+│   │   │   │       │   ├── convLayer.d.ts
+│   │   │   │       │   ├── convLayer.js
+│   │   │   │       │   ├── convLayer.js.map
+│   │   │   │       │   ├── depthwiseSeparableConv.d.ts
+│   │   │   │       │   ├── depthwiseSeparableConv.js
+│   │   │   │       │   ├── depthwiseSeparableConv.js.map
+│   │   │   │       │   ├── disposeUnusedWeightTensors.d.ts
+│   │   │   │       │   ├── disposeUnusedWeightTensors.js
+│   │   │   │       │   ├── disposeUnusedWeightTensors.js.map
+│   │   │   │       │   ├── extractConvParamsFactory.d.ts
+│   │   │   │       │   ├── extractConvParamsFactory.js
+│   │   │   │       │   ├── extractConvParamsFactory.js.map
+│   │   │   │       │   ├── extractFCParamsFactory.d.ts
+│   │   │   │       │   ├── extractFCParamsFactory.js
+│   │   │   │       │   ├── extractFCParamsFactory.js.map
+│   │   │   │       │   ├── extractSeparableConvParamsFactory.d.ts
+│   │   │   │       │   ├── extractSeparableConvParamsFactory.js
+│   │   │   │       │   ├── extractSeparableConvParamsFactory.js.map
+│   │   │   │       │   ├── extractWeightEntryFactory.d.ts
+│   │   │   │       │   ├── extractWeightEntryFactory.js
+│   │   │   │       │   ├── extractWeightEntryFactory.js.map
+│   │   │   │       │   ├── extractWeightsFactory.d.ts
+│   │   │   │       │   ├── extractWeightsFactory.js
+│   │   │   │       │   ├── extractWeightsFactory.js.map
+│   │   │   │       │   ├── fullyConnectedLayer.d.ts
+│   │   │   │       │   ├── fullyConnectedLayer.js
+│   │   │   │       │   ├── fullyConnectedLayer.js.map
+│   │   │   │       │   ├── getModelUris.d.ts
+│   │   │   │       │   ├── getModelUris.js
+│   │   │   │       │   ├── getModelUris.js.map
+│   │   │   │       │   ├── index.d.ts
+│   │   │   │       │   ├── index.js
+│   │   │   │       │   ├── index.js.map
+│   │   │   │       │   ├── loadConvParamsFactory.d.ts
+│   │   │   │       │   ├── loadConvParamsFactory.js
+│   │   │   │       │   ├── loadConvParamsFactory.js.map
+│   │   │   │       │   ├── types.d.ts
+│   │   │   │       │   ├── types.js
+│   │   │   │       │   └── types.js.map
+│   │   │   │       ├── dom
+│   │   │   │       │   ├── awaitMediaLoaded.d.ts
+│   │   │   │       │   ├── awaitMediaLoaded.js
+│   │   │   │       │   ├── awaitMediaLoaded.js.map
+│   │   │   │       │   ├── bufferToImage.d.ts
+│   │   │   │       │   ├── bufferToImage.js
+│   │   │   │       │   ├── bufferToImage.js.map
+│   │   │   │       │   ├── createCanvas.d.ts
+│   │   │   │       │   ├── createCanvas.js
+│   │   │   │       │   ├── createCanvas.js.map
+│   │   │   │       │   ├── extractFaces.d.ts
+│   │   │   │       │   ├── extractFaces.js
+│   │   │   │       │   ├── extractFaces.js.map
+│   │   │   │       │   ├── extractFaceTensors.d.ts
+│   │   │   │       │   ├── extractFaceTensors.js
+│   │   │   │       │   ├── extractFaceTensors.js.map
+│   │   │   │       │   ├── fetchImage.d.ts
+│   │   │   │       │   ├── fetchImage.js
+│   │   │   │       │   ├── fetchImage.js.map
+│   │   │   │       │   ├── fetchJson.d.ts
+│   │   │   │       │   ├── fetchJson.js
+│   │   │   │       │   ├── fetchJson.js.map
+│   │   │   │       │   ├── fetchNetWeights.d.ts
+│   │   │   │       │   ├── fetchNetWeights.js
+│   │   │   │       │   ├── fetchNetWeights.js.map
+│   │   │   │       │   ├── fetchOrThrow.d.ts
+│   │   │   │       │   ├── fetchOrThrow.js
+│   │   │   │       │   ├── fetchOrThrow.js.map
+│   │   │   │       │   ├── getContext2dOrThrow.d.ts
+│   │   │   │       │   ├── getContext2dOrThrow.js
+│   │   │   │       │   ├── getContext2dOrThrow.js.map
+│   │   │   │       │   ├── getMediaDimensions.d.ts
+│   │   │   │       │   ├── getMediaDimensions.js
+│   │   │   │       │   ├── getMediaDimensions.js.map
+│   │   │   │       │   ├── imageTensorToCanvas.d.ts
+│   │   │   │       │   ├── imageTensorToCanvas.js
+│   │   │   │       │   ├── imageTensorToCanvas.js.map
+│   │   │   │       │   ├── imageToSquare.d.ts
+│   │   │   │       │   ├── imageToSquare.js
+│   │   │   │       │   ├── imageToSquare.js.map
+│   │   │   │       │   ├── index.d.ts
+│   │   │   │       │   ├── index.js
+│   │   │   │       │   ├── index.js.map
+│   │   │   │       │   ├── isMediaElement.d.ts
+│   │   │   │       │   ├── isMediaElement.js
+│   │   │   │       │   ├── isMediaElement.js.map
+│   │   │   │       │   ├── isMediaLoaded.d.ts
+│   │   │   │       │   ├── isMediaLoaded.js
+│   │   │   │       │   ├── isMediaLoaded.js.map
+│   │   │   │       │   ├── loadWeightMap.d.ts
+│   │   │   │       │   ├── loadWeightMap.js
+│   │   │   │       │   ├── loadWeightMap.js.map
+│   │   │   │       │   ├── matchDimensions.d.ts
+│   │   │   │       │   ├── matchDimensions.js
+│   │   │   │       │   ├── matchDimensions.js.map
+│   │   │   │       │   ├── NetInput.d.ts
+│   │   │   │       │   ├── NetInput.js
+│   │   │   │       │   ├── NetInput.js.map
+│   │   │   │       │   ├── resolveInput.d.ts
+│   │   │   │       │   ├── resolveInput.js
+│   │   │   │       │   ├── resolveInput.js.map
+│   │   │   │       │   ├── toNetInput.d.ts
+│   │   │   │       │   ├── toNetInput.js
+│   │   │   │       │   ├── toNetInput.js.map
+│   │   │   │       │   ├── types.d.ts
+│   │   │   │       │   ├── types.js
+│   │   │   │       │   └── types.js.map
+│   │   │   │       ├── draw
+│   │   │   │       │   ├── DrawBox.d.ts
+│   │   │   │       │   ├── DrawBox.js
+│   │   │   │       │   ├── DrawBox.js.map
+│   │   │   │       │   ├── drawContour.d.ts
+│   │   │   │       │   ├── drawContour.js
+│   │   │   │       │   ├── drawContour.js.map
+│   │   │   │       │   ├── drawDetections.d.ts
+│   │   │   │       │   ├── drawDetections.js
+│   │   │   │       │   ├── drawDetections.js.map
+│   │   │   │       │   ├── drawFaceExpressions.d.ts
+│   │   │   │       │   ├── drawFaceExpressions.js
+│   │   │   │       │   ├── drawFaceExpressions.js.map
+│   │   │   │       │   ├── DrawFaceLandmarks.d.ts
+│   │   │   │       │   ├── DrawFaceLandmarks.js
+│   │   │   │       │   ├── DrawFaceLandmarks.js.map
+│   │   │   │       │   ├── DrawTextField.d.ts
+│   │   │   │       │   ├── DrawTextField.js
+│   │   │   │       │   ├── DrawTextField.js.map
+│   │   │   │       │   ├── index.d.ts
+│   │   │   │       │   ├── index.js
+│   │   │   │       │   └── index.js.map
+│   │   │   │       ├── env
+│   │   │   │       │   ├── createBrowserEnv.d.ts
+│   │   │   │       │   ├── createBrowserEnv.js
+│   │   │   │       │   ├── createBrowserEnv.js.map
+│   │   │   │       │   ├── createFileSystem.d.ts
+│   │   │   │       │   ├── createFileSystem.js
+│   │   │   │       │   ├── createFileSystem.js.map
+│   │   │   │       │   ├── createNodejsEnv.d.ts
+│   │   │   │       │   ├── createNodejsEnv.js
+│   │   │   │       │   ├── createNodejsEnv.js.map
+│   │   │   │       │   ├── index.d.ts
+│   │   │   │       │   ├── index.js
+│   │   │   │       │   ├── index.js.map
+│   │   │   │       │   ├── isBrowser.d.ts
+│   │   │   │       │   ├── isBrowser.js
+│   │   │   │       │   ├── isBrowser.js.map
+│   │   │   │       │   ├── isNodejs.d.ts
+│   │   │   │       │   ├── isNodejs.js
+│   │   │   │       │   ├── isNodejs.js.map
+│   │   │   │       │   ├── types.d.ts
+│   │   │   │       │   ├── types.js
+│   │   │   │       │   └── types.js.map
+│   │   │   │       ├── euclideanDistance.d.ts
+│   │   │   │       ├── euclideanDistance.js
+│   │   │   │       ├── euclideanDistance.js.map
+│   │   │   │       ├── faceExpressionNet
+│   │   │   │       │   ├── FaceExpressionNet.d.ts
+│   │   │   │       │   ├── FaceExpressionNet.js
+│   │   │   │       │   ├── FaceExpressionNet.js.map
+│   │   │   │       │   ├── FaceExpressions.d.ts
+│   │   │   │       │   ├── FaceExpressions.js
+│   │   │   │       │   ├── FaceExpressions.js.map
+│   │   │   │       │   ├── index.d.ts
+│   │   │   │       │   ├── index.js
+│   │   │   │       │   └── index.js.map
+│   │   │   │       ├── faceFeatureExtractor
+│   │   │   │       │   ├── denseBlock.d.ts
+│   │   │   │       │   ├── denseBlock.js
+│   │   │   │       │   ├── denseBlock.js.map
+│   │   │   │       │   ├── extractorsFactory.d.ts
+│   │   │   │       │   ├── extractorsFactory.js
+│   │   │   │       │   ├── extractorsFactory.js.map
+│   │   │   │       │   ├── extractParams.d.ts
+│   │   │   │       │   ├── extractParamsFromWeigthMap.d.ts
+│   │   │   │       │   ├── extractParamsFromWeigthMap.js
+│   │   │   │       │   ├── extractParamsFromWeigthMap.js.map
+│   │   │   │       │   ├── extractParamsFromWeigthMapTiny.d.ts
+│   │   │   │       │   ├── extractParamsFromWeigthMapTiny.js
+│   │   │   │       │   ├── extractParamsFromWeigthMapTiny.js.map
+│   │   │   │       │   ├── extractParams.js
+│   │   │   │       │   ├── extractParams.js.map
+│   │   │   │       │   ├── extractParamsTiny.d.ts
+│   │   │   │       │   ├── extractParamsTiny.js
+│   │   │   │       │   ├── extractParamsTiny.js.map
+│   │   │   │       │   ├── FaceFeatureExtractor.d.ts
+│   │   │   │       │   ├── FaceFeatureExtractor.js
+│   │   │   │       │   ├── FaceFeatureExtractor.js.map
+│   │   │   │       │   ├── index.d.ts
+│   │   │   │       │   ├── index.js
+│   │   │   │       │   ├── index.js.map
+│   │   │   │       │   ├── loadParamsFactory.d.ts
+│   │   │   │       │   ├── loadParamsFactory.js
+│   │   │   │       │   ├── loadParamsFactory.js.map
+│   │   │   │       │   ├── TinyFaceFeatureExtractor.d.ts
+│   │   │   │       │   ├── TinyFaceFeatureExtractor.js
+│   │   │   │       │   ├── TinyFaceFeatureExtractor.js.map
+│   │   │   │       │   ├── types.d.ts
+│   │   │   │       │   ├── types.js
+│   │   │   │       │   └── types.js.map
+│   │   │   │       ├── faceLandmarkNet
+│   │   │   │       │   ├── FaceLandmark68NetBase.d.ts
+│   │   │   │       │   ├── FaceLandmark68NetBase.js
+│   │   │   │       │   ├── FaceLandmark68NetBase.js.map
+│   │   │   │       │   ├── FaceLandmark68Net.d.ts
+│   │   │   │       │   ├── FaceLandmark68Net.js
+│   │   │   │       │   ├── FaceLandmark68Net.js.map
+│   │   │   │       │   ├── FaceLandmark68TinyNet.d.ts
+│   │   │   │       │   ├── FaceLandmark68TinyNet.js
+│   │   │   │       │   ├── FaceLandmark68TinyNet.js.map
+│   │   │   │       │   ├── index.d.ts
+│   │   │   │       │   ├── index.js
+│   │   │   │       │   └── index.js.map
+│   │   │   │       ├── faceProcessor
+│   │   │   │       │   ├── extractParams.d.ts
+│   │   │   │       │   ├── extractParamsFromWeigthMap.d.ts
+│   │   │   │       │   ├── extractParamsFromWeigthMap.js
+│   │   │   │       │   ├── extractParamsFromWeigthMap.js.map
+│   │   │   │       │   ├── extractParams.js
+│   │   │   │       │   ├── extractParams.js.map
+│   │   │   │       │   ├── FaceProcessor.d.ts
+│   │   │   │       │   ├── FaceProcessor.js
+│   │   │   │       │   ├── FaceProcessor.js.map
+│   │   │   │       │   ├── index.d.ts
+│   │   │   │       │   ├── index.js
+│   │   │   │       │   ├── index.js.map
+│   │   │   │       │   ├── types.d.ts
+│   │   │   │       │   ├── types.js
+│   │   │   │       │   ├── types.js.map
+│   │   │   │       │   ├── util.d.ts
+│   │   │   │       │   ├── util.js
+│   │   │   │       │   └── util.js.map
+│   │   │   │       ├── faceRecognitionNet
+│   │   │   │       │   ├── convLayer.d.ts
+│   │   │   │       │   ├── convLayer.js
+│   │   │   │       │   ├── convLayer.js.map
+│   │   │   │       │   ├── extractParams.d.ts
+│   │   │   │       │   ├── extractParamsFromWeigthMap.d.ts
+│   │   │   │       │   ├── extractParamsFromWeigthMap.js
+│   │   │   │       │   ├── extractParamsFromWeigthMap.js.map
+│   │   │   │       │   ├── extractParams.js
+│   │   │   │       │   ├── extractParams.js.map
+│   │   │   │       │   ├── FaceRecognitionNet.d.ts
+│   │   │   │       │   ├── FaceRecognitionNet.js
+│   │   │   │       │   ├── FaceRecognitionNet.js.map
+│   │   │   │       │   ├── index.d.ts
+│   │   │   │       │   ├── index.js
+│   │   │   │       │   ├── index.js.map
+│   │   │   │       │   ├── residualLayer.d.ts
+│   │   │   │       │   ├── residualLayer.js
+│   │   │   │       │   ├── residualLayer.js.map
+│   │   │   │       │   ├── scaleLayer.d.ts
+│   │   │   │       │   ├── scaleLayer.js
+│   │   │   │       │   ├── scaleLayer.js.map
+│   │   │   │       │   ├── types.d.ts
+│   │   │   │       │   ├── types.js
+│   │   │   │       │   └── types.js.map
+│   │   │   │       ├── factories
+│   │   │   │       │   ├── index.d.ts
+│   │   │   │       │   ├── index.js
+│   │   │   │       │   ├── index.js.map
+│   │   │   │       │   ├── WithAge.d.ts
+│   │   │   │       │   ├── WithAge.js
+│   │   │   │       │   ├── WithAge.js.map
+│   │   │   │       │   ├── WithFaceDescriptor.d.ts
+│   │   │   │       │   ├── WithFaceDescriptor.js
+│   │   │   │       │   ├── WithFaceDescriptor.js.map
+│   │   │   │       │   ├── WithFaceDetection.d.ts
+│   │   │   │       │   ├── WithFaceDetection.js
+│   │   │   │       │   ├── WithFaceDetection.js.map
+│   │   │   │       │   ├── WithFaceExpressions.d.ts
+│   │   │   │       │   ├── WithFaceExpressions.js
+│   │   │   │       │   ├── WithFaceExpressions.js.map
+│   │   │   │       │   ├── WithFaceLandmarks.d.ts
+│   │   │   │       │   ├── WithFaceLandmarks.js
+│   │   │   │       │   ├── WithFaceLandmarks.js.map
+│   │   │   │       │   ├── WithGender.d.ts
+│   │   │   │       │   ├── WithGender.js
+│   │   │   │       │   └── WithGender.js.map
+│   │   │   │       ├── globalApi
+│   │   │   │       │   ├── allFaces.d.ts
+│   │   │   │       │   ├── allFaces.js
+│   │   │   │       │   ├── allFaces.js.map
+│   │   │   │       │   ├── ComposableTask.d.ts
+│   │   │   │       │   ├── ComposableTask.js
+│   │   │   │       │   ├── ComposableTask.js.map
+│   │   │   │       │   ├── ComputeFaceDescriptorsTasks.d.ts
+│   │   │   │       │   ├── ComputeFaceDescriptorsTasks.js
+│   │   │   │       │   ├── ComputeFaceDescriptorsTasks.js.map
+│   │   │   │       │   ├── DetectFaceLandmarksTasks.d.ts
+│   │   │   │       │   ├── DetectFaceLandmarksTasks.js
+│   │   │   │       │   ├── DetectFaceLandmarksTasks.js.map
+│   │   │   │       │   ├── detectFaces.d.ts
+│   │   │   │       │   ├── detectFaces.js
+│   │   │   │       │   ├── detectFaces.js.map
+│   │   │   │       │   ├── DetectFacesTasks.d.ts
+│   │   │   │       │   ├── DetectFacesTasks.js
+│   │   │   │       │   ├── DetectFacesTasks.js.map
+│   │   │   │       │   ├── extractFacesAndComputeResults.d.ts
+│   │   │   │       │   ├── extractFacesAndComputeResults.js
+│   │   │   │       │   ├── extractFacesAndComputeResults.js.map
+│   │   │   │       │   ├── FaceMatcher.d.ts
+│   │   │   │       │   ├── FaceMatcher.js
+│   │   │   │       │   ├── FaceMatcher.js.map
+│   │   │   │       │   ├── index.d.ts
+│   │   │   │       │   ├── index.js
+│   │   │   │       │   ├── index.js.map
+│   │   │   │       │   ├── nets.d.ts
+│   │   │   │       │   ├── nets.js
+│   │   │   │       │   ├── nets.js.map
+│   │   │   │       │   ├── PredictAgeAndGenderTask.d.ts
+│   │   │   │       │   ├── PredictAgeAndGenderTask.js
+│   │   │   │       │   ├── PredictAgeAndGenderTask.js.map
+│   │   │   │       │   ├── PredictFaceExpressionsTask.d.ts
+│   │   │   │       │   ├── PredictFaceExpressionsTask.js
+│   │   │   │       │   ├── PredictFaceExpressionsTask.js.map
+│   │   │   │       │   ├── types.d.ts
+│   │   │   │       │   ├── types.js
+│   │   │   │       │   └── types.js.map
+│   │   │   │       ├── index.d.ts
+│   │   │   │       ├── index.js
+│   │   │   │       ├── index.js.map
+│   │   │   │       ├── mtcnn
+│   │   │   │       │   ├── bgrToRgbTensor.d.ts
+│   │   │   │       │   ├── bgrToRgbTensor.js
+│   │   │   │       │   ├── bgrToRgbTensor.js.map
+│   │   │   │       │   ├── config.d.ts
+│   │   │   │       │   ├── config.js
+│   │   │   │       │   ├── config.js.map
+│   │   │   │       │   ├── extractImagePatches.d.ts
+│   │   │   │       │   ├── extractImagePatches.js
+│   │   │   │       │   ├── extractImagePatches.js.map
+│   │   │   │       │   ├── extractParams.d.ts
+│   │   │   │       │   ├── extractParamsFromWeigthMap.d.ts
+│   │   │   │       │   ├── extractParamsFromWeigthMap.js
+│   │   │   │       │   ├── extractParamsFromWeigthMap.js.map
+│   │   │   │       │   ├── extractParams.js
+│   │   │   │       │   ├── extractParams.js.map
+│   │   │   │       │   ├── getSizesForScale.d.ts
+│   │   │   │       │   ├── getSizesForScale.js
+│   │   │   │       │   ├── getSizesForScale.js.map
+│   │   │   │       │   ├── index.d.ts
+│   │   │   │       │   ├── index.js
+│   │   │   │       │   ├── index.js.map
+│   │   │   │       │   ├── MtcnnBox.d.ts
+│   │   │   │       │   ├── MtcnnBox.js
+│   │   │   │       │   ├── MtcnnBox.js.map
+│   │   │   │       │   ├── Mtcnn.d.ts
+│   │   │   │       │   ├── Mtcnn.js
+│   │   │   │       │   ├── Mtcnn.js.map
+│   │   │   │       │   ├── MtcnnOptions.d.ts
+│   │   │   │       │   ├── MtcnnOptions.js
+│   │   │   │       │   ├── MtcnnOptions.js.map
+│   │   │   │       │   ├── normalize.d.ts
+│   │   │   │       │   ├── normalize.js
+│   │   │   │       │   ├── normalize.js.map
+│   │   │   │       │   ├── ONet.d.ts
+│   │   │   │       │   ├── ONet.js
+│   │   │   │       │   ├── ONet.js.map
+│   │   │   │       │   ├── PNet.d.ts
+│   │   │   │       │   ├── PNet.js
+│   │   │   │       │   ├── PNet.js.map
+│   │   │   │       │   ├── prelu.d.ts
+│   │   │   │       │   ├── prelu.js
+│   │   │   │       │   ├── prelu.js.map
+│   │   │   │       │   ├── pyramidDown.d.ts
+│   │   │   │       │   ├── pyramidDown.js
+│   │   │   │       │   ├── pyramidDown.js.map
+│   │   │   │       │   ├── RNet.d.ts
+│   │   │   │       │   ├── RNet.js
+│   │   │   │       │   ├── RNet.js.map
+│   │   │   │       │   ├── sharedLayers.d.ts
+│   │   │   │       │   ├── sharedLayers.js
+│   │   │   │       │   ├── sharedLayers.js.map
+│   │   │   │       │   ├── stage1.d.ts
+│   │   │   │       │   ├── stage1.js
+│   │   │   │       │   ├── stage1.js.map
+│   │   │   │       │   ├── stage2.d.ts
+│   │   │   │       │   ├── stage2.js
+│   │   │   │       │   ├── stage2.js.map
+│   │   │   │       │   ├── stage3.d.ts
+│   │   │   │       │   ├── stage3.js
+│   │   │   │       │   ├── stage3.js.map
+│   │   │   │       │   ├── types.d.ts
+│   │   │   │       │   ├── types.js
+│   │   │   │       │   └── types.js.map
+│   │   │   │       ├── NeuralNetwork.d.ts
+│   │   │   │       ├── NeuralNetwork.js
+│   │   │   │       ├── NeuralNetwork.js.map
+│   │   │   │       ├── ops
+│   │   │   │       │   ├── index.d.ts
+│   │   │   │       │   ├── index.js
+│   │   │   │       │   ├── index.js.map
+│   │   │   │       │   ├── iou.d.ts
+│   │   │   │       │   ├── iou.js
+│   │   │   │       │   ├── iou.js.map
+│   │   │   │       │   ├── minBbox.d.ts
+│   │   │   │       │   ├── minBbox.js
+│   │   │   │       │   ├── minBbox.js.map
+│   │   │   │       │   ├── nonMaxSuppression.d.ts
+│   │   │   │       │   ├── nonMaxSuppression.js
+│   │   │   │       │   ├── nonMaxSuppression.js.map
+│   │   │   │       │   ├── normalize.d.ts
+│   │   │   │       │   ├── normalize.js
+│   │   │   │       │   ├── normalize.js.map
+│   │   │   │       │   ├── padToSquare.d.ts
+│   │   │   │       │   ├── padToSquare.js
+│   │   │   │       │   ├── padToSquare.js.map
+│   │   │   │       │   ├── shuffleArray.d.ts
+│   │   │   │       │   ├── shuffleArray.js
+│   │   │   │       │   └── shuffleArray.js.map
+│   │   │   │       ├── resizeResults.d.ts
+│   │   │   │       ├── resizeResults.js
+│   │   │   │       ├── resizeResults.js.map
+│   │   │   │       ├── ssdMobilenetv1
+│   │   │   │       │   ├── boxPredictionLayer.d.ts
+│   │   │   │       │   ├── boxPredictionLayer.js
+│   │   │   │       │   ├── boxPredictionLayer.js.map
+│   │   │   │       │   ├── extractParams.d.ts
+│   │   │   │       │   ├── extractParamsFromWeigthMap.d.ts
+│   │   │   │       │   ├── extractParamsFromWeigthMap.js
+│   │   │   │       │   ├── extractParamsFromWeigthMap.js.map
+│   │   │   │       │   ├── extractParams.js
+│   │   │   │       │   ├── extractParams.js.map
+│   │   │   │       │   ├── index.d.ts
+│   │   │   │       │   ├── index.js
+│   │   │   │       │   ├── index.js.map
+│   │   │   │       │   ├── mobileNetV1.d.ts
+│   │   │   │       │   ├── mobileNetV1.js
+│   │   │   │       │   ├── mobileNetV1.js.map
+│   │   │   │       │   ├── nonMaxSuppression.d.ts
+│   │   │   │       │   ├── nonMaxSuppression.js
+│   │   │   │       │   ├── nonMaxSuppression.js.map
+│   │   │   │       │   ├── outputLayer.d.ts
+│   │   │   │       │   ├── outputLayer.js
+│   │   │   │       │   ├── outputLayer.js.map
+│   │   │   │       │   ├── pointwiseConvLayer.d.ts
+│   │   │   │       │   ├── pointwiseConvLayer.js
+│   │   │   │       │   ├── pointwiseConvLayer.js.map
+│   │   │   │       │   ├── predictionLayer.d.ts
+│   │   │   │       │   ├── predictionLayer.js
+│   │   │   │       │   ├── predictionLayer.js.map
+│   │   │   │       │   ├── SsdMobilenetv1.d.ts
+│   │   │   │       │   ├── SsdMobilenetv1.js
+│   │   │   │       │   ├── SsdMobilenetv1.js.map
+│   │   │   │       │   ├── SsdMobilenetv1Options.d.ts
+│   │   │   │       │   ├── SsdMobilenetv1Options.js
+│   │   │   │       │   ├── SsdMobilenetv1Options.js.map
+│   │   │   │       │   ├── types.d.ts
+│   │   │   │       │   ├── types.js
+│   │   │   │       │   └── types.js.map
+│   │   │   │       ├── tinyFaceDetector
+│   │   │   │       │   ├── const.d.ts
+│   │   │   │       │   ├── const.js
+│   │   │   │       │   ├── const.js.map
+│   │   │   │       │   ├── index.d.ts
+│   │   │   │       │   ├── index.js
+│   │   │   │       │   ├── index.js.map
+│   │   │   │       │   ├── TinyFaceDetector.d.ts
+│   │   │   │       │   ├── TinyFaceDetector.js
+│   │   │   │       │   ├── TinyFaceDetector.js.map
+│   │   │   │       │   ├── TinyFaceDetectorOptions.d.ts
+│   │   │   │       │   ├── TinyFaceDetectorOptions.js
+│   │   │   │       │   └── TinyFaceDetectorOptions.js.map
+│   │   │   │       ├── tinyYolov2
+│   │   │   │       │   ├── config.d.ts
+│   │   │   │       │   ├── config.js
+│   │   │   │       │   ├── config.js.map
+│   │   │   │       │   ├── const.d.ts
+│   │   │   │       │   ├── const.js
+│   │   │   │       │   ├── const.js.map
+│   │   │   │       │   ├── convWithBatchNorm.d.ts
+│   │   │   │       │   ├── convWithBatchNorm.js
+│   │   │   │       │   ├── convWithBatchNorm.js.map
+│   │   │   │       │   ├── depthwiseSeparableConv.d.ts
+│   │   │   │       │   ├── depthwiseSeparableConv.js
+│   │   │   │       │   ├── depthwiseSeparableConv.js.map
+│   │   │   │       │   ├── extractParams.d.ts
+│   │   │   │       │   ├── extractParamsFromWeigthMap.d.ts
+│   │   │   │       │   ├── extractParamsFromWeigthMap.js
+│   │   │   │       │   ├── extractParamsFromWeigthMap.js.map
+│   │   │   │       │   ├── extractParams.js
+│   │   │   │       │   ├── extractParams.js.map
+│   │   │   │       │   ├── index.d.ts
+│   │   │   │       │   ├── index.js
+│   │   │   │       │   ├── index.js.map
+│   │   │   │       │   ├── leaky.d.ts
+│   │   │   │       │   ├── leaky.js
+│   │   │   │       │   ├── leaky.js.map
+│   │   │   │       │   ├── TinyYolov2Base.d.ts
+│   │   │   │       │   ├── TinyYolov2Base.js
+│   │   │   │       │   ├── TinyYolov2Base.js.map
+│   │   │   │       │   ├── TinyYolov2.d.ts
+│   │   │   │       │   ├── TinyYolov2.js
+│   │   │   │       │   ├── TinyYolov2.js.map
+│   │   │   │       │   ├── TinyYolov2Options.d.ts
+│   │   │   │       │   ├── TinyYolov2Options.js
+│   │   │   │       │   ├── TinyYolov2Options.js.map
+│   │   │   │       │   ├── types.d.ts
+│   │   │   │       │   ├── types.js
+│   │   │   │       │   └── types.js.map
+│   │   │   │       ├── utils
+│   │   │   │       │   ├── index.d.ts
+│   │   │   │       │   ├── index.js
+│   │   │   │       │   └── index.js.map
+│   │   │   │       └── xception
+│   │   │   │           ├── extractParams.d.ts
+│   │   │   │           ├── extractParamsFromWeigthMap.d.ts
+│   │   │   │           ├── extractParamsFromWeigthMap.js
+│   │   │   │           ├── extractParamsFromWeigthMap.js.map
+│   │   │   │           ├── extractParams.js
+│   │   │   │           ├── extractParams.js.map
+│   │   │   │           ├── index.d.ts
+│   │   │   │           ├── index.js
+│   │   │   │           ├── index.js.map
+│   │   │   │           ├── TinyXception.d.ts
+│   │   │   │           ├── TinyXception.js
+│   │   │   │           ├── TinyXception.js.map
+│   │   │   │           ├── types.d.ts
+│   │   │   │           ├── types.js
+│   │   │   │           └── types.js.map
+│   │   │   ├── dist
+│   │   │   │   ├── face-api.js
+│   │   │   │   ├── face-api.js.map
+│   │   │   │   └── face-api.min.js
+│   │   │   ├── jasmine-node.js
+│   │   │   ├── karma.conf.js
+│   │   │   ├── LICENSE
+│   │   │   ├── node_modules
+│   │   │   │   └── tslib
+│   │   │   │       ├── CopyrightNotice.txt
+│   │   │   │       ├── LICENSE.txt
+│   │   │   │       ├── modules
+│   │   │   │       │   ├── index.js
+│   │   │   │       │   └── package.json
+│   │   │   │       ├── package.json
+│   │   │   │       ├── README.md
+│   │   │   │       ├── test
+│   │   │   │       │   └── validateModuleExportsMatchCommonJS
+│   │   │   │       │       ├── index.js
+│   │   │   │       │       └── package.json
+│   │   │   │       ├── tslib.d.ts
+│   │   │   │       ├── tslib.es6.html
+│   │   │   │       ├── tslib.es6.js
+│   │   │   │       ├── tslib.html
+│   │   │   │       └── tslib.js
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── rollup.config.js
+│   │   │   ├── tsconfig.es6.json
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsconfig.test.json
+│   │   │   └── typedoc.config.js
 │   │   ├── fast-deep-equal
 │   │   │   ├── es6
 │   │   │   │   ├── index.d.ts
@@ -2727,6 +4333,59 @@
 │   │   │   ├── README.md
 │   │   │   └── types
 │   │   │       └── index.d.ts
+│   │   ├── follow-redirects
+│   │   │   ├── debug.js
+│   │   │   ├── http.js
+│   │   │   ├── https.js
+│   │   │   ├── index.js
+│   │   │   ├── LICENSE
+│   │   │   ├── package.json
+│   │   │   └── README.md
+│   │   ├── form-data
+│   │   │   ├── CHANGELOG.md
+│   │   │   ├── index.d.ts
+│   │   │   ├── lib
+│   │   │   │   ├── browser.js
+│   │   │   │   ├── form_data.js
+│   │   │   │   └── populate.js
+│   │   │   ├── License
+│   │   │   ├── package.json
+│   │   │   └── README.md
+│   │   ├── fraction.js
+│   │   │   ├── CHANGELOG.md
+│   │   │   ├── dist
+│   │   │   │   ├── fraction.js
+│   │   │   │   ├── fraction.min.js
+│   │   │   │   └── fraction.mjs
+│   │   │   ├── examples
+│   │   │   │   ├── angles.js
+│   │   │   │   ├── approx.js
+│   │   │   │   ├── egyptian.js
+│   │   │   │   ├── hesse-convergence.js
+│   │   │   │   ├── integrate.js
+│   │   │   │   ├── ratio-chain.js
+│   │   │   │   ├── rational-pow.js
+│   │   │   │   ├── tape-measure.js
+│   │   │   │   ├── toFraction.js
+│   │   │   │   └── valueOfPi.js
+│   │   │   ├── fraction.d.mts
+│   │   │   ├── fraction.d.ts
+│   │   │   ├── LICENSE
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   └── fraction.js
+│   │   │   └── tests
+│   │   │       └── fraction.test.js
+│   │   ├── function-bind
+│   │   │   ├── CHANGELOG.md
+│   │   │   ├── implementation.js
+│   │   │   ├── index.js
+│   │   │   ├── LICENSE
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   └── test
+│   │   │       └── index.js
 │   │   ├── gensync
 │   │   │   ├── index.js
 │   │   │   ├── index.js.flow
@@ -2735,6 +4394,28 @@
 │   │   │   ├── README.md
 │   │   │   └── test
 │   │   │       └── index.test.js
+│   │   ├── get-intrinsic
+│   │   │   ├── CHANGELOG.md
+│   │   │   ├── index.js
+│   │   │   ├── LICENSE
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   └── test
+│   │   │       └── GetIntrinsic.js
+│   │   ├── get-proto
+│   │   │   ├── CHANGELOG.md
+│   │   │   ├── index.d.ts
+│   │   │   ├── index.js
+│   │   │   ├── LICENSE
+│   │   │   ├── Object.getPrototypeOf.d.ts
+│   │   │   ├── Object.getPrototypeOf.js
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── Reflect.getPrototypeOf.d.ts
+│   │   │   ├── Reflect.getPrototypeOf.js
+│   │   │   ├── test
+│   │   │   │   └── index.js
+│   │   │   └── tsconfig.json
 │   │   ├── globals
 │   │   │   ├── globals.json
 │   │   │   ├── index.d.ts
@@ -2747,6 +4428,59 @@
 │   │   │   ├── LICENSE
 │   │   │   ├── package.json
 │   │   │   └── README.md
+│   │   ├── gopd
+│   │   │   ├── CHANGELOG.md
+│   │   │   ├── gOPD.d.ts
+│   │   │   ├── gOPD.js
+│   │   │   ├── index.d.ts
+│   │   │   ├── index.js
+│   │   │   ├── LICENSE
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── test
+│   │   │   │   └── index.js
+│   │   │   └── tsconfig.json
+│   │   ├── hasown
+│   │   │   ├── CHANGELOG.md
+│   │   │   ├── eslint.config.mjs
+│   │   │   ├── index.d.ts
+│   │   │   ├── index.js
+│   │   │   ├── LICENSE
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   └── tsconfig.json
+│   │   ├── has-symbols
+│   │   │   ├── CHANGELOG.md
+│   │   │   ├── index.d.ts
+│   │   │   ├── index.js
+│   │   │   ├── LICENSE
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── shams.d.ts
+│   │   │   ├── shams.js
+│   │   │   ├── test
+│   │   │   │   ├── index.js
+│   │   │   │   ├── shams
+│   │   │   │   │   ├── core-js.js
+│   │   │   │   │   └── get-own-property-symbols.js
+│   │   │   │   └── tests.js
+│   │   │   └── tsconfig.json
+│   │   ├── has-tostringtag
+│   │   │   ├── CHANGELOG.md
+│   │   │   ├── index.d.ts
+│   │   │   ├── index.js
+│   │   │   ├── LICENSE
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── shams.d.ts
+│   │   │   ├── shams.js
+│   │   │   ├── test
+│   │   │   │   ├── index.js
+│   │   │   │   ├── shams
+│   │   │   │   │   ├── core-js.js
+│   │   │   │   │   └── get-own-property-symbols.js
+│   │   │   │   └── tests.js
+│   │   │   └── tsconfig.json
 │   │   ├── hermes-estree
 │   │   │   ├── dist
 │   │   │   │   ├── generated
@@ -2820,6 +4554,19 @@
 │   │   │   │       ├── mutateESTreeASTForPrettier.js
 │   │   │   │       └── mutateESTreeASTForPrettier.js.flow
 │   │   │   ├── LICENSE
+│   │   │   ├── package.json
+│   │   │   └── README.md
+│   │   ├── https-proxy-agent
+│   │   │   ├── dist
+│   │   │   │   ├── agent.d.ts
+│   │   │   │   ├── agent.js
+│   │   │   │   ├── agent.js.map
+│   │   │   │   ├── index.d.ts
+│   │   │   │   ├── index.js
+│   │   │   │   ├── index.js.map
+│   │   │   │   ├── parse-proxy-response.d.ts
+│   │   │   │   ├── parse-proxy-response.js
+│   │   │   │   └── parse-proxy-response.js.map
 │   │   │   ├── package.json
 │   │   │   └── README.md
 │   │   ├── @humanfs
@@ -3189,6 +4936,11 @@
 │   │   │   ├── lightningcss.linux-x64-gnu.node
 │   │   │   ├── package.json
 │   │   │   └── README.md
+│   │   ├── lightningcss-linux-x64-musl
+│   │   │   ├── LICENSE
+│   │   │   ├── lightningcss.linux-x64-musl.node
+│   │   │   ├── package.json
+│   │   │   └── README.md
 │   │   ├── locate-path
 │   │   │   ├── index.d.ts
 │   │   │   ├── index.js
@@ -3196,6 +4948,58 @@
 │   │   │   ├── package.json
 │   │   │   └── readme.md
 │   │   ├── lru-cache
+│   │   │   ├── index.js
+│   │   │   ├── LICENSE
+│   │   │   ├── package.json
+│   │   │   └── README.md
+│   │   ├── math-intrinsics
+│   │   │   ├── abs.d.ts
+│   │   │   ├── abs.js
+│   │   │   ├── CHANGELOG.md
+│   │   │   ├── constants
+│   │   │   │   ├── maxArrayLength.d.ts
+│   │   │   │   ├── maxArrayLength.js
+│   │   │   │   ├── maxSafeInteger.d.ts
+│   │   │   │   ├── maxSafeInteger.js
+│   │   │   │   ├── maxValue.d.ts
+│   │   │   │   └── maxValue.js
+│   │   │   ├── floor.d.ts
+│   │   │   ├── floor.js
+│   │   │   ├── isFinite.d.ts
+│   │   │   ├── isFinite.js
+│   │   │   ├── isInteger.d.ts
+│   │   │   ├── isInteger.js
+│   │   │   ├── isNaN.d.ts
+│   │   │   ├── isNaN.js
+│   │   │   ├── isNegativeZero.d.ts
+│   │   │   ├── isNegativeZero.js
+│   │   │   ├── LICENSE
+│   │   │   ├── max.d.ts
+│   │   │   ├── max.js
+│   │   │   ├── min.d.ts
+│   │   │   ├── min.js
+│   │   │   ├── mod.d.ts
+│   │   │   ├── mod.js
+│   │   │   ├── package.json
+│   │   │   ├── pow.d.ts
+│   │   │   ├── pow.js
+│   │   │   ├── README.md
+│   │   │   ├── round.d.ts
+│   │   │   ├── round.js
+│   │   │   ├── sign.d.ts
+│   │   │   ├── sign.js
+│   │   │   ├── test
+│   │   │   │   └── index.js
+│   │   │   └── tsconfig.json
+│   │   ├── mime-db
+│   │   │   ├── db.json
+│   │   │   ├── HISTORY.md
+│   │   │   ├── index.js
+│   │   │   ├── LICENSE
+│   │   │   ├── package.json
+│   │   │   └── README.md
+│   │   ├── mime-types
+│   │   │   ├── HISTORY.md
 │   │   │   ├── index.js
 │   │   │   ├── LICENSE
 │   │   │   ├── package.json
@@ -3295,6 +5099,15 @@
 │   │   ├── @napi-rs
 │   │   ├── natural-compare
 │   │   │   ├── index.js
+│   │   │   ├── package.json
+│   │   │   └── README.md
+│   │   ├── node-fetch
+│   │   │   ├── browser.js
+│   │   │   ├── CHANGELOG.md
+│   │   │   ├── lib
+│   │   │   │   ├── index.es.js
+│   │   │   │   └── index.js
+│   │   │   ├── LICENSE.md
 │   │   │   ├── package.json
 │   │   │   └── README.md
 │   │   ├── node-releases
@@ -3422,6 +5235,17 @@
 │   │   │   ├── LICENSE
 │   │   │   ├── package.json
 │   │   │   └── README.md
+│   │   ├── postcss-value-parser
+│   │   │   ├── lib
+│   │   │   │   ├── index.d.ts
+│   │   │   │   ├── index.js
+│   │   │   │   ├── parse.js
+│   │   │   │   ├── stringify.js
+│   │   │   │   ├── unit.js
+│   │   │   │   └── walk.js
+│   │   │   ├── LICENSE
+│   │   │   ├── package.json
+│   │   │   └── README.md
 │   │   ├── prelude-ls
 │   │   │   ├── CHANGELOG.md
 │   │   │   ├── lib
@@ -3431,6 +5255,12 @@
 │   │   │   │   ├── Num.js
 │   │   │   │   ├── Obj.js
 │   │   │   │   └── Str.js
+│   │   │   ├── LICENSE
+│   │   │   ├── package.json
+│   │   │   └── README.md
+│   │   ├── proxy-from-env
+│   │   │   ├── index.cjs
+│   │   │   ├── index.js
 │   │   │   ├── LICENSE
 │   │   │   ├── package.json
 │   │   │   └── README.md
@@ -3514,11 +5344,199 @@
 │   │   │   ├── static.node.js
 │   │   │   ├── static.react-server.js
 │   │   │   └── test-utils.js
+│   │   ├── react-router
+│   │   │   ├── CHANGELOG.md
+│   │   │   ├── dist
+│   │   │   │   ├── development
+│   │   │   │   │   ├── browser-CGcs-0pD.d.mts
+│   │   │   │   │   ├── browser-D3uq9sI1.d.ts
+│   │   │   │   │   ├── chunk-6CSD65Y2.mjs
+│   │   │   │   │   ├── chunk-ASILSGTR.mjs
+│   │   │   │   │   ├── chunk-KFNXW4AL.js
+│   │   │   │   │   ├── chunk-PBLBZ3QU.js
+│   │   │   │   │   ├── chunk-PULC7NLK.js
+│   │   │   │   │   ├── context-CmHpk1Ws.d.mts
+│   │   │   │   │   ├── data-D4xhSy90.d.ts
+│   │   │   │   │   ├── data-U8FS-wNn.d.mts
+│   │   │   │   │   ├── dom-export.d.mts
+│   │   │   │   │   ├── dom-export.d.ts
+│   │   │   │   │   ├── dom-export.js
+│   │   │   │   │   ├── dom-export.mjs
+│   │   │   │   │   ├── index.d.mts
+│   │   │   │   │   ├── index.d.ts
+│   │   │   │   │   ├── index.js
+│   │   │   │   │   ├── index.mjs
+│   │   │   │   │   ├── index-react-server-client-CwU9bE5R.d.ts
+│   │   │   │   │   ├── index-react-server-client.d.mts
+│   │   │   │   │   ├── index-react-server-client-DPrDrCew.d.mts
+│   │   │   │   │   ├── index-react-server-client.d.ts
+│   │   │   │   │   ├── index-react-server-client.js
+│   │   │   │   │   ├── index-react-server-client.mjs
+│   │   │   │   │   ├── index-react-server.d.mts
+│   │   │   │   │   ├── index-react-server.d.ts
+│   │   │   │   │   ├── index-react-server.js
+│   │   │   │   │   ├── index-react-server.mjs
+│   │   │   │   │   ├── instrumentation-1q4YhLGP.d.ts
+│   │   │   │   │   ├── lib
+│   │   │   │   │   │   └── types
+│   │   │   │   │   │       ├── internal.d.mts
+│   │   │   │   │   │       ├── internal.d.ts
+│   │   │   │   │   │       ├── internal.js
+│   │   │   │   │   │       └── internal.mjs
+│   │   │   │   │   ├── register-CNAx3TXj.d.ts
+│   │   │   │   │   └── register-CqK96Zfk.d.mts
+│   │   │   │   └── production
+│   │   │   │       ├── browser-CGcs-0pD.d.mts
+│   │   │   │       ├── browser-D3uq9sI1.d.ts
+│   │   │   │       ├── chunk-5TQZEVD5.mjs
+│   │   │   │       ├── chunk-CTIXC7EV.js
+│   │   │   │       ├── chunk-EN242BO4.js
+│   │   │   │       ├── chunk-OSYEOCBT.mjs
+│   │   │   │       ├── chunk-RTRY3JFT.js
+│   │   │   │       ├── context-CmHpk1Ws.d.mts
+│   │   │   │       ├── data-D4xhSy90.d.ts
+│   │   │   │       ├── data-U8FS-wNn.d.mts
+│   │   │   │       ├── dom-export.d.mts
+│   │   │   │       ├── dom-export.d.ts
+│   │   │   │       ├── dom-export.js
+│   │   │   │       ├── dom-export.mjs
+│   │   │   │       ├── index.d.mts
+│   │   │   │       ├── index.d.ts
+│   │   │   │       ├── index.js
+│   │   │   │       ├── index.mjs
+│   │   │   │       ├── index-react-server-client-CwU9bE5R.d.ts
+│   │   │   │       ├── index-react-server-client.d.mts
+│   │   │   │       ├── index-react-server-client-DPrDrCew.d.mts
+│   │   │   │       ├── index-react-server-client.d.ts
+│   │   │   │       ├── index-react-server-client.js
+│   │   │   │       ├── index-react-server-client.mjs
+│   │   │   │       ├── index-react-server.d.mts
+│   │   │   │       ├── index-react-server.d.ts
+│   │   │   │       ├── index-react-server.js
+│   │   │   │       ├── index-react-server.mjs
+│   │   │   │       ├── instrumentation-1q4YhLGP.d.ts
+│   │   │   │       ├── lib
+│   │   │   │       │   └── types
+│   │   │   │       │       ├── internal.d.mts
+│   │   │   │       │       ├── internal.d.ts
+│   │   │   │       │       ├── internal.js
+│   │   │   │       │       └── internal.mjs
+│   │   │   │       ├── register-CNAx3TXj.d.ts
+│   │   │   │       └── register-CqK96Zfk.d.mts
+│   │   │   ├── docs
+│   │   │   │   ├── explanation
+│   │   │   │   │   ├── backend-for-frontend.md
+│   │   │   │   │   ├── code-splitting.md
+│   │   │   │   │   ├── concurrency.md
+│   │   │   │   │   ├── form-vs-fetcher.md
+│   │   │   │   │   ├── hot-module-replacement.md
+│   │   │   │   │   ├── hydration.md
+│   │   │   │   │   ├── index.md
+│   │   │   │   │   ├── index-query-param.md
+│   │   │   │   │   ├── lazy-route-discovery.md
+│   │   │   │   │   ├── location.md
+│   │   │   │   │   ├── progressive-enhancement.md
+│   │   │   │   │   ├── race-conditions.md
+│   │   │   │   │   ├── react-transitions.md
+│   │   │   │   │   ├── route-matching.md
+│   │   │   │   │   ├── server-client-execution.md
+│   │   │   │   │   ├── sessions-and-cookies.md
+│   │   │   │   │   ├── special-files.md
+│   │   │   │   │   ├── state-management.md
+│   │   │   │   │   ├── styling.md
+│   │   │   │   │   └── type-safety.md
+│   │   │   │   ├── how-to
+│   │   │   │   │   ├── accessibility.md
+│   │   │   │   │   ├── client-data.md
+│   │   │   │   │   ├── data-strategy.md
+│   │   │   │   │   ├── error-boundary.md
+│   │   │   │   │   ├── error-reporting.md
+│   │   │   │   │   ├── fetchers.md
+│   │   │   │   │   ├── file-route-conventions.md
+│   │   │   │   │   ├── file-uploads.md
+│   │   │   │   │   ├── form-validation.md
+│   │   │   │   │   ├── headers.md
+│   │   │   │   │   ├── index.md
+│   │   │   │   │   ├── instrumentation.md
+│   │   │   │   │   ├── meta.md
+│   │   │   │   │   ├── middleware.md
+│   │   │   │   │   ├── navigation-blocking.md
+│   │   │   │   │   ├── optimize-revalidation.md
+│   │   │   │   │   ├── pre-rendering.md
+│   │   │   │   │   ├── presets.md
+│   │   │   │   │   ├── react-server-components.md
+│   │   │   │   │   ├── resource-routes.md
+│   │   │   │   │   ├── route-module-type-safety.md
+│   │   │   │   │   ├── search-params.md
+│   │   │   │   │   ├── security.md
+│   │   │   │   │   ├── server-bundles.md
+│   │   │   │   │   ├── spa.md
+│   │   │   │   │   ├── status.md
+│   │   │   │   │   ├── suspense.md
+│   │   │   │   │   ├── using-handle.md
+│   │   │   │   │   ├── view-transitions.md
+│   │   │   │   │   └── webhook.md
+│   │   │   │   ├── index.md
+│   │   │   │   ├── start
+│   │   │   │   │   ├── data
+│   │   │   │   │   │   ├── actions.md
+│   │   │   │   │   │   ├── custom.md
+│   │   │   │   │   │   ├── data-loading.md
+│   │   │   │   │   │   ├── index.md
+│   │   │   │   │   │   ├── installation.md
+│   │   │   │   │   │   ├── navigating.md
+│   │   │   │   │   │   ├── pending-ui.md
+│   │   │   │   │   │   ├── route-object.md
+│   │   │   │   │   │   ├── routing.md
+│   │   │   │   │   │   └── testing.md
+│   │   │   │   │   ├── declarative
+│   │   │   │   │   │   ├── index.md
+│   │   │   │   │   │   ├── installation.md
+│   │   │   │   │   │   ├── navigating.md
+│   │   │   │   │   │   ├── routing.md
+│   │   │   │   │   │   └── url-values.md
+│   │   │   │   │   ├── framework
+│   │   │   │   │   │   ├── actions.md
+│   │   │   │   │   │   ├── data-loading.md
+│   │   │   │   │   │   ├── deploying.md
+│   │   │   │   │   │   ├── index.md
+│   │   │   │   │   │   ├── installation.md
+│   │   │   │   │   │   ├── navigating.md
+│   │   │   │   │   │   ├── pending-ui.md
+│   │   │   │   │   │   ├── rendering.md
+│   │   │   │   │   │   ├── route-module.md
+│   │   │   │   │   │   ├── routing.md
+│   │   │   │   │   │   └── testing.md
+│   │   │   │   │   ├── index.md
+│   │   │   │   │   └── modes.md
+│   │   │   │   └── upgrading
+│   │   │   │       ├── component-routes.md
+│   │   │   │       ├── future.md
+│   │   │   │       ├── index.md
+│   │   │   │       ├── remix.md
+│   │   │   │       ├── router-provider.md
+│   │   │   │       └── v6.md
+│   │   │   ├── LICENSE.md
+│   │   │   ├── package.json
+│   │   │   └── README.md
+│   │   ├── react-router-dom
+│   │   │   ├── dist
+│   │   │   │   ├── index.d.mts
+│   │   │   │   ├── index.d.ts
+│   │   │   │   ├── index.js
+│   │   │   │   └── index.mjs
+│   │   │   ├── LICENSE.md
+│   │   │   ├── package.json
+│   │   │   └── README.md
 │   │   ├── @rolldown
 │   │   │   ├── binding-linux-x64-gnu
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── rolldown-binding.linux-x64-gnu.node
+│   │   │   ├── binding-linux-x64-musl
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── rolldown-binding.linux-x64-musl.node
 │   │   │   └── pluginutils
 │   │   │       ├── dist
 │   │   │       │   ├── filter
@@ -3599,6 +5617,50 @@
 │   │   │   ├── README.md
 │   │   │   ├── unstable_mock.js
 │   │   │   └── unstable_post_task.js
+│   │   ├── seedrandom
+│   │   │   ├── bower.json
+│   │   │   ├── component.json
+│   │   │   ├── Gruntfile.js
+│   │   │   ├── index.js
+│   │   │   ├── lib
+│   │   │   │   ├── alea.js
+│   │   │   │   ├── alea.min.js
+│   │   │   │   ├── crypto.js
+│   │   │   │   ├── tychei.js
+│   │   │   │   ├── tychei.min.js
+│   │   │   │   ├── xor128.js
+│   │   │   │   ├── xor128.min.js
+│   │   │   │   ├── xor4096.js
+│   │   │   │   ├── xor4096.min.js
+│   │   │   │   ├── xorshift7.js
+│   │   │   │   ├── xorshift7.min.js
+│   │   │   │   ├── xorwow.js
+│   │   │   │   └── xorwow.min.js
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── seedrandom.js
+│   │   │   ├── seedrandom.min.js
+│   │   │   └── test
+│   │   │       ├── altprng.html
+│   │   │       ├── autoseed.html
+│   │   │       ├── bitgen.js
+│   │   │       ├── browserified.html
+│   │   │       ├── browserified.js
+│   │   │       ├── cryptotest.js
+│   │   │       ├── lib
+│   │   │       │   ├── qunit.css
+│   │   │       │   ├── qunit.js
+│   │   │       │   └── require.js
+│   │   │       ├── newapi.html
+│   │   │       ├── nodetest.js
+│   │   │       ├── options.html
+│   │   │       ├── out
+│   │   │       │   └── dieharder-report.txt
+│   │   │       ├── prngtest.js
+│   │   │       ├── qunitassert.js
+│   │   │       ├── require.html
+│   │   │       ├── run_dieharder.sh
+│   │   │       └── state.html
 │   │   ├── semver
 │   │   │   ├── bin
 │   │   │   │   └── semver.js
@@ -3607,6 +5669,12 @@
 │   │   │   ├── range.bnf
 │   │   │   ├── README.md
 │   │   │   └── semver.js
+│   │   ├── set-cookie-parser
+│   │   │   ├── lib
+│   │   │   │   └── set-cookie.js
+│   │   │   ├── LICENSE
+│   │   │   ├── package.json
+│   │   │   └── README.md
 │   │   ├── shebang-command
 │   │   │   ├── index.js
 │   │   │   ├── license
@@ -3638,6 +5706,1361 @@
 │   │   │   ├── README.md
 │   │   │   ├── source-map.d.ts
 │   │   │   └── source-map.js
+│   │   ├── tailwindcss
+│   │   │   ├── dist
+│   │   │   │   ├── chunk-5JIJA4QV.mjs
+│   │   │   │   ├── chunk-X4GG3EDV.mjs
+│   │   │   │   ├── chunk-XVOTX5KS.mjs
+│   │   │   │   ├── colors-C__qRT83.d.ts
+│   │   │   │   ├── colors.d.mts
+│   │   │   │   ├── colors.d.ts
+│   │   │   │   ├── colors.js
+│   │   │   │   ├── colors.mjs
+│   │   │   │   ├── default-theme.d.mts
+│   │   │   │   ├── default-theme.d.ts
+│   │   │   │   ├── default-theme.js
+│   │   │   │   ├── default-theme.mjs
+│   │   │   │   ├── flatten-color-palette.d.mts
+│   │   │   │   ├── flatten-color-palette.d.ts
+│   │   │   │   ├── flatten-color-palette.js
+│   │   │   │   ├── flatten-color-palette.mjs
+│   │   │   │   ├── lib.d.mts
+│   │   │   │   ├── lib.d.ts
+│   │   │   │   ├── lib.js
+│   │   │   │   ├── lib.mjs
+│   │   │   │   ├── plugin.d.mts
+│   │   │   │   ├── plugin.d.ts
+│   │   │   │   ├── plugin.js
+│   │   │   │   ├── plugin.mjs
+│   │   │   │   ├── resolve-config-B4yBzhca.d.ts
+│   │   │   │   ├── resolve-config-QUZ9b-Gn.d.mts
+│   │   │   │   └── types-DWdTiksJ.d.mts
+│   │   │   ├── index.css
+│   │   │   ├── LICENSE
+│   │   │   ├── package.json
+│   │   │   ├── preflight.css
+│   │   │   ├── README.md
+│   │   │   ├── theme.css
+│   │   │   └── utilities.css
+│   │   ├── @tensorflow
+│   │   │   └── tfjs-core
+│   │   │       ├── benchmarks
+│   │   │       │   ├── index.html
+│   │   │       │   ├── main.css
+│   │   │       │   ├── modelConfig.js
+│   │   │       │   └── util.js
+│   │   │       ├── BUILD.bazel
+│   │   │       ├── cloudbuild.yml
+│   │   │       ├── dist
+│   │   │       │   ├── backends
+│   │   │       │   │   ├── array_util.d.ts
+│   │   │       │   │   ├── array_util.js
+│   │   │       │   │   ├── array_util.js.map
+│   │   │       │   │   ├── array_util_test.d.ts
+│   │   │       │   │   ├── array_util_test.js.map
+│   │   │       │   │   ├── backend.d.ts
+│   │   │       │   │   ├── backend.js
+│   │   │       │   │   ├── backend.js.map
+│   │   │       │   │   ├── backend_test.d.ts
+│   │   │       │   │   ├── backend_test.js.map
+│   │   │       │   │   ├── backend_util.d.ts
+│   │   │       │   │   ├── backend_util.js
+│   │   │       │   │   ├── backend_util.js.map
+│   │   │       │   │   ├── complex_util.d.ts
+│   │   │       │   │   ├── complex_util.js
+│   │   │       │   │   ├── complex_util.js.map
+│   │   │       │   │   ├── complex_util_test.d.ts
+│   │   │       │   │   ├── complex_util_test.js.map
+│   │   │       │   │   ├── cpu
+│   │   │       │   │   │   ├── backend_cpu.d.ts
+│   │   │       │   │   │   ├── backend_cpu.js
+│   │   │       │   │   │   ├── backend_cpu.js.map
+│   │   │       │   │   │   ├── backend_cpu_test.d.ts
+│   │   │       │   │   │   ├── backend_cpu_test.js.map
+│   │   │       │   │   │   ├── backend_cpu_test_registry.d.ts
+│   │   │       │   │   │   ├── backend_cpu_test_registry.js
+│   │   │       │   │   │   ├── backend_cpu_test_registry.js.map
+│   │   │       │   │   │   ├── cpu_util.d.ts
+│   │   │       │   │   │   ├── cpu_util.js
+│   │   │       │   │   │   ├── cpu_util.js.map
+│   │   │       │   │   │   ├── kernels
+│   │   │       │   │   │   │   ├── NonMaxSuppressionV5.d.ts
+│   │   │       │   │   │   │   ├── NonMaxSuppressionV5.js
+│   │   │       │   │   │   │   ├── NonMaxSuppressionV5.js.map
+│   │   │       │   │   │   │   ├── SquaredDifference.d.ts
+│   │   │       │   │   │   │   ├── SquaredDifference.js
+│   │   │       │   │   │   │   ├── SquaredDifference.js.map
+│   │   │       │   │   │   │   ├── Square.d.ts
+│   │   │       │   │   │   │   ├── Square.js
+│   │   │       │   │   │   │   └── Square.js.map
+│   │   │       │   │   │   ├── register_all_kernels.d.ts
+│   │   │       │   │   │   ├── register_all_kernels.js
+│   │   │       │   │   │   ├── register_all_kernels.js.map
+│   │   │       │   │   │   └── utils
+│   │   │       │   │   │       ├── kernel_utils.d.ts
+│   │   │       │   │   │       ├── kernel_utils.js
+│   │   │       │   │   │       └── kernel_utils.js.map
+│   │   │       │   │   ├── non_max_suppression_impl.d.ts
+│   │   │       │   │   ├── non_max_suppression_impl.js
+│   │   │       │   │   ├── non_max_suppression_impl.js.map
+│   │   │       │   │   ├── packing_util.d.ts
+│   │   │       │   │   ├── packing_util.js
+│   │   │       │   │   ├── packing_util.js.map
+│   │   │       │   │   ├── split_shared.d.ts
+│   │   │       │   │   ├── split_shared.js
+│   │   │       │   │   ├── split_shared.js.map
+│   │   │       │   │   ├── tile_impl.d.ts
+│   │   │       │   │   ├── tile_impl.js
+│   │   │       │   │   ├── tile_impl.js.map
+│   │   │       │   │   ├── topk_impl.d.ts
+│   │   │       │   │   ├── topk_impl.js
+│   │   │       │   │   ├── topk_impl.js.map
+│   │   │       │   │   ├── webgl
+│   │   │       │   │   │   ├── addn_gpu.d.ts
+│   │   │       │   │   │   ├── addn_gpu.js
+│   │   │       │   │   │   ├── addn_gpu.js.map
+│   │   │       │   │   │   ├── addn_packed_gpu.d.ts
+│   │   │       │   │   │   ├── addn_packed_gpu.js
+│   │   │       │   │   │   ├── addn_packed_gpu.js.map
+│   │   │       │   │   │   ├── argminmax_gpu.d.ts
+│   │   │       │   │   │   ├── argminmax_gpu.js
+│   │   │       │   │   │   ├── argminmax_gpu.js.map
+│   │   │       │   │   │   ├── argminmax_packed_gpu.d.ts
+│   │   │       │   │   │   ├── argminmax_packed_gpu.js
+│   │   │       │   │   │   ├── argminmax_packed_gpu.js.map
+│   │   │       │   │   │   ├── avg_pool_backprop_gpu.d.ts
+│   │   │       │   │   │   ├── avg_pool_backprop_gpu.js
+│   │   │       │   │   │   ├── avg_pool_backprop_gpu.js.map
+│   │   │       │   │   │   ├── backend_webgl.d.ts
+│   │   │       │   │   │   ├── backend_webgl.js
+│   │   │       │   │   │   ├── backend_webgl.js.map
+│   │   │       │   │   │   ├── backend_webgl_test.d.ts
+│   │   │       │   │   │   ├── backend_webgl_test.js.map
+│   │   │       │   │   │   ├── backend_webgl_test_registry.d.ts
+│   │   │       │   │   │   ├── backend_webgl_test_registry.js
+│   │   │       │   │   │   ├── backend_webgl_test_registry.js.map
+│   │   │       │   │   │   ├── batchnorm_gpu.d.ts
+│   │   │       │   │   │   ├── batchnorm_gpu.js
+│   │   │       │   │   │   ├── batchnorm_gpu.js.map
+│   │   │       │   │   │   ├── batchnorm_packed_gpu.d.ts
+│   │   │       │   │   │   ├── batchnorm_packed_gpu.js
+│   │   │       │   │   │   ├── batchnorm_packed_gpu.js.map
+│   │   │       │   │   │   ├── binaryop_complex_gpu.d.ts
+│   │   │       │   │   │   ├── binaryop_complex_gpu.js
+│   │   │       │   │   │   ├── binaryop_complex_gpu.js.map
+│   │   │       │   │   │   ├── binaryop_gpu.d.ts
+│   │   │       │   │   │   ├── binaryop_gpu.js
+│   │   │       │   │   │   ├── binaryop_gpu.js.map
+│   │   │       │   │   │   ├── binaryop_packed_gpu.d.ts
+│   │   │       │   │   │   ├── binaryop_packed_gpu.js
+│   │   │       │   │   │   ├── binaryop_packed_gpu.js.map
+│   │   │       │   │   │   ├── canvas_util.d.ts
+│   │   │       │   │   │   ├── canvas_util.js
+│   │   │       │   │   │   ├── canvas_util.js.map
+│   │   │       │   │   │   ├── canvas_util_test.d.ts
+│   │   │       │   │   │   ├── canvas_util_test.js.map
+│   │   │       │   │   │   ├── clip_gpu.d.ts
+│   │   │       │   │   │   ├── clip_gpu.js
+│   │   │       │   │   │   ├── clip_gpu.js.map
+│   │   │       │   │   │   ├── clip_packed_gpu.d.ts
+│   │   │       │   │   │   ├── clip_packed_gpu.js
+│   │   │       │   │   │   ├── clip_packed_gpu.js.map
+│   │   │       │   │   │   ├── complex_abs_gpu.d.ts
+│   │   │       │   │   │   ├── complex_abs_gpu.js
+│   │   │       │   │   │   ├── complex_abs_gpu.js.map
+│   │   │       │   │   │   ├── concat_gpu.d.ts
+│   │   │       │   │   │   ├── concat_gpu.js
+│   │   │       │   │   │   ├── concat_gpu.js.map
+│   │   │       │   │   │   ├── concat_packed_gpu.d.ts
+│   │   │       │   │   │   ├── concat_packed_gpu.js
+│   │   │       │   │   │   ├── concat_packed_gpu.js.map
+│   │   │       │   │   │   ├── conv_backprop_gpu_depthwise.d.ts
+│   │   │       │   │   │   ├── conv_backprop_gpu_depthwise.js
+│   │   │       │   │   │   ├── conv_backprop_gpu_depthwise.js.map
+│   │   │       │   │   │   ├── conv_backprop_gpu.d.ts
+│   │   │       │   │   │   ├── conv_backprop_gpu.js
+│   │   │       │   │   │   ├── conv_backprop_gpu.js.map
+│   │   │       │   │   │   ├── conv_gpu_depthwise.d.ts
+│   │   │       │   │   │   ├── conv_gpu_depthwise.js
+│   │   │       │   │   │   ├── conv_gpu_depthwise.js.map
+│   │   │       │   │   │   ├── conv_gpu.d.ts
+│   │   │       │   │   │   ├── conv_gpu.js
+│   │   │       │   │   │   ├── conv_gpu.js.map
+│   │   │       │   │   │   ├── conv_packed_gpu_depthwise.d.ts
+│   │   │       │   │   │   ├── conv_packed_gpu_depthwise.js
+│   │   │       │   │   │   ├── conv_packed_gpu_depthwise.js.map
+│   │   │       │   │   │   ├── crop_and_resize_gpu.d.ts
+│   │   │       │   │   │   ├── crop_and_resize_gpu.js
+│   │   │       │   │   │   ├── crop_and_resize_gpu.js.map
+│   │   │       │   │   │   ├── cumsum_gpu.d.ts
+│   │   │       │   │   │   ├── cumsum_gpu.js
+│   │   │       │   │   │   ├── cumsum_gpu.js.map
+│   │   │       │   │   │   ├── decode_matrix_gpu.d.ts
+│   │   │       │   │   │   ├── decode_matrix_gpu.js
+│   │   │       │   │   │   ├── decode_matrix_gpu.js.map
+│   │   │       │   │   │   ├── decode_matrix_packed_gpu.d.ts
+│   │   │       │   │   │   ├── decode_matrix_packed_gpu.js
+│   │   │       │   │   │   ├── decode_matrix_packed_gpu.js.map
+│   │   │       │   │   │   ├── depth_to_space_gpu.d.ts
+│   │   │       │   │   │   ├── depth_to_space_gpu.js
+│   │   │       │   │   │   ├── depth_to_space_gpu.js.map
+│   │   │       │   │   │   ├── diag_gpu.d.ts
+│   │   │       │   │   │   ├── diag_gpu.js
+│   │   │       │   │   │   ├── diag_gpu.js.map
+│   │   │       │   │   │   ├── encode_float_gpu.d.ts
+│   │   │       │   │   │   ├── encode_float_gpu.js
+│   │   │       │   │   │   ├── encode_float_gpu.js.map
+│   │   │       │   │   │   ├── encode_float_packed_gpu.d.ts
+│   │   │       │   │   │   ├── encode_float_packed_gpu.js
+│   │   │       │   │   │   ├── encode_float_packed_gpu.js.map
+│   │   │       │   │   │   ├── encode_matrix_gpu.d.ts
+│   │   │       │   │   │   ├── encode_matrix_gpu.js
+│   │   │       │   │   │   ├── encode_matrix_gpu.js.map
+│   │   │       │   │   │   ├── encode_matrix_packed_gpu.d.ts
+│   │   │       │   │   │   ├── encode_matrix_packed_gpu.js
+│   │   │       │   │   │   ├── encode_matrix_packed_gpu.js.map
+│   │   │       │   │   │   ├── fft_gpu.d.ts
+│   │   │       │   │   │   ├── fft_gpu.js
+│   │   │       │   │   │   ├── fft_gpu.js.map
+│   │   │       │   │   │   ├── fill_gpu.d.ts
+│   │   │       │   │   │   ├── fill_gpu.js
+│   │   │       │   │   │   ├── fill_gpu.js.map
+│   │   │       │   │   │   ├── flags_webgl.d.ts
+│   │   │       │   │   │   ├── flags_webgl.js
+│   │   │       │   │   │   ├── flags_webgl.js.map
+│   │   │       │   │   │   ├── flags_webgl_test.d.ts
+│   │   │       │   │   │   ├── flags_webgl_test.js.map
+│   │   │       │   │   │   ├── gather_gpu.d.ts
+│   │   │       │   │   │   ├── gather_gpu.js
+│   │   │       │   │   │   ├── gather_gpu.js.map
+│   │   │       │   │   │   ├── gather_nd_gpu.d.ts
+│   │   │       │   │   │   ├── gather_nd_gpu.js
+│   │   │       │   │   │   ├── gather_nd_gpu.js.map
+│   │   │       │   │   │   ├── glsl_version.d.ts
+│   │   │       │   │   │   ├── glsl_version.js
+│   │   │       │   │   │   ├── glsl_version.js.map
+│   │   │       │   │   │   ├── gpgpu_context.d.ts
+│   │   │       │   │   │   ├── gpgpu_context.js
+│   │   │       │   │   │   ├── gpgpu_context.js.map
+│   │   │       │   │   │   ├── gpgpu_context_test.d.ts
+│   │   │       │   │   │   ├── gpgpu_context_test.js.map
+│   │   │       │   │   │   ├── gpgpu_math.d.ts
+│   │   │       │   │   │   ├── gpgpu_math.js
+│   │   │       │   │   │   ├── gpgpu_math.js.map
+│   │   │       │   │   │   ├── gpgpu_util.d.ts
+│   │   │       │   │   │   ├── gpgpu_util.js
+│   │   │       │   │   │   ├── gpgpu_util.js.map
+│   │   │       │   │   │   ├── gpgpu_util_test.d.ts
+│   │   │       │   │   │   ├── gpgpu_util_test.js.map
+│   │   │       │   │   │   ├── im2col_packed_gpu.d.ts
+│   │   │       │   │   │   ├── im2col_packed_gpu.js
+│   │   │       │   │   │   ├── im2col_packed_gpu.js.map
+│   │   │       │   │   │   ├── kernels
+│   │   │       │   │   │   │   ├── FromPixels.d.ts
+│   │   │       │   │   │   │   ├── FromPixels.js
+│   │   │       │   │   │   │   ├── FromPixels.js.map
+│   │   │       │   │   │   │   ├── FromPixels_utils
+│   │   │       │   │   │   │   │   ├── from_pixels_gpu.d.ts
+│   │   │       │   │   │   │   │   ├── from_pixels_gpu.js
+│   │   │       │   │   │   │   │   ├── from_pixels_gpu.js.map
+│   │   │       │   │   │   │   │   ├── from_pixels_packed_gpu.d.ts
+│   │   │       │   │   │   │   │   ├── from_pixels_packed_gpu.js
+│   │   │       │   │   │   │   │   └── from_pixels_packed_gpu.js.map
+│   │   │       │   │   │   │   ├── NonMaxSuppressionV5.d.ts
+│   │   │       │   │   │   │   ├── NonMaxSuppressionV5.js
+│   │   │       │   │   │   │   ├── NonMaxSuppressionV5.js.map
+│   │   │       │   │   │   │   ├── SquaredDifference.d.ts
+│   │   │       │   │   │   │   ├── SquaredDifference.js
+│   │   │       │   │   │   │   ├── SquaredDifference.js.map
+│   │   │       │   │   │   │   ├── Square.d.ts
+│   │   │       │   │   │   │   ├── Square.js
+│   │   │       │   │   │   │   └── Square.js.map
+│   │   │       │   │   │   ├── lrn_gpu.d.ts
+│   │   │       │   │   │   ├── lrn_gpu.js
+│   │   │       │   │   │   ├── lrn_gpu.js.map
+│   │   │       │   │   │   ├── lrn_grad_gpu.d.ts
+│   │   │       │   │   │   ├── lrn_grad_gpu.js
+│   │   │       │   │   │   ├── lrn_grad_gpu.js.map
+│   │   │       │   │   │   ├── lrn_packed_gpu.d.ts
+│   │   │       │   │   │   ├── lrn_packed_gpu.js
+│   │   │       │   │   │   ├── lrn_packed_gpu.js.map
+│   │   │       │   │   │   ├── max_pool_backprop_gpu.d.ts
+│   │   │       │   │   │   ├── max_pool_backprop_gpu.js
+│   │   │       │   │   │   ├── max_pool_backprop_gpu.js.map
+│   │   │       │   │   │   ├── mulmat_packed_gpu.d.ts
+│   │   │       │   │   │   ├── mulmat_packed_gpu.js
+│   │   │       │   │   │   ├── mulmat_packed_gpu.js.map
+│   │   │       │   │   │   ├── multinomial_gpu.d.ts
+│   │   │       │   │   │   ├── multinomial_gpu.js
+│   │   │       │   │   │   ├── multinomial_gpu.js.map
+│   │   │       │   │   │   ├── onehot_gpu.d.ts
+│   │   │       │   │   │   ├── onehot_gpu.js
+│   │   │       │   │   │   ├── onehot_gpu.js.map
+│   │   │       │   │   │   ├── pack_gpu.d.ts
+│   │   │       │   │   │   ├── pack_gpu.js
+│   │   │       │   │   │   ├── pack_gpu.js.map
+│   │   │       │   │   │   ├── pad_gpu.d.ts
+│   │   │       │   │   │   ├── pad_gpu.js
+│   │   │       │   │   │   ├── pad_gpu.js.map
+│   │   │       │   │   │   ├── pad_packed_gpu.d.ts
+│   │   │       │   │   │   ├── pad_packed_gpu.js
+│   │   │       │   │   │   ├── pad_packed_gpu.js.map
+│   │   │       │   │   │   ├── pool_gpu.d.ts
+│   │   │       │   │   │   ├── pool_gpu.js
+│   │   │       │   │   │   ├── pool_gpu.js.map
+│   │   │       │   │   │   ├── reduce_gpu.d.ts
+│   │   │       │   │   │   ├── reduce_gpu.js
+│   │   │       │   │   │   ├── reduce_gpu.js.map
+│   │   │       │   │   │   ├── register_all_kernels.d.ts
+│   │   │       │   │   │   ├── register_all_kernels.js
+│   │   │       │   │   │   ├── register_all_kernels.js.map
+│   │   │       │   │   │   ├── reshape_packed_gpu.d.ts
+│   │   │       │   │   │   ├── reshape_packed_gpu.js
+│   │   │       │   │   │   ├── reshape_packed_gpu.js.map
+│   │   │       │   │   │   ├── reshape_packed_test.d.ts
+│   │   │       │   │   │   ├── reshape_packed_test.js.map
+│   │   │       │   │   │   ├── resize_bilinear_backprop_gpu.d.ts
+│   │   │       │   │   │   ├── resize_bilinear_backprop_gpu.js
+│   │   │       │   │   │   ├── resize_bilinear_backprop_gpu.js.map
+│   │   │       │   │   │   ├── resize_bilinear_gpu.d.ts
+│   │   │       │   │   │   ├── resize_bilinear_gpu.js
+│   │   │       │   │   │   ├── resize_bilinear_gpu.js.map
+│   │   │       │   │   │   ├── resize_bilinear_packed_gpu.d.ts
+│   │   │       │   │   │   ├── resize_bilinear_packed_gpu.js
+│   │   │       │   │   │   ├── resize_bilinear_packed_gpu.js.map
+│   │   │       │   │   │   ├── resize_nearest_neighbor_backprop_gpu.d.ts
+│   │   │       │   │   │   ├── resize_nearest_neighbor_backprop_gpu.js
+│   │   │       │   │   │   ├── resize_nearest_neighbor_backprop_gpu.js.map
+│   │   │       │   │   │   ├── resize_nearest_neighbor_gpu.d.ts
+│   │   │       │   │   │   ├── resize_nearest_neighbor_gpu.js
+│   │   │       │   │   │   ├── resize_nearest_neighbor_gpu.js.map
+│   │   │       │   │   │   ├── reverse_gpu.d.ts
+│   │   │       │   │   │   ├── reverse_gpu.js
+│   │   │       │   │   │   ├── reverse_gpu.js.map
+│   │   │       │   │   │   ├── reverse_packed_gpu.d.ts
+│   │   │       │   │   │   ├── reverse_packed_gpu.js
+│   │   │       │   │   │   ├── reverse_packed_gpu.js.map
+│   │   │       │   │   │   ├── scatter_gpu.d.ts
+│   │   │       │   │   │   ├── scatter_gpu.js
+│   │   │       │   │   │   ├── scatter_gpu.js.map
+│   │   │       │   │   │   ├── segment_gpu.d.ts
+│   │   │       │   │   │   ├── segment_gpu.js
+│   │   │       │   │   │   ├── segment_gpu.js.map
+│   │   │       │   │   │   ├── select_gpu.d.ts
+│   │   │       │   │   │   ├── select_gpu.js
+│   │   │       │   │   │   ├── select_gpu.js.map
+│   │   │       │   │   │   ├── shader_compiler.d.ts
+│   │   │       │   │   │   ├── shader_compiler.js
+│   │   │       │   │   │   ├── shader_compiler.js.map
+│   │   │       │   │   │   ├── shader_compiler_util.d.ts
+│   │   │       │   │   │   ├── shader_compiler_util.js
+│   │   │       │   │   │   ├── shader_compiler_util.js.map
+│   │   │       │   │   │   ├── shader_compiler_util_test.d.ts
+│   │   │       │   │   │   ├── shader_compiler_util_test.js.map
+│   │   │       │   │   │   ├── slice_gpu.d.ts
+│   │   │       │   │   │   ├── slice_gpu.js
+│   │   │       │   │   │   ├── slice_gpu.js.map
+│   │   │       │   │   │   ├── slice_packed_gpu.d.ts
+│   │   │       │   │   │   ├── slice_packed_gpu.js
+│   │   │       │   │   │   ├── slice_packed_gpu.js.map
+│   │   │       │   │   │   ├── strided_slice_gpu.d.ts
+│   │   │       │   │   │   ├── strided_slice_gpu.js
+│   │   │       │   │   │   ├── strided_slice_gpu.js.map
+│   │   │       │   │   │   ├── texture_manager.d.ts
+│   │   │       │   │   │   ├── texture_manager.js
+│   │   │       │   │   │   ├── texture_manager.js.map
+│   │   │       │   │   │   ├── tex_util.d.ts
+│   │   │       │   │   │   ├── tex_util.js
+│   │   │       │   │   │   ├── tex_util.js.map
+│   │   │       │   │   │   ├── tex_util_test.d.ts
+│   │   │       │   │   │   ├── tex_util_test.js.map
+│   │   │       │   │   │   ├── tile_gpu.d.ts
+│   │   │       │   │   │   ├── tile_gpu.js
+│   │   │       │   │   │   ├── tile_gpu.js.map
+│   │   │       │   │   │   ├── transpose_gpu.d.ts
+│   │   │       │   │   │   ├── transpose_gpu.js
+│   │   │       │   │   │   ├── transpose_gpu.js.map
+│   │   │       │   │   │   ├── transpose_packed_gpu.d.ts
+│   │   │       │   │   │   ├── transpose_packed_gpu.js
+│   │   │       │   │   │   ├── transpose_packed_gpu.js.map
+│   │   │       │   │   │   ├── unaryop_gpu.d.ts
+│   │   │       │   │   │   ├── unaryop_gpu.js
+│   │   │       │   │   │   ├── unaryop_gpu.js.map
+│   │   │       │   │   │   ├── unaryop_packed_gpu.d.ts
+│   │   │       │   │   │   ├── unaryop_packed_gpu.js
+│   │   │       │   │   │   ├── unaryop_packed_gpu.js.map
+│   │   │       │   │   │   ├── unpack_gpu.d.ts
+│   │   │       │   │   │   ├── unpack_gpu.js
+│   │   │       │   │   │   ├── unpack_gpu.js.map
+│   │   │       │   │   │   ├── webgl_batchnorm_test.d.ts
+│   │   │       │   │   │   ├── webgl_batchnorm_test.js.map
+│   │   │       │   │   │   ├── webgl_custom_op_test.d.ts
+│   │   │       │   │   │   ├── webgl_custom_op_test.js.map
+│   │   │       │   │   │   ├── webgl_ops_test.d.ts
+│   │   │       │   │   │   ├── webgl_ops_test.js.map
+│   │   │       │   │   │   ├── webgl_types.d.ts
+│   │   │       │   │   │   ├── webgl_types.js
+│   │   │       │   │   │   ├── webgl_types.js.map
+│   │   │       │   │   │   ├── webgl_util.d.ts
+│   │   │       │   │   │   ├── webgl_util.js
+│   │   │       │   │   │   ├── webgl_util.js.map
+│   │   │       │   │   │   ├── webgl_util_test.d.ts
+│   │   │       │   │   │   └── webgl_util_test.js.map
+│   │   │       │   │   ├── where_impl.d.ts
+│   │   │       │   │   ├── where_impl.js
+│   │   │       │   │   └── where_impl.js.map
+│   │   │       │   ├── browser_util.d.ts
+│   │   │       │   ├── browser_util.js
+│   │   │       │   ├── browser_util.js.map
+│   │   │       │   ├── browser_util_test.d.ts
+│   │   │       │   ├── browser_util_test.js
+│   │   │       │   ├── browser_util_test.js.map
+│   │   │       │   ├── buffer_test.d.ts
+│   │   │       │   ├── buffer_test.js
+│   │   │       │   ├── buffer_test.js.map
+│   │   │       │   ├── debug_mode_test.d.ts
+│   │   │       │   ├── debug_mode_test.js
+│   │   │       │   ├── debug_mode_test.js.map
+│   │   │       │   ├── device_util.d.ts
+│   │   │       │   ├── device_util.js
+│   │   │       │   ├── device_util.js.map
+│   │   │       │   ├── engine.d.ts
+│   │   │       │   ├── engine.js
+│   │   │       │   ├── engine.js.map
+│   │   │       │   ├── engine_test.d.ts
+│   │   │       │   ├── engine_test.js
+│   │   │       │   ├── engine_test.js.map
+│   │   │       │   ├── environment.d.ts
+│   │   │       │   ├── environment.js
+│   │   │       │   ├── environment.js.map
+│   │   │       │   ├── environment_test.d.ts
+│   │   │       │   ├── environment_test.js
+│   │   │       │   ├── environment_test.js.map
+│   │   │       │   ├── flags.d.ts
+│   │   │       │   ├── flags.js
+│   │   │       │   ├── flags.js.map
+│   │   │       │   ├── flags_test.d.ts
+│   │   │       │   ├── flags_test.js
+│   │   │       │   ├── flags_test.js.map
+│   │   │       │   ├── globals.d.ts
+│   │   │       │   ├── globals.js
+│   │   │       │   ├── globals.js.map
+│   │   │       │   ├── globals_test.d.ts
+│   │   │       │   ├── globals_test.js
+│   │   │       │   ├── globals_test.js.map
+│   │   │       │   ├── gradients
+│   │   │       │   │   ├── SquaredDifference_grad.d.ts
+│   │   │       │   │   ├── SquaredDifference_grad.js
+│   │   │       │   │   ├── SquaredDifference_grad.js.map
+│   │   │       │   │   ├── Square_grad.d.ts
+│   │   │       │   │   ├── Square_grad.js
+│   │   │       │   │   └── Square_grad.js.map
+│   │   │       │   ├── gradients.d.ts
+│   │   │       │   ├── gradients.js
+│   │   │       │   ├── gradients.js.map
+│   │   │       │   ├── gradients_test.d.ts
+│   │   │       │   ├── gradients_test.js
+│   │   │       │   ├── gradients_test.js.map
+│   │   │       │   ├── index.d.ts
+│   │   │       │   ├── index.js
+│   │   │       │   ├── index.js.map
+│   │   │       │   ├── io
+│   │   │       │   │   ├── browser_files.d.ts
+│   │   │       │   │   ├── browser_files.js
+│   │   │       │   │   ├── browser_files.js.map
+│   │   │       │   │   ├── browser_files_test.d.ts
+│   │   │       │   │   ├── browser_files_test.js
+│   │   │       │   │   ├── browser_files_test.js.map
+│   │   │       │   │   ├── http.d.ts
+│   │   │       │   │   ├── http.js
+│   │   │       │   │   ├── http.js.map
+│   │   │       │   │   ├── http_test.d.ts
+│   │   │       │   │   ├── http_test.js
+│   │   │       │   │   ├── http_test.js.map
+│   │   │       │   │   ├── indexed_db.d.ts
+│   │   │       │   │   ├── indexed_db.js
+│   │   │       │   │   ├── indexed_db.js.map
+│   │   │       │   │   ├── indexed_db_test.d.ts
+│   │   │       │   │   ├── indexed_db_test.js
+│   │   │       │   │   ├── indexed_db_test.js.map
+│   │   │       │   │   ├── io.d.ts
+│   │   │       │   │   ├── io.js
+│   │   │       │   │   ├── io.js.map
+│   │   │       │   │   ├── io_utils.d.ts
+│   │   │       │   │   ├── io_utils.js
+│   │   │       │   │   ├── io_utils.js.map
+│   │   │       │   │   ├── io_utils_test.d.ts
+│   │   │       │   │   ├── io_utils_test.js
+│   │   │       │   │   ├── io_utils_test.js.map
+│   │   │       │   │   ├── local_storage.d.ts
+│   │   │       │   │   ├── local_storage.js
+│   │   │       │   │   ├── local_storage.js.map
+│   │   │       │   │   ├── local_storage_test.d.ts
+│   │   │       │   │   ├── local_storage_test.js
+│   │   │       │   │   ├── local_storage_test.js.map
+│   │   │       │   │   ├── model_management.d.ts
+│   │   │       │   │   ├── model_management.js
+│   │   │       │   │   ├── model_management.js.map
+│   │   │       │   │   ├── model_management_test.d.ts
+│   │   │       │   │   ├── model_management_test.js
+│   │   │       │   │   ├── model_management_test.js.map
+│   │   │       │   │   ├── passthrough.d.ts
+│   │   │       │   │   ├── passthrough.js
+│   │   │       │   │   ├── passthrough.js.map
+│   │   │       │   │   ├── passthrough_test.d.ts
+│   │   │       │   │   ├── passthrough_test.js
+│   │   │       │   │   ├── passthrough_test.js.map
+│   │   │       │   │   ├── progress.d.ts
+│   │   │       │   │   ├── progress.js
+│   │   │       │   │   ├── progress.js.map
+│   │   │       │   │   ├── progress_test.d.ts
+│   │   │       │   │   ├── progress_test.js
+│   │   │       │   │   ├── progress_test.js.map
+│   │   │       │   │   ├── router_registry.d.ts
+│   │   │       │   │   ├── router_registry.js
+│   │   │       │   │   ├── router_registry.js.map
+│   │   │       │   │   ├── router_registry_test.d.ts
+│   │   │       │   │   ├── router_registry_test.js
+│   │   │       │   │   ├── router_registry_test.js.map
+│   │   │       │   │   ├── types.d.ts
+│   │   │       │   │   ├── types.js
+│   │   │       │   │   ├── types.js.map
+│   │   │       │   │   ├── weights_loader.d.ts
+│   │   │       │   │   ├── weights_loader.js
+│   │   │       │   │   ├── weights_loader.js.map
+│   │   │       │   │   ├── weights_loader_test.d.ts
+│   │   │       │   │   ├── weights_loader_test.js
+│   │   │       │   │   └── weights_loader_test.js.map
+│   │   │       │   ├── jasmine_util.d.ts
+│   │   │       │   ├── jasmine_util.js
+│   │   │       │   ├── jasmine_util.js.map
+│   │   │       │   ├── jasmine_util_test.d.ts
+│   │   │       │   ├── jasmine_util_test.js
+│   │   │       │   ├── jasmine_util_test.js.map
+│   │   │       │   ├── kernel_names.d.ts
+│   │   │       │   ├── kernel_names.js
+│   │   │       │   ├── kernel_names.js.map
+│   │   │       │   ├── kernel_registry.d.ts
+│   │   │       │   ├── kernel_registry.js
+│   │   │       │   ├── kernel_registry.js.map
+│   │   │       │   ├── kernel_registry_test.d.ts
+│   │   │       │   ├── kernel_registry_test.js
+│   │   │       │   ├── kernel_registry_test.js.map
+│   │   │       │   ├── log.d.ts
+│   │   │       │   ├── log.js
+│   │   │       │   ├── log.js.map
+│   │   │       │   ├── math.d.ts
+│   │   │       │   ├── math.js
+│   │   │       │   ├── math.js.map
+│   │   │       │   ├── miniprogram
+│   │   │       │   │   ├── index.js
+│   │   │       │   │   └── index.js.map
+│   │   │       │   ├── model_types.d.ts
+│   │   │       │   ├── model_types.js
+│   │   │       │   ├── model_types.js.map
+│   │   │       │   ├── ops
+│   │   │       │   │   ├── arithmetic_test.d.ts
+│   │   │       │   │   ├── arithmetic_test.js
+│   │   │       │   │   ├── arithmetic_test.js.map
+│   │   │       │   │   ├── array_ops.d.ts
+│   │   │       │   │   ├── array_ops.js
+│   │   │       │   │   ├── array_ops.js.map
+│   │   │       │   │   ├── array_ops_test.d.ts
+│   │   │       │   │   ├── array_ops_test.js
+│   │   │       │   │   ├── array_ops_test.js.map
+│   │   │       │   │   ├── array_ops_util.d.ts
+│   │   │       │   │   ├── array_ops_util.js
+│   │   │       │   │   ├── array_ops_util.js.map
+│   │   │       │   │   ├── axis_util.d.ts
+│   │   │       │   │   ├── axis_util.js
+│   │   │       │   │   ├── axis_util.js.map
+│   │   │       │   │   ├── axis_util_test.d.ts
+│   │   │       │   │   ├── axis_util_test.js
+│   │   │       │   │   ├── axis_util_test.js.map
+│   │   │       │   │   ├── batchnorm.d.ts
+│   │   │       │   │   ├── batchnorm.js
+│   │   │       │   │   ├── batchnorm.js.map
+│   │   │       │   │   ├── batchnorm_test.d.ts
+│   │   │       │   │   ├── batchnorm_test.js
+│   │   │       │   │   ├── batchnorm_test.js.map
+│   │   │       │   │   ├── binary_ops.d.ts
+│   │   │       │   │   ├── binary_ops.js
+│   │   │       │   │   ├── binary_ops.js.map
+│   │   │       │   │   ├── binary_ops_test.d.ts
+│   │   │       │   │   ├── binary_ops_test.js
+│   │   │       │   │   ├── binary_ops_test.js.map
+│   │   │       │   │   ├── boolean_mask.d.ts
+│   │   │       │   │   ├── boolean_mask.js
+│   │   │       │   │   ├── boolean_mask.js.map
+│   │   │       │   │   ├── boolean_mask_test.d.ts
+│   │   │       │   │   ├── boolean_mask_test.js
+│   │   │       │   │   ├── boolean_mask_test.js.map
+│   │   │       │   │   ├── broadcast_util.d.ts
+│   │   │       │   │   ├── broadcast_util.js
+│   │   │       │   │   ├── broadcast_util.js.map
+│   │   │       │   │   ├── broadcast_util_test.d.ts
+│   │   │       │   │   ├── broadcast_util_test.js
+│   │   │       │   │   ├── broadcast_util_test.js.map
+│   │   │       │   │   ├── browser.d.ts
+│   │   │       │   │   ├── browser.js
+│   │   │       │   │   ├── browser.js.map
+│   │   │       │   │   ├── clone_test.d.ts
+│   │   │       │   │   ├── clone_test.js
+│   │   │       │   │   ├── clone_test.js.map
+│   │   │       │   │   ├── compare.d.ts
+│   │   │       │   │   ├── compare.js
+│   │   │       │   │   ├── compare.js.map
+│   │   │       │   │   ├── compare_ops_test.d.ts
+│   │   │       │   │   ├── compare_ops_test.js
+│   │   │       │   │   ├── compare_ops_test.js.map
+│   │   │       │   │   ├── complex_ops.d.ts
+│   │   │       │   │   ├── complex_ops.js
+│   │   │       │   │   ├── complex_ops.js.map
+│   │   │       │   │   ├── complex_ops_test.d.ts
+│   │   │       │   │   ├── complex_ops_test.js
+│   │   │       │   │   ├── complex_ops_test.js.map
+│   │   │       │   │   ├── concat_split.d.ts
+│   │   │       │   │   ├── concat_split.js
+│   │   │       │   │   ├── concat_split.js.map
+│   │   │       │   │   ├── concat_test.d.ts
+│   │   │       │   │   ├── concat_test.js
+│   │   │       │   │   ├── concat_test.js.map
+│   │   │       │   │   ├── concat_util.d.ts
+│   │   │       │   │   ├── concat_util.js
+│   │   │       │   │   ├── concat_util.js.map
+│   │   │       │   │   ├── concat_util_test.d.ts
+│   │   │       │   │   ├── concat_util_test.js
+│   │   │       │   │   ├── concat_util_test.js.map
+│   │   │       │   │   ├── confusion_matrix.d.ts
+│   │   │       │   │   ├── confusion_matrix.js
+│   │   │       │   │   ├── confusion_matrix.js.map
+│   │   │       │   │   ├── confusion_matrix_test.d.ts
+│   │   │       │   │   ├── confusion_matrix_test.js
+│   │   │       │   │   ├── confusion_matrix_test.js.map
+│   │   │       │   │   ├── conv1d_test.d.ts
+│   │   │       │   │   ├── conv1d_test.js
+│   │   │       │   │   ├── conv1d_test.js.map
+│   │   │       │   │   ├── conv2d_depthwise_test.d.ts
+│   │   │       │   │   ├── conv2d_depthwise_test.js
+│   │   │       │   │   ├── conv2d_depthwise_test.js.map
+│   │   │       │   │   ├── conv2d_separable_test.d.ts
+│   │   │       │   │   ├── conv2d_separable_test.js
+│   │   │       │   │   ├── conv2d_separable_test.js.map
+│   │   │       │   │   ├── conv2d_test.d.ts
+│   │   │       │   │   ├── conv2d_test.js
+│   │   │       │   │   ├── conv2d_test.js.map
+│   │   │       │   │   ├── conv2d_transpose_test.d.ts
+│   │   │       │   │   ├── conv2d_transpose_test.js
+│   │   │       │   │   ├── conv2d_transpose_test.js.map
+│   │   │       │   │   ├── conv3d_test.d.ts
+│   │   │       │   │   ├── conv3d_test.js
+│   │   │       │   │   ├── conv3d_test.js.map
+│   │   │       │   │   ├── conv3d_transpose_test.d.ts
+│   │   │       │   │   ├── conv3d_transpose_test.js
+│   │   │       │   │   ├── conv3d_transpose_test.js.map
+│   │   │       │   │   ├── conv.d.ts
+│   │   │       │   │   ├── conv.js
+│   │   │       │   │   ├── conv.js.map
+│   │   │       │   │   ├── conv_util.d.ts
+│   │   │       │   │   ├── conv_util.js
+│   │   │       │   │   ├── conv_util.js.map
+│   │   │       │   │   ├── conv_util_test.d.ts
+│   │   │       │   │   ├── conv_util_test.js
+│   │   │       │   │   ├── conv_util_test.js.map
+│   │   │       │   │   ├── diag.d.ts
+│   │   │       │   │   ├── diag.js
+│   │   │       │   │   ├── diag.js.map
+│   │   │       │   │   ├── diag_test.d.ts
+│   │   │       │   │   ├── diag_test.js
+│   │   │       │   │   ├── diag_test.js.map
+│   │   │       │   │   ├── dropout.d.ts
+│   │   │       │   │   ├── dropout.js
+│   │   │       │   │   ├── dropout.js.map
+│   │   │       │   │   ├── dropout_test.d.ts
+│   │   │       │   │   ├── dropout_test.js
+│   │   │       │   │   ├── dropout_test.js.map
+│   │   │       │   │   ├── dropout_util.d.ts
+│   │   │       │   │   ├── dropout_util.js
+│   │   │       │   │   ├── dropout_util.js.map
+│   │   │       │   │   ├── dropout_util_test.d.ts
+│   │   │       │   │   ├── dropout_util_test.js
+│   │   │       │   │   ├── dropout_util_test.js.map
+│   │   │       │   │   ├── erf_util.d.ts
+│   │   │       │   │   ├── erf_util.js
+│   │   │       │   │   ├── erf_util.js.map
+│   │   │       │   │   ├── fused_ops.d.ts
+│   │   │       │   │   ├── fused_ops.js
+│   │   │       │   │   ├── fused_ops.js.map
+│   │   │       │   │   ├── fused_test.d.ts
+│   │   │       │   │   ├── fused_test.js
+│   │   │       │   │   ├── fused_test.js.map
+│   │   │       │   │   ├── fused_util.d.ts
+│   │   │       │   │   ├── fused_util.js
+│   │   │       │   │   ├── fused_util.js.map
+│   │   │       │   │   ├── gather_nd.d.ts
+│   │   │       │   │   ├── gather_nd.js
+│   │   │       │   │   ├── gather_nd.js.map
+│   │   │       │   │   ├── gather_nd_test.d.ts
+│   │   │       │   │   ├── gather_nd_test.js
+│   │   │       │   │   ├── gather_nd_test.js.map
+│   │   │       │   │   ├── gather_nd_util.d.ts
+│   │   │       │   │   ├── gather_nd_util.js
+│   │   │       │   │   ├── gather_nd_util.js.map
+│   │   │       │   │   ├── image_ops.d.ts
+│   │   │       │   │   ├── image_ops.js
+│   │   │       │   │   ├── image_ops.js.map
+│   │   │       │   │   ├── image_ops_test.d.ts
+│   │   │       │   │   ├── image_ops_test.js
+│   │   │       │   │   ├── image_ops_test.js.map
+│   │   │       │   │   ├── in_top_k.d.ts
+│   │   │       │   │   ├── in_top_k.js
+│   │   │       │   │   ├── in_top_k.js.map
+│   │   │       │   │   ├── in_top_k_test.d.ts
+│   │   │       │   │   ├── in_top_k_test.js
+│   │   │       │   │   ├── in_top_k_test.js.map
+│   │   │       │   │   ├── linalg_ops.d.ts
+│   │   │       │   │   ├── linalg_ops.js
+│   │   │       │   │   ├── linalg_ops.js.map
+│   │   │       │   │   ├── linalg_ops_test.d.ts
+│   │   │       │   │   ├── linalg_ops_test.js
+│   │   │       │   │   ├── linalg_ops_test.js.map
+│   │   │       │   │   ├── logical_ops.d.ts
+│   │   │       │   │   ├── logical_ops.js
+│   │   │       │   │   ├── logical_ops.js.map
+│   │   │       │   │   ├── logical_ops_test.d.ts
+│   │   │       │   │   ├── logical_ops_test.js
+│   │   │       │   │   ├── logical_ops_test.js.map
+│   │   │       │   │   ├── loss_ops.d.ts
+│   │   │       │   │   ├── loss_ops.js
+│   │   │       │   │   ├── loss_ops.js.map
+│   │   │       │   │   ├── loss_ops_test.d.ts
+│   │   │       │   │   ├── loss_ops_test.js
+│   │   │       │   │   ├── loss_ops_test.js.map
+│   │   │       │   │   ├── lrn.d.ts
+│   │   │       │   │   ├── lrn.js
+│   │   │       │   │   ├── lrn.js.map
+│   │   │       │   │   ├── lrn_test.d.ts
+│   │   │       │   │   ├── lrn_test.js
+│   │   │       │   │   ├── lrn_test.js.map
+│   │   │       │   │   ├── lstm.d.ts
+│   │   │       │   │   ├── lstm.js
+│   │   │       │   │   ├── lstm.js.map
+│   │   │       │   │   ├── lstm_test.d.ts
+│   │   │       │   │   ├── lstm_test.js
+│   │   │       │   │   ├── lstm_test.js.map
+│   │   │       │   │   ├── matmul.d.ts
+│   │   │       │   │   ├── matmul.js
+│   │   │       │   │   ├── matmul.js.map
+│   │   │       │   │   ├── matmul_test.d.ts
+│   │   │       │   │   ├── matmul_test.js
+│   │   │       │   │   ├── matmul_test.js.map
+│   │   │       │   │   ├── moving_average.d.ts
+│   │   │       │   │   ├── moving_average.js
+│   │   │       │   │   ├── moving_average.js.map
+│   │   │       │   │   ├── moving_average_test.d.ts
+│   │   │       │   │   ├── moving_average_test.js
+│   │   │       │   │   ├── moving_average_test.js.map
+│   │   │       │   │   ├── multinomial_test.d.ts
+│   │   │       │   │   ├── multinomial_test.js
+│   │   │       │   │   ├── multinomial_test.js.map
+│   │   │       │   │   ├── norm.d.ts
+│   │   │       │   │   ├── norm.js
+│   │   │       │   │   ├── norm.js.map
+│   │   │       │   │   ├── operation.d.ts
+│   │   │       │   │   ├── operation.js
+│   │   │       │   │   ├── operation.js.map
+│   │   │       │   │   ├── operation_test.d.ts
+│   │   │       │   │   ├── operation_test.js
+│   │   │       │   │   ├── operation_test.js.map
+│   │   │       │   │   ├── ops.d.ts
+│   │   │       │   │   ├── ops.js
+│   │   │       │   │   ├── ops.js.map
+│   │   │       │   │   ├── pad_test.d.ts
+│   │   │       │   │   ├── pad_test.js
+│   │   │       │   │   ├── pad_test.js.map
+│   │   │       │   │   ├── pool.d.ts
+│   │   │       │   │   ├── pool.js
+│   │   │       │   │   ├── pool.js.map
+│   │   │       │   │   ├── pool_test.d.ts
+│   │   │       │   │   ├── pool_test.js
+│   │   │       │   │   ├── pool_test.js.map
+│   │   │       │   │   ├── rand.d.ts
+│   │   │       │   │   ├── rand.js
+│   │   │       │   │   ├── rand.js.map
+│   │   │       │   │   ├── rand_test.d.ts
+│   │   │       │   │   ├── rand_test.js
+│   │   │       │   │   ├── rand_test.js.map
+│   │   │       │   │   ├── rand_util.d.ts
+│   │   │       │   │   ├── rand_util.js
+│   │   │       │   │   ├── rand_util.js.map
+│   │   │       │   │   ├── reduce_util.d.ts
+│   │   │       │   │   ├── reduce_util.js
+│   │   │       │   │   ├── reduce_util.js.map
+│   │   │       │   │   ├── reduction_ops.d.ts
+│   │   │       │   │   ├── reduction_ops.js
+│   │   │       │   │   ├── reduction_ops.js.map
+│   │   │       │   │   ├── reduction_ops_test.d.ts
+│   │   │       │   │   ├── reduction_ops_test.js
+│   │   │       │   │   ├── reduction_ops_test.js.map
+│   │   │       │   │   ├── relu_ops.d.ts
+│   │   │       │   │   ├── relu_ops.js
+│   │   │       │   │   ├── relu_ops.js.map
+│   │   │       │   │   ├── resize_bilinear_test.d.ts
+│   │   │       │   │   ├── resize_bilinear_test.js
+│   │   │       │   │   ├── resize_bilinear_test.js.map
+│   │   │       │   │   ├── resize_nearest_neighbor_test.d.ts
+│   │   │       │   │   ├── resize_nearest_neighbor_test.js
+│   │   │       │   │   ├── resize_nearest_neighbor_test.js.map
+│   │   │       │   │   ├── reverse.d.ts
+│   │   │       │   │   ├── reverse.js
+│   │   │       │   │   ├── reverse.js.map
+│   │   │       │   │   ├── reverse_test.d.ts
+│   │   │       │   │   ├── reverse_test.js
+│   │   │       │   │   ├── reverse_test.js.map
+│   │   │       │   │   ├── scatter_nd.d.ts
+│   │   │       │   │   ├── scatter_nd.js
+│   │   │       │   │   ├── scatter_nd.js.map
+│   │   │       │   │   ├── scatter_nd_test.d.ts
+│   │   │       │   │   ├── scatter_nd_test.js
+│   │   │       │   │   ├── scatter_nd_test.js.map
+│   │   │       │   │   ├── scatter_nd_util.d.ts
+│   │   │       │   │   ├── scatter_nd_util.js
+│   │   │       │   │   ├── scatter_nd_util.js.map
+│   │   │       │   │   ├── segment_ops.d.ts
+│   │   │       │   │   ├── segment_ops.js
+│   │   │       │   │   ├── segment_ops.js.map
+│   │   │       │   │   ├── segment_ops_test.d.ts
+│   │   │       │   │   ├── segment_ops_test.js
+│   │   │       │   │   ├── segment_ops_test.js.map
+│   │   │       │   │   ├── segment_util.d.ts
+│   │   │       │   │   ├── segment_util.js
+│   │   │       │   │   ├── segment_util.js.map
+│   │   │       │   │   ├── selu_util.d.ts
+│   │   │       │   │   ├── selu_util.js
+│   │   │       │   │   ├── selu_util.js.map
+│   │   │       │   │   ├── signal_ops.d.ts
+│   │   │       │   │   ├── signal_ops.js
+│   │   │       │   │   ├── signal_ops.js.map
+│   │   │       │   │   ├── signal_ops_test.d.ts
+│   │   │       │   │   ├── signal_ops_test.js
+│   │   │       │   │   ├── signal_ops_test.js.map
+│   │   │       │   │   ├── slice.d.ts
+│   │   │       │   │   ├── slice.js
+│   │   │       │   │   ├── slice.js.map
+│   │   │       │   │   ├── slice_test.d.ts
+│   │   │       │   │   ├── slice_test.js
+│   │   │       │   │   ├── slice_test.js.map
+│   │   │       │   │   ├── slice_util.d.ts
+│   │   │       │   │   ├── slice_util.js
+│   │   │       │   │   ├── slice_util.js.map
+│   │   │       │   │   ├── slice_util_test.d.ts
+│   │   │       │   │   ├── slice_util_test.js
+│   │   │       │   │   ├── slice_util_test.js.map
+│   │   │       │   │   ├── softmax.d.ts
+│   │   │       │   │   ├── softmax.js
+│   │   │       │   │   ├── softmax.js.map
+│   │   │       │   │   ├── softmax_test.d.ts
+│   │   │       │   │   ├── softmax_test.js
+│   │   │       │   │   ├── softmax_test.js.map
+│   │   │       │   │   ├── sparse_to_dense.d.ts
+│   │   │       │   │   ├── sparse_to_dense.js
+│   │   │       │   │   ├── sparse_to_dense.js.map
+│   │   │       │   │   ├── sparse_to_dense_test.d.ts
+│   │   │       │   │   ├── sparse_to_dense_test.js
+│   │   │       │   │   ├── sparse_to_dense_test.js.map
+│   │   │       │   │   ├── sparse_to_dense_util.d.ts
+│   │   │       │   │   ├── sparse_to_dense_util.js
+│   │   │       │   │   ├── sparse_to_dense_util.js.map
+│   │   │       │   │   ├── spectral_ops.d.ts
+│   │   │       │   │   ├── spectral_ops.js
+│   │   │       │   │   ├── spectral_ops.js.map
+│   │   │       │   │   ├── spectral_ops_test.d.ts
+│   │   │       │   │   ├── spectral_ops_test.js
+│   │   │       │   │   ├── spectral_ops_test.js.map
+│   │   │       │   │   ├── squared_difference.d.ts
+│   │   │       │   │   ├── squared_difference.js
+│   │   │       │   │   ├── squared_difference.js.map
+│   │   │       │   │   ├── square.d.ts
+│   │   │       │   │   ├── square.js
+│   │   │       │   │   ├── square.js.map
+│   │   │       │   │   ├── strided_slice.d.ts
+│   │   │       │   │   ├── strided_slice.js
+│   │   │       │   │   ├── strided_slice.js.map
+│   │   │       │   │   ├── strided_slice_test.d.ts
+│   │   │       │   │   ├── strided_slice_test.js
+│   │   │       │   │   ├── strided_slice_test.js.map
+│   │   │       │   │   ├── tensor_ops.d.ts
+│   │   │       │   │   ├── tensor_ops.js
+│   │   │       │   │   ├── tensor_ops.js.map
+│   │   │       │   │   ├── topk.d.ts
+│   │   │       │   │   ├── topk.js
+│   │   │       │   │   ├── topk.js.map
+│   │   │       │   │   ├── topk_test.d.ts
+│   │   │       │   │   ├── topk_test.js
+│   │   │       │   │   ├── topk_test.js.map
+│   │   │       │   │   ├── transpose.d.ts
+│   │   │       │   │   ├── transpose.js
+│   │   │       │   │   ├── transpose.js.map
+│   │   │       │   │   ├── transpose_test.d.ts
+│   │   │       │   │   ├── transpose_test.js
+│   │   │       │   │   ├── transpose_test.js.map
+│   │   │       │   │   ├── unary_ops.d.ts
+│   │   │       │   │   ├── unary_ops.js
+│   │   │       │   │   ├── unary_ops.js.map
+│   │   │       │   │   ├── unary_ops_test.d.ts
+│   │   │       │   │   ├── unary_ops_test.js
+│   │   │       │   │   └── unary_ops_test.js.map
+│   │   │       │   ├── optimizers
+│   │   │       │   │   ├── adadelta_optimizer.d.ts
+│   │   │       │   │   ├── adadelta_optimizer.js
+│   │   │       │   │   ├── adadelta_optimizer.js.map
+│   │   │       │   │   ├── adadelta_optimizer_test.d.ts
+│   │   │       │   │   ├── adadelta_optimizer_test.js
+│   │   │       │   │   ├── adadelta_optimizer_test.js.map
+│   │   │       │   │   ├── adagrad_optimizer.d.ts
+│   │   │       │   │   ├── adagrad_optimizer.js
+│   │   │       │   │   ├── adagrad_optimizer.js.map
+│   │   │       │   │   ├── adagrad_optimizer_test.d.ts
+│   │   │       │   │   ├── adagrad_optimizer_test.js
+│   │   │       │   │   ├── adagrad_optimizer_test.js.map
+│   │   │       │   │   ├── adamax_optimizer.d.ts
+│   │   │       │   │   ├── adamax_optimizer.js
+│   │   │       │   │   ├── adamax_optimizer.js.map
+│   │   │       │   │   ├── adamax_optimizer_test.d.ts
+│   │   │       │   │   ├── adamax_optimizer_test.js
+│   │   │       │   │   ├── adamax_optimizer_test.js.map
+│   │   │       │   │   ├── adam_optimizer.d.ts
+│   │   │       │   │   ├── adam_optimizer.js
+│   │   │       │   │   ├── adam_optimizer.js.map
+│   │   │       │   │   ├── adam_optimizer_test.d.ts
+│   │   │       │   │   ├── adam_optimizer_test.js
+│   │   │       │   │   ├── adam_optimizer_test.js.map
+│   │   │       │   │   ├── momentum_optimizer.d.ts
+│   │   │       │   │   ├── momentum_optimizer.js
+│   │   │       │   │   ├── momentum_optimizer.js.map
+│   │   │       │   │   ├── momentum_optimizer_test.d.ts
+│   │   │       │   │   ├── momentum_optimizer_test.js
+│   │   │       │   │   ├── momentum_optimizer_test.js.map
+│   │   │       │   │   ├── optimizer_constructors.d.ts
+│   │   │       │   │   ├── optimizer_constructors.js
+│   │   │       │   │   ├── optimizer_constructors.js.map
+│   │   │       │   │   ├── optimizer.d.ts
+│   │   │       │   │   ├── optimizer.js
+│   │   │       │   │   ├── optimizer.js.map
+│   │   │       │   │   ├── optimizer_test.d.ts
+│   │   │       │   │   ├── optimizer_test.js
+│   │   │       │   │   ├── optimizer_test.js.map
+│   │   │       │   │   ├── rmsprop_optimizer.d.ts
+│   │   │       │   │   ├── rmsprop_optimizer.js
+│   │   │       │   │   ├── rmsprop_optimizer.js.map
+│   │   │       │   │   ├── rmsprop_optimizer_test.d.ts
+│   │   │       │   │   ├── rmsprop_optimizer_test.js
+│   │   │       │   │   ├── rmsprop_optimizer_test.js.map
+│   │   │       │   │   ├── sgd_optimizer.d.ts
+│   │   │       │   │   ├── sgd_optimizer.js
+│   │   │       │   │   ├── sgd_optimizer.js.map
+│   │   │       │   │   ├── sgd_optimizer_test.d.ts
+│   │   │       │   │   ├── sgd_optimizer_test.js
+│   │   │       │   │   └── sgd_optimizer_test.js.map
+│   │   │       │   ├── platforms
+│   │   │       │   │   ├── platform_browser.d.ts
+│   │   │       │   │   ├── platform_browser.js
+│   │   │       │   │   ├── platform_browser.js.map
+│   │   │       │   │   ├── platform_browser_test.d.ts
+│   │   │       │   │   ├── platform_browser_test.js
+│   │   │       │   │   ├── platform_browser_test.js.map
+│   │   │       │   │   ├── platform.d.ts
+│   │   │       │   │   ├── platform.js
+│   │   │       │   │   ├── platform.js.map
+│   │   │       │   │   ├── platform_node.d.ts
+│   │   │       │   │   ├── platform_node.js
+│   │   │       │   │   ├── platform_node.js.map
+│   │   │       │   │   ├── platform_node_test.d.ts
+│   │   │       │   │   ├── platform_node_test.js
+│   │   │       │   │   └── platform_node_test.js.map
+│   │   │       │   ├── profiler.d.ts
+│   │   │       │   ├── profiler.js
+│   │   │       │   ├── profiler.js.map
+│   │   │       │   ├── profiler_test.d.ts
+│   │   │       │   ├── profiler_test.js
+│   │   │       │   ├── profiler_test.js.map
+│   │   │       │   ├── public
+│   │   │       │   │   └── chained_ops
+│   │   │       │   │       ├── register_all_chained_ops.d.ts
+│   │   │       │   │       ├── register_all_chained_ops.js
+│   │   │       │   │       ├── register_all_chained_ops.js.map
+│   │   │       │   │       ├── squared_difference.d.ts
+│   │   │       │   │       ├── squared_difference.js
+│   │   │       │   │       └── squared_difference.js.map
+│   │   │       │   ├── register_all_gradients.d.ts
+│   │   │       │   ├── register_all_gradients.js
+│   │   │       │   ├── register_all_gradients.js.map
+│   │   │       │   ├── scripts
+│   │   │       │   │   └── test_snippets
+│   │   │       │   │       ├── util.d.ts
+│   │   │       │   │       ├── util.js
+│   │   │       │   │       └── util.js.map
+│   │   │       │   ├── serialization.d.ts
+│   │   │       │   ├── serialization.js
+│   │   │       │   ├── serialization.js.map
+│   │   │       │   ├── serialization_test.d.ts
+│   │   │       │   ├── serialization_test.js
+│   │   │       │   ├── serialization_test.js.map
+│   │   │       │   ├── setup_test.d.ts
+│   │   │       │   ├── setup_test.js
+│   │   │       │   ├── setup_test.js.map
+│   │   │       │   ├── tape.d.ts
+│   │   │       │   ├── tape.js
+│   │   │       │   ├── tape.js.map
+│   │   │       │   ├── tape_test.d.ts
+│   │   │       │   ├── tape_test.js
+│   │   │       │   ├── tape_test.js.map
+│   │   │       │   ├── tensor.d.ts
+│   │   │       │   ├── tensor_format.d.ts
+│   │   │       │   ├── tensor_format.js
+│   │   │       │   ├── tensor_format.js.map
+│   │   │       │   ├── tensor.js
+│   │   │       │   ├── tensor.js.map
+│   │   │       │   ├── tensor_test.d.ts
+│   │   │       │   ├── tensor_test.js
+│   │   │       │   ├── tensor_test.js.map
+│   │   │       │   ├── tensor_types.d.ts
+│   │   │       │   ├── tensor_types.js
+│   │   │       │   ├── tensor_types.js.map
+│   │   │       │   ├── tensor_util.d.ts
+│   │   │       │   ├── tensor_util_env.d.ts
+│   │   │       │   ├── tensor_util_env.js
+│   │   │       │   ├── tensor_util_env.js.map
+│   │   │       │   ├── tensor_util.js
+│   │   │       │   ├── tensor_util.js.map
+│   │   │       │   ├── tensor_util_test.d.ts
+│   │   │       │   ├── tensor_util_test.js
+│   │   │       │   ├── tensor_util_test.js.map
+│   │   │       │   ├── test_async_backends.d.ts
+│   │   │       │   ├── test_async_backends.js
+│   │   │       │   ├── test_async_backends.js.map
+│   │   │       │   ├── test_node.d.ts
+│   │   │       │   ├── test_node.js
+│   │   │       │   ├── test_node.js.map
+│   │   │       │   ├── tests.d.ts
+│   │   │       │   ├── tests.js
+│   │   │       │   ├── tests.js.map
+│   │   │       │   ├── test_util.d.ts
+│   │   │       │   ├── test_util.js
+│   │   │       │   ├── test_util.js.map
+│   │   │       │   ├── test_util_test.d.ts
+│   │   │       │   ├── test_util_test.js
+│   │   │       │   ├── test_util_test.js.map
+│   │   │       │   ├── tf-core.esm.js
+│   │   │       │   ├── tf-core.esm.js.map
+│   │   │       │   ├── tf-core.js
+│   │   │       │   ├── tf-core.js.map
+│   │   │       │   ├── tf-core.min.js
+│   │   │       │   ├── tf-core.min.js.html
+│   │   │       │   ├── tf-core.min.js.map
+│   │   │       │   ├── train.d.ts
+│   │   │       │   ├── train.js
+│   │   │       │   ├── train.js.map
+│   │   │       │   ├── types.d.ts
+│   │   │       │   ├── types.js
+│   │   │       │   ├── types.js.map
+│   │   │       │   ├── types_test.d.ts
+│   │   │       │   ├── types_test.js
+│   │   │       │   ├── types_test.js.map
+│   │   │       │   ├── util.d.ts
+│   │   │       │   ├── util.js
+│   │   │       │   ├── util.js.map
+│   │   │       │   ├── util_test.d.ts
+│   │   │       │   ├── util_test.js
+│   │   │       │   ├── util_test.js.map
+│   │   │       │   ├── variable_test.d.ts
+│   │   │       │   ├── variable_test.js
+│   │   │       │   ├── variable_test.js.map
+│   │   │       │   ├── version.d.ts
+│   │   │       │   ├── version.js
+│   │   │       │   ├── version.js.map
+│   │   │       │   ├── version_test.d.ts
+│   │   │       │   ├── version_test.js
+│   │   │       │   ├── version_test.js.map
+│   │   │       │   ├── webgl.d.ts
+│   │   │       │   ├── webgl.js
+│   │   │       │   ├── webgl.js.map
+│   │   │       │   ├── worker_node_test.d.ts
+│   │   │       │   ├── worker_node_test.js
+│   │   │       │   ├── worker_node_test.js.map
+│   │   │       │   ├── worker_test.d.ts
+│   │   │       │   ├── worker_test.js
+│   │   │       │   └── worker_test.js.map
+│   │   │       ├── package.json
+│   │   │       ├── README.md
+│   │   │       ├── scripts
+│   │   │       │   ├── build-npm.sh
+│   │   │       │   ├── cloud_funcs
+│   │   │       │   │   ├── README.md
+│   │   │       │   │   ├── send_email
+│   │   │       │   │   │   ├── config.json
+│   │   │       │   │   │   ├── index.js
+│   │   │       │   │   │   ├── package.json
+│   │   │       │   │   │   └── package-lock.json
+│   │   │       │   │   ├── sync_reactnative
+│   │   │       │   │   │   ├── index.js
+│   │   │       │   │   │   └── package.json
+│   │   │       │   │   └── trigger_nightly
+│   │   │       │   │       ├── index.js
+│   │   │       │   │       ├── package.json
+│   │   │       │   │       └── package-lock.json
+│   │   │       │   ├── enumerate-tests.js
+│   │   │       │   ├── test-bundle-size.js
+│   │   │       │   ├── test-ci.sh
+│   │   │       │   ├── test-integration.js
+│   │   │       │   ├── test-integration.sh
+│   │   │       │   └── test_snippets
+│   │   │       │       ├── test_snippets.ts
+│   │   │       │       └── util.ts
+│   │   │       ├── src
+│   │   │       │   ├── backends
+│   │   │       │   │   ├── array_util.ts
+│   │   │       │   │   ├── backend.ts
+│   │   │       │   │   ├── backend_util.ts
+│   │   │       │   │   ├── complex_util.ts
+│   │   │       │   │   ├── cpu
+│   │   │       │   │   │   ├── backend_cpu_test_registry.ts
+│   │   │       │   │   │   ├── backend_cpu.ts
+│   │   │       │   │   │   ├── cpu_util.ts
+│   │   │       │   │   │   ├── kernels
+│   │   │       │   │   │   │   ├── NonMaxSuppressionV5.ts
+│   │   │       │   │   │   │   ├── SquaredDifference.ts
+│   │   │       │   │   │   │   └── Square.ts
+│   │   │       │   │   │   ├── register_all_kernels.ts
+│   │   │       │   │   │   └── utils
+│   │   │       │   │   │       └── kernel_utils.ts
+│   │   │       │   │   ├── non_max_suppression_impl.ts
+│   │   │       │   │   ├── packing_util.ts
+│   │   │       │   │   ├── split_shared.ts
+│   │   │       │   │   ├── tile_impl.ts
+│   │   │       │   │   ├── topk_impl.ts
+│   │   │       │   │   ├── webgl
+│   │   │       │   │   │   ├── addn_gpu.ts
+│   │   │       │   │   │   ├── addn_packed_gpu.ts
+│   │   │       │   │   │   ├── argminmax_gpu.ts
+│   │   │       │   │   │   ├── argminmax_packed_gpu.ts
+│   │   │       │   │   │   ├── avg_pool_backprop_gpu.ts
+│   │   │       │   │   │   ├── backend_webgl_test_registry.ts
+│   │   │       │   │   │   ├── backend_webgl.ts
+│   │   │       │   │   │   ├── batchnorm_gpu.ts
+│   │   │       │   │   │   ├── batchnorm_packed_gpu.ts
+│   │   │       │   │   │   ├── binaryop_complex_gpu.ts
+│   │   │       │   │   │   ├── binaryop_gpu.ts
+│   │   │       │   │   │   ├── binaryop_packed_gpu.ts
+│   │   │       │   │   │   ├── canvas_util.ts
+│   │   │       │   │   │   ├── clip_gpu.ts
+│   │   │       │   │   │   ├── clip_packed_gpu.ts
+│   │   │       │   │   │   ├── complex_abs_gpu.ts
+│   │   │       │   │   │   ├── concat_gpu.ts
+│   │   │       │   │   │   ├── concat_packed_gpu.ts
+│   │   │       │   │   │   ├── conv_backprop_gpu_depthwise.ts
+│   │   │       │   │   │   ├── conv_backprop_gpu.ts
+│   │   │       │   │   │   ├── conv_gpu_depthwise.ts
+│   │   │       │   │   │   ├── conv_gpu.ts
+│   │   │       │   │   │   ├── conv_packed_gpu_depthwise.ts
+│   │   │       │   │   │   ├── crop_and_resize_gpu.ts
+│   │   │       │   │   │   ├── cumsum_gpu.ts
+│   │   │       │   │   │   ├── decode_matrix_gpu.ts
+│   │   │       │   │   │   ├── decode_matrix_packed_gpu.ts
+│   │   │       │   │   │   ├── depth_to_space_gpu.ts
+│   │   │       │   │   │   ├── diag_gpu.ts
+│   │   │       │   │   │   ├── encode_float_gpu.ts
+│   │   │       │   │   │   ├── encode_float_packed_gpu.ts
+│   │   │       │   │   │   ├── encode_matrix_gpu.ts
+│   │   │       │   │   │   ├── encode_matrix_packed_gpu.ts
+│   │   │       │   │   │   ├── fft_gpu.ts
+│   │   │       │   │   │   ├── fill_gpu.ts
+│   │   │       │   │   │   ├── flags_webgl.ts
+│   │   │       │   │   │   ├── gather_gpu.ts
+│   │   │       │   │   │   ├── gather_nd_gpu.ts
+│   │   │       │   │   │   ├── glsl_version.ts
+│   │   │       │   │   │   ├── gpgpu_context.ts
+│   │   │       │   │   │   ├── gpgpu_math.ts
+│   │   │       │   │   │   ├── gpgpu_util.ts
+│   │   │       │   │   │   ├── im2col_packed_gpu.ts
+│   │   │       │   │   │   ├── kernels
+│   │   │       │   │   │   │   ├── FromPixels.ts
+│   │   │       │   │   │   │   ├── FromPixels_utils
+│   │   │       │   │   │   │   │   ├── from_pixels_gpu.ts
+│   │   │       │   │   │   │   │   └── from_pixels_packed_gpu.ts
+│   │   │       │   │   │   │   ├── NonMaxSuppressionV5.ts
+│   │   │       │   │   │   │   ├── SquaredDifference.ts
+│   │   │       │   │   │   │   └── Square.ts
+│   │   │       │   │   │   ├── lrn_gpu.ts
+│   │   │       │   │   │   ├── lrn_grad_gpu.ts
+│   │   │       │   │   │   ├── lrn_packed_gpu.ts
+│   │   │       │   │   │   ├── max_pool_backprop_gpu.ts
+│   │   │       │   │   │   ├── mulmat_packed_gpu.ts
+│   │   │       │   │   │   ├── multinomial_gpu.ts
+│   │   │       │   │   │   ├── onehot_gpu.ts
+│   │   │       │   │   │   ├── pack_gpu.ts
+│   │   │       │   │   │   ├── pad_gpu.ts
+│   │   │       │   │   │   ├── pad_packed_gpu.ts
+│   │   │       │   │   │   ├── pool_gpu.ts
+│   │   │       │   │   │   ├── reduce_gpu.ts
+│   │   │       │   │   │   ├── register_all_kernels.ts
+│   │   │       │   │   │   ├── reshape_packed_gpu.ts
+│   │   │       │   │   │   ├── resize_bilinear_backprop_gpu.ts
+│   │   │       │   │   │   ├── resize_bilinear_gpu.ts
+│   │   │       │   │   │   ├── resize_bilinear_packed_gpu.ts
+│   │   │       │   │   │   ├── resize_nearest_neighbor_backprop_gpu.ts
+│   │   │       │   │   │   ├── resize_nearest_neighbor_gpu.ts
+│   │   │       │   │   │   ├── reverse_gpu.ts
+│   │   │       │   │   │   ├── reverse_packed_gpu.ts
+│   │   │       │   │   │   ├── scatter_gpu.ts
+│   │   │       │   │   │   ├── segment_gpu.ts
+│   │   │       │   │   │   ├── select_gpu.ts
+│   │   │       │   │   │   ├── shader_compiler.ts
+│   │   │       │   │   │   ├── shader_compiler_util.ts
+│   │   │       │   │   │   ├── slice_gpu.ts
+│   │   │       │   │   │   ├── slice_packed_gpu.ts
+│   │   │       │   │   │   ├── strided_slice_gpu.ts
+│   │   │       │   │   │   ├── texture_manager.ts
+│   │   │       │   │   │   ├── tex_util.ts
+│   │   │       │   │   │   ├── tile_gpu.ts
+│   │   │       │   │   │   ├── transpose_gpu.ts
+│   │   │       │   │   │   ├── transpose_packed_gpu.ts
+│   │   │       │   │   │   ├── unaryop_gpu.ts
+│   │   │       │   │   │   ├── unaryop_packed_gpu.ts
+│   │   │       │   │   │   ├── unpack_gpu.ts
+│   │   │       │   │   │   ├── webgl_types.ts
+│   │   │       │   │   │   └── webgl_util.ts
+│   │   │       │   │   └── where_impl.ts
+│   │   │       │   ├── browser_util.ts
+│   │   │       │   ├── BUILD.bazel
+│   │   │       │   ├── device_util.ts
+│   │   │       │   ├── engine.ts
+│   │   │       │   ├── environment.ts
+│   │   │       │   ├── flags.ts
+│   │   │       │   ├── globals.ts
+│   │   │       │   ├── gradients
+│   │   │       │   │   ├── SquaredDifference_grad.ts
+│   │   │       │   │   └── Square_grad.ts
+│   │   │       │   ├── gradients.ts
+│   │   │       │   ├── index.ts
+│   │   │       │   ├── io
+│   │   │       │   │   ├── browser_files.ts
+│   │   │       │   │   ├── http.ts
+│   │   │       │   │   ├── indexed_db.ts
+│   │   │       │   │   ├── io.ts
+│   │   │       │   │   ├── io_utils.ts
+│   │   │       │   │   ├── local_storage.ts
+│   │   │       │   │   ├── model_management.ts
+│   │   │       │   │   ├── passthrough.ts
+│   │   │       │   │   ├── progress.ts
+│   │   │       │   │   ├── router_registry.ts
+│   │   │       │   │   ├── types.ts
+│   │   │       │   │   └── weights_loader.ts
+│   │   │       │   ├── jasmine_util.ts
+│   │   │       │   ├── kernel_names.ts
+│   │   │       │   ├── kernel_registry.ts
+│   │   │       │   ├── log.ts
+│   │   │       │   ├── math.ts
+│   │   │       │   ├── model_types.ts
+│   │   │       │   ├── ops
+│   │   │       │   │   ├── array_ops.ts
+│   │   │       │   │   ├── array_ops_util.ts
+│   │   │       │   │   ├── axis_util.ts
+│   │   │       │   │   ├── batchnorm.ts
+│   │   │       │   │   ├── binary_ops.ts
+│   │   │       │   │   ├── boolean_mask.ts
+│   │   │       │   │   ├── broadcast_util.ts
+│   │   │       │   │   ├── browser.ts
+│   │   │       │   │   ├── compare.ts
+│   │   │       │   │   ├── complex_ops.ts
+│   │   │       │   │   ├── concat_split.ts
+│   │   │       │   │   ├── concat_util.ts
+│   │   │       │   │   ├── confusion_matrix.ts
+│   │   │       │   │   ├── conv.ts
+│   │   │       │   │   ├── conv_util.ts
+│   │   │       │   │   ├── diag.ts
+│   │   │       │   │   ├── dropout.ts
+│   │   │       │   │   ├── dropout_util.ts
+│   │   │       │   │   ├── erf_util.ts
+│   │   │       │   │   ├── fused_ops.ts
+│   │   │       │   │   ├── fused_util.ts
+│   │   │       │   │   ├── gather_nd.ts
+│   │   │       │   │   ├── gather_nd_util.ts
+│   │   │       │   │   ├── image_ops.ts
+│   │   │       │   │   ├── in_top_k.ts
+│   │   │       │   │   ├── linalg_ops.ts
+│   │   │       │   │   ├── logical_ops.ts
+│   │   │       │   │   ├── loss_ops.ts
+│   │   │       │   │   ├── lrn.ts
+│   │   │       │   │   ├── lstm.ts
+│   │   │       │   │   ├── matmul.ts
+│   │   │       │   │   ├── moving_average.ts
+│   │   │       │   │   ├── norm.ts
+│   │   │       │   │   ├── operation.ts
+│   │   │       │   │   ├── ops.ts
+│   │   │       │   │   ├── pool.ts
+│   │   │       │   │   ├── rand.ts
+│   │   │       │   │   ├── rand_util.ts
+│   │   │       │   │   ├── reduce_util.ts
+│   │   │       │   │   ├── reduction_ops.ts
+│   │   │       │   │   ├── relu_ops.ts
+│   │   │       │   │   ├── reverse.ts
+│   │   │       │   │   ├── scatter_nd.ts
+│   │   │       │   │   ├── scatter_nd_util.ts
+│   │   │       │   │   ├── segment_ops.ts
+│   │   │       │   │   ├── segment_util.ts
+│   │   │       │   │   ├── selu_util.ts
+│   │   │       │   │   ├── signal_ops.ts
+│   │   │       │   │   ├── slice.ts
+│   │   │       │   │   ├── slice_util.ts
+│   │   │       │   │   ├── softmax.ts
+│   │   │       │   │   ├── sparse_to_dense.ts
+│   │   │       │   │   ├── sparse_to_dense_util.ts
+│   │   │       │   │   ├── spectral_ops.ts
+│   │   │       │   │   ├── squared_difference.ts
+│   │   │       │   │   ├── square.ts
+│   │   │       │   │   ├── strided_slice.ts
+│   │   │       │   │   ├── tensor_ops.ts
+│   │   │       │   │   ├── topk.ts
+│   │   │       │   │   ├── transpose.ts
+│   │   │       │   │   └── unary_ops.ts
+│   │   │       │   ├── optimizers
+│   │   │       │   │   ├── adadelta_optimizer.ts
+│   │   │       │   │   ├── adagrad_optimizer.ts
+│   │   │       │   │   ├── adamax_optimizer.ts
+│   │   │       │   │   ├── adam_optimizer.ts
+│   │   │       │   │   ├── momentum_optimizer.ts
+│   │   │       │   │   ├── optimizer_constructors.ts
+│   │   │       │   │   ├── optimizer.ts
+│   │   │       │   │   ├── rmsprop_optimizer.ts
+│   │   │       │   │   └── sgd_optimizer.ts
+│   │   │       │   ├── platforms
+│   │   │       │   │   ├── platform_browser.ts
+│   │   │       │   │   ├── platform_node.ts
+│   │   │       │   │   └── platform.ts
+│   │   │       │   ├── profiler.ts
+│   │   │       │   ├── public
+│   │   │       │   │   └── chained_ops
+│   │   │       │   │       ├── register_all_chained_ops.ts
+│   │   │       │   │       └── squared_difference.ts
+│   │   │       │   ├── register_all_gradients.ts
+│   │   │       │   ├── serialization.ts
+│   │   │       │   ├── tape.ts
+│   │   │       │   ├── tensor_format.ts
+│   │   │       │   ├── tensor.ts
+│   │   │       │   ├── tensor_types.ts
+│   │   │       │   ├── tensor_util_env.ts
+│   │   │       │   ├── tensor_util.ts
+│   │   │       │   ├── test_async_backends.ts
+│   │   │       │   ├── test_node.ts
+│   │   │       │   ├── tests.ts
+│   │   │       │   ├── test_util.ts
+│   │   │       │   ├── train.ts
+│   │   │       │   ├── types.ts
+│   │   │       │   ├── util.ts
+│   │   │       │   ├── version.ts
+│   │   │       │   └── webgl.ts
+│   │   │       └── test.html
 │   │   ├── tinyglobby
 │   │   │   ├── dist
 │   │   │   │   ├── index.cjs
@@ -3770,6 +7193,11 @@
 │   │   │   │   │   └── streams.d.ts
 │   │   │   │   ├── worker_threads.d.ts
 │   │   │   │   └── zlib.d.ts
+│   │   │   ├── offscreencanvas
+│   │   │   │   ├── index.d.ts
+│   │   │   │   ├── LICENSE
+│   │   │   │   ├── package.json
+│   │   │   │   └── README.md
 │   │   │   ├── react
 │   │   │   │   ├── canary.d.ts
 │   │   │   │   ├── compiler-runtime.d.ts
@@ -3788,25 +7216,40 @@
 │   │   │   │       ├── index.d.ts
 │   │   │   │       ├── jsx-dev-runtime.d.ts
 │   │   │   │       └── jsx-runtime.d.ts
-│   │   │   └── react-dom
-│   │   │       ├── canary.d.ts
-│   │   │       ├── client.d.ts
-│   │   │       ├── experimental.d.ts
+│   │   │   ├── react-dom
+│   │   │   │   ├── canary.d.ts
+│   │   │   │   ├── client.d.ts
+│   │   │   │   ├── experimental.d.ts
+│   │   │   │   ├── index.d.ts
+│   │   │   │   ├── LICENSE
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   ├── server.browser.d.ts
+│   │   │   │   ├── server.bun.d.ts
+│   │   │   │   ├── server.d.ts
+│   │   │   │   ├── server.edge.d.ts
+│   │   │   │   ├── server.node.d.ts
+│   │   │   │   ├── static.browser.d.ts
+│   │   │   │   ├── static.d.ts
+│   │   │   │   ├── static.edge.d.ts
+│   │   │   │   ├── static.node.d.ts
+│   │   │   │   └── test-utils
+│   │   │   │       └── index.d.ts
+│   │   │   ├── seedrandom
+│   │   │   │   ├── index.d.ts
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── types-metadata.json
+│   │   │   ├── webgl2
+│   │   │   │   ├── index.d.ts
+│   │   │   │   ├── LICENSE
+│   │   │   │   ├── package.json
+│   │   │   │   └── README.md
+│   │   │   └── webgl-ext
 │   │   │       ├── index.d.ts
 │   │   │       ├── LICENSE
 │   │   │       ├── package.json
-│   │   │       ├── README.md
-│   │   │       ├── server.browser.d.ts
-│   │   │       ├── server.bun.d.ts
-│   │   │       ├── server.d.ts
-│   │   │       ├── server.edge.d.ts
-│   │   │       ├── server.node.d.ts
-│   │   │       ├── static.browser.d.ts
-│   │   │       ├── static.d.ts
-│   │   │       ├── static.edge.d.ts
-│   │   │       ├── static.node.d.ts
-│   │   │       └── test-utils
-│   │   │           └── index.d.ts
+│   │   │       └── README.md
 │   │   ├── typescript
 │   │   │   ├── bin
 │   │   │   │   ├── tsc
@@ -6138,9 +9581,9 @@
 │   ├── public
 │   │   ├── favicon.svg
 │   │   ├── icons.svg
-│   │   ├── models
-│   │   └── public
-│   │       └── models
+│   │   └── models
+│   │       ├── tiny_face_detector_model-shard1
+│   │       └── tiny_face_detector_model-weights_manifest.json
 │   ├── README.md
 │   ├── src
 │   │   ├── App.css
@@ -6156,8 +9599,24 @@
 │   │   │       ├── FeedbackOverlay.tsx
 │   │   │       ├── useFaceDetection.tsx
 │   │   │       └── useWebcam.ts
+│   │   ├── features
+│   │   │   └── face-capture
+│   │   │       ├── components
+│   │   │       │   └── FaceCapture.tsx
+│   │   │       ├── hooks
+│   │   │       │   ├── useFaceDetection.ts
+│   │   │       │   └── useWebcam.ts
+│   │   │       └── utils
+│   │   │           └── captureFrame.ts
 │   │   ├── index.css
-│   │   └── main.tsx
+│   │   ├── main.tsx
+│   │   ├── pages
+│   │   │   ├── CadastroPage.tsx
+│   │   │   └── ListagemPage.tsx
+│   │   ├── services
+│   │   │   └── userService.ts
+│   │   └── types
+│   │       └── index.ts
 │   ├── tsconfig.app.json
 │   ├── tsconfig.json
 │   ├── tsconfig.node.json
@@ -6166,4 +9625,4 @@
 │   └── Caddyfile
 └── README.md
 
-534 directories, 5632 files
+781 directories, 8844 files

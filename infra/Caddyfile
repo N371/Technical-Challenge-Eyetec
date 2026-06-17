@@ -1,5 +1,16 @@
 :80 {
+    # Serve os arquivos estáticos compilados do React
     root * /var/www/html
     file_server
-    try_files {path} /index.html
+
+    # Todas as chamadas /api/* são repassadas para o backend Spring Boot
+    handle /api/* {
+        reverse_proxy backend:8080
+    }
+
+    # SPA fallback: qualquer rota não encontrada cai no index.html
+    # (necessário para o react-router funcionar com refresh/deep-link)
+    handle {
+        try_files {path} /index.html
+    }
 }

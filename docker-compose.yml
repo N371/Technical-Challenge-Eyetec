@@ -1,7 +1,23 @@
 version: '3.8'
 
 services:
-  # Serviço que constrói e compila o React
+  # ── Backend Spring Boot ───────────────────────────────────────────────────
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: eyetec-backend-prod
+    restart: unless-stopped
+    environment:
+      - DB_PATH=/app/data/usermanager.db
+      - UPLOAD_DIR=/app/uploads
+    volumes:
+      - db_data:/app/data         # Persiste o arquivo SQLite entre reinícios
+      - uploads_data:/app/uploads # Persiste as fotos capturadas
+    expose:
+      - "8080"  # Não exposto na máquina host — só o Caddy acessa via rede interna
+
+  # ── Frontend (build do React) ────────────────────────────────────────────
   frontend:
     build:
       context: ./frontend
@@ -11,14 +27,14 @@ services:
     volumes:
       - html_data:/var/www/html # Compartilha os arquivos compilados
 
-  # Servidor Web e Proxy que entrega o site para o mundo
+  # ── Servidor Web e Proxy ──────────────────────────────────────────────────
   caddy:
     image: caddy:2-alpine
     container_name: eyetec-proxy
     restart: unless-stopped
     ports:
       - "8081:80"   # HTTP padrão
-      - "443:443" # HTTPS padrão (usado na nuvem)
+      - "443:443"   # HTTPS padrão (usado na nuvem)
     volumes:
       - ./infra/Caddyfile:/etc/caddy/Caddyfile
       - html_data:/var/www/html # Lê os arquivos compilados do front-end
@@ -26,8 +42,11 @@ services:
       - caddy_config:/config
     depends_on:
       - frontend
+      - backend
 
 volumes:
-  html_data:   # Volume compartilhado para os arquivos estáticos do React
-  caddy_data:  # Guarda os certificados SSL que o Caddy gerar na AWS
+  html_data:    # Volume compartilhado para os arquivos estáticos do React
+  caddy_data:   # Guarda os certificados SSL que o Caddy gerar na AWS
   caddy_config:
+  db_data:      # Persiste o usermanager.db entre rebuilds/restarts do container
+  uploads_data: # Persiste as fotos dos usuários entre rebuilds/restarts

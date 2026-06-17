@@ -34,14 +34,16 @@ public class UserController {
     }
 
     // ── POST /api/users  (multipart/form-data) ────────────────────────────────
+    // @RequestParam (não @RequestPart) para campos de texto: mais tolerante
+    // a variações de Content-Type por parte que o FormData do browser gera.
     @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<User> criar(
-            @RequestPart("nome")                               String nome,
-            @RequestPart("email")                              String email,
-            @RequestPart("cpf")                                String cpf,
-            @RequestPart(value = "telefone",       required = false) String telefone,
-            @RequestPart(value = "foto",           required = false) MultipartFile foto,
-            @RequestPart(value = "faceDescriptor", required = false) String faceDescriptor) {
+            @RequestParam("nome")                               String nome,
+            @RequestParam("email")                              String email,
+            @RequestParam("cpf")                                String cpf,
+            @RequestParam(value = "telefone",       required = false) String telefone,
+            @RequestParam(value = "foto",           required = false) MultipartFile foto,
+            @RequestParam(value = "faceDescriptor", required = false) String faceDescriptor) {
 
         User criado = service.criar(nome, email, cpf, telefone, foto, faceDescriptor);
         return ResponseEntity.status(HttpStatus.CREATED).body(criado);
@@ -51,12 +53,12 @@ public class UserController {
     @PutMapping(value = "/{id}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<User> atualizar(
             @PathVariable Long id,
-            @RequestPart("nome")                               String nome,
-            @RequestPart("email")                              String email,
-            @RequestPart("cpf")                                String cpf,
-            @RequestPart(value = "telefone",       required = false) String telefone,
-            @RequestPart(value = "foto",           required = false) MultipartFile foto,
-            @RequestPart(value = "faceDescriptor", required = false) String faceDescriptor) {
+            @RequestParam("nome")                               String nome,
+            @RequestParam("email")                              String email,
+            @RequestParam("cpf")                                String cpf,
+            @RequestParam(value = "telefone",       required = false) String telefone,
+            @RequestParam(value = "foto",           required = false) MultipartFile foto,
+            @RequestParam(value = "faceDescriptor", required = false) String faceDescriptor) {
 
         User atualizado = service.atualizar(id, nome, email, cpf, telefone, foto, faceDescriptor);
         return ResponseEntity.ok(atualizado);

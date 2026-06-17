@@ -117,7 +117,7 @@ public class UserService {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Usuário sem foto");
         }
 
-        Path path = Paths.get(uploadDir, user.getFotoPath());
+        Path path = Paths.get(uploadDir, user.getFotoPath()).toAbsolutePath();
         if (!Files.exists(path)) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Arquivo de foto não encontrado");
         }
@@ -181,22 +181,28 @@ public class UserService {
 
         String extensao   = obterExtensao(foto.getOriginalFilename());
         String nomeArquivo = UUID.randomUUID() + extensao;
-        Path   destino     = Paths.get(uploadDir, nomeArquivo);
+        Path   destino     = Paths.get(uploadDir, nomeArquivo).toAbsolutePath();
 
         try {
             Files.createDirectories(destino.getParent());
-            foto.transferTo(destino.toFile());
-            log.debug("Foto salva: {}", destino.toAbsolutePath());
+            // Usa Files.copy via InputStream em vez de transferTo —
+            // transferTo pode resolver caminhos relativos contra o diretório
+            // de trabalho interno do Tomcat em vez do diretório do processo.
+            try (var inputStream = foto.getInputStream()) {
+                Files.copy(inputStream, destino, java.nio.file.StandardCopyOption.REPLACE_EXISTING);
+            }
+            log.debug("Foto salva: {}", destino);
             return nomeArquivo;
-        } catch (IOException e) {
-            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Erro ao salvar foto");
+        } catch (Exception e) {
+            log.error("Falha ao salvar foto em {}: {}", destino, e.getMessage(), e);
+            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Erro ao salvar foto: " + e.getMessage());
         }
     }
 
     private void removerFotoDisco(String fotoPath) {
         if (fotoPath == null) return;
         try {
-            Files.deleteIfExists(Paths.get(uploadDir, fotoPath));
+            Files.deleteIfExists(Paths.get(uploadDir, fotoPath).toAbsolutePath());
         } catch (IOException e) {
             log.warn("Não foi possível remover foto: {}", fotoPath);
         }

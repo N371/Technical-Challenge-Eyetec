@@ -74,9 +74,64 @@ O histórico do Git reflete rigorosamente a evolução cronológica e o raciocí
 
 ---
 
-## 🛠️ Tecnologias e Ferramentas Propostas
 
-* **Backend:** Java, Spring Boot.
-* **Frontend:** React (Vite), TypeScript, face-api.js, TailwindCSS.
-* **Banco de Dados:** SQLite (Armazenamento baseado em arquivo local).
-* **Infraestrutura:** Docker, Docker Compose, Caddy.
+## 🛠️ Tecnologias Utilizadas
+
+* **Frontend:** React, Vite, TypeScript, Axios, TailwindCSS.
+* **Backend:** Java 21, Spring Boot 3.3, JdbcTemplate.
+* **Banco de Dados:** SQLite (persistido localmente via volumes).
+* **Proxy & Servidor Web:** Caddy Server (atuando como proxy reverso e servidor de arquivos estáticos).
+
+---
+
+## 📋 Requisitos Mínimos
+
+Para executar este projeto, o avaliador precisa ter instalado apenas:
+
+1. **Docker** (versão 20.10+ recomendada)
+2. **Docker Compose**
+
+*Nota: Não é necessário ter Java, Maven, Node.js ou SQLite instalados fisicamente na máquina, pois tudo é isolado e construído dentro dos contêineres.*
+
+---
+
+## 🚀 Como Executar a Aplicação
+
+Siga os passos abaixo para subir o ambiente completo:
+
+### 1. Clonar o Repositório
+
+git clone https://github.com/N371/Technical-Challenge-Eyetec.git
+
+cd Technical-Challenge-Eyetec 
+
+
+3. **Inicializar os Contêineres com Docker Compose**
+Na raiz do projeto (onde encontra-se o arquivo docker-compose.yml), execute o comando abaixo para realizar o build das imagens e iniciar todos os serviços em segundo plano (detached mode):
+docker compose up -d --build
+
+
+### 2. Acessar a Aplicação via Navegador
+Assim que o Docker indicar que todos os contêineres foram iniciados com sucesso (Started), a aplicação estará pronta para uso. Abra o seu navegador de preferência e acesse o endereço:
+
+👉 http://localhost:8081
+
+- Inserir com foto;
+- Lista dos usuários inseridos;
+- Opção de editar;
+- Opção de deletar.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

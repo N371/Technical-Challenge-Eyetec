@@ -4,12 +4,12 @@ import { useEffect, useRef, useState } from "react";
 export type FramingStatus = "loading" | "no_face" | "too_close" | "too_far" | "off_center" | "ok";
 
 export function useFaceDetection(
-  videoRef: React.RefObject<HTMLVideoElement>,
-  canvasRef: React.RefObject<HTMLCanvasElement>
+  videoRef: React.RefObject<HTMLVideoElement | null>,
+  canvasRef: React.RefObject<HTMLCanvasElement | null>
 ) {
   const [status, setStatus] = useState<FramingStatus>("loading");
   const [modelsLoaded, setModelsLoaded] = useState(false);
-  const animFrameRef = useRef<number>();
+  const animFrameRef = useRef<number | undefined>(undefined);
 
   useEffect(() => {
     faceapi.loadTinyFaceDetectorModel("/models")

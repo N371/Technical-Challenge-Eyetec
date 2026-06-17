@@ -80,11 +80,11 @@ export function CadastroPage() {
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
             <div style={{ gridColumn: "1/-1" }}>
               <label style={labelStyle}>Nome completo *</label>
-              <input style={inputStyle} placeholder="Ana Paula Ferreira" value={form.nome} onChange={handle("nome")} />
+              <input style={inputStyle} placeholder="Nome Completo" value={form.nome} onChange={handle("nome")} />
             </div>
             <div style={{ gridColumn: "1/-1" }}>
               <label style={labelStyle}>E-mail *</label>
-              <input style={inputStyle} type="email" placeholder="ana@empresa.com" value={form.email} onChange={handle("email")} />
+              <input style={inputStyle} type="email" placeholder="identificador@dominio" value={form.email} onChange={handle("email")} />
             </div>
             <div>
               <label style={labelStyle}>CPF *</label>
